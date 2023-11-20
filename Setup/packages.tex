@@ -1,0 +1,250 @@
+% Deutsche Anpassungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}%     %% Schriftkodierung
+%\usepackage[ansinew]{inputenc}%% Eingabekodierung
+\usepackage[utf8]{inputenc}%% Eingabekodierung
+
+\usepackage[ngerman]{babel}%  %% Neue deutsche Rechtschreibung verwenden
+\addto\captionsngerman{%      %% Name des Literaturverzeichnisses ver�ndern
+  \renewcommand{\bibname}{Quellen}%
+}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{color}															 % f�r Farben im allgemeinen
+\usepackage{colortbl}
+\definecolor{rot}{rgb}{1,0.3,0.3}
+\definecolor{drot}{rgb}{1,0.4,0.2}
+\definecolor{grun}{rgb}{0.3,1,0.3}	
+
+\usepackage{booktabs}
+
+\usepackage{siunitx}
+\sisetup{
+	locale = DE ,
+	per-mode = symbol
+}
+
+\usepackage{textcomp}
+
+% URL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{url}%               %% Links durch \url{}
+
+% Schriftarten %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lmodern}% 			%% Latin-modern Schriftart
+
+% Zeilenabstand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{setspace} 
+
+% Diverses %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{blindtext}
+
+%% Textformatierung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{ulem}%            %% Unterstreichen/Durchstreichen
+%\usepackage[                  %% Packet zum Zeichnen
+%    pdftex,                   % Ausgabe f�r pdfTeX
+%    %xetex,                   % Ausgabe f�r XeTeX
+%    %debug,                   % pict2e-Ausgabe kennzeichnen
+%    pstarrows                 % Pfeilspitzen --> PS-Tricks Variante
+%    ]{pict2e}%                  
+\usepackage[                  %% Package f�r Farbe
+   pdftex,                    % Ausgabe f�r pdfTeX
+   %xetex,                    % Ausgabe f�r XeTeX
+   hyperref,                  % Hyperref-Support
+   svgnames,				  % Zus�tzliche Farben per Name hinzuf�gen
+   x11names,				  % un nochmehr Farben
+   showerror                  % Fehlermeldung bei Verwendung undefinierter Farbe
+   ]{xcolor}%                 
+
+%\definecolor{ol}{RGB}{255,20,20}
+
+%% Packages f�r Grafiken & Abbildungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex]{graphicx}% 			%% Zum Laden von Grafiken
+   \graphicspath{{Bilder/}}%            % Standardpfad f�r Bilder/Grafiken 
+%\usepackage{tikz}%                      %%Vektorgrafiken in TeX, siehe: http://www.texample.net/
+%\usepackage{tikz-timing}
+%   \usetikztiminglibrary{either}
+%      \tikzset{timing/e/background/.style={fill=gray}}
+
+\usepackage{fancybox}         %Erm�glicht zeichnen von Boxen von definierter L�nge
+%\usepackage{framed}			  %Erm�glicht zeichnen von Boxen mit Umbr�chen ohne definierter L�nge
+
+
+% Bild statt Abbildung
+%\renewcommand{\figurename}{Bild} % with german
+\addto\captionsngerman{\renewcommand{\figurename}{Bild}} % with ngerman
+
+
+% fancy cross-referencing \fref & \Fref
+\usepackage[german, plain]{fancyref}
+
+
+\usepackage[                  %% Bildunterschriften
+   format = hang,             % Ausrichtung
+%   indention = 0.5cm,         % Texteinzug ab 2. Zeile
+   labelformat = default,     % Bezeichnerformatierung
+   labelsep = colon,          % Bezeichner-Trennzeichen
+%  textformat = period,       % Textformatierung (Textendzeichen)
+   justification = justified, % Text als Blocksatz setzen
+   singlelinecheck = true,    % 1-Zeilen-Beschriftungen --> zentrieren erlaubt
+   font = {it, small},        % Beschriftungsformat   
+   labelfont = bf,			  % Bezeichnerformat (Bild x.y...)
+%   textfont = it,             % Textformat
+   margin = 0pt,              % Beschriftungsrand (auch links/rechts m�glich {0pt, 0pt})
+%   oneside,                   % Einseitiger Textsatz
+   twoside,                   % Zweiseitiger Textsatz
+   parskip = 5pt,             % Abstand zwischen Abs�tzen in Beschriftungen
+   skip = 8pt,                % Abstand von Beschriftung
+   listfigurename = Bilderverzeichnis,	% Abbildungen anstatt Abbildungsverzeichniss
+   listtablename  = Tabellen,           % Tabellen anstatt Tabellenverzeichnis
+   figurewithin = chapter,    % Z�hlerbegrenzung festlegen (also Bild 3.1 anstatt Bild 43)
+   tablewithin = chapter      % Zahlerbegrenzung festlegen
+   ]{caption}%
+%\captionsetup[table]{
+%      position = top,         % Beschriftung als �berschrift bei Tabellen
+%%      tablename = Tabelle     % "`Tabelle"' anstatt "`Tabelle"'
+%   }% 
+%	\captionsetup[figure]{%
+%      position = bottom,      % Beschriftung alsUnterschrift bei Bildern 
+%      figurename = Bild       % "Bild" anstatt "Abbildung"
+%   }%
+
+
+%\addto\captionsngerman{\renewcommand{\figurename}{Bild}}
+
+
+\usepackage{subfigure}%          %%Teilabbildungen in einer Abbildung
+                              
+% \usepackage{wrapfig}          %% Paket um Text um Bilder herumflie�en zu lassen
+% \usepackage{float}%           %% Allgemeine Float-Umgebung, --> HERE (H) Anweisung
+
+
+%% Tabellen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{array}            %% Standarderweiterung f�r Tabellen      
+\usepackage{tabularx}         %% TabularX-Umgebung
+%\usepackage{booktabs}         %% Kommandoerweiterungen f�r Tabellen
+% \usepackage{threeparttable}   %% Tabellenkopf / -inhalt /-fu�note
+% \usepackage[                  %% Wie threeparttable, aber auch f�r TabularX geeignet
+%    referable
+%    ]{threeparttablex}
+
+
+%% Bibliographiestil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=biber,style=numeric-comp,sorting=none]{biblatex}
+\addbibresource{Kapitel/7_Literatur/Literatur.bib}
+
+
+
+%\usepackage[ % Erweiterung der Basisfunktionalit�t
+%	numbers,% Nummern
+%	square, % Eckige Klammern
+%    sort&compress,% Multiple Zitate sortieren und zusammenfassen
+%    longnamesfirst% Erstes Zitat mit vollen Namen
+%   ]
+%   {natbib}%
+%{Bibliographie/ka-style}
+%   \setcitestyle{
+%     authoryear,% Author-Year-Style
+%      square,   % Eckige Klammern
+%     semicolon, % semicolon als Trennzeichen
+%      aysep{},% Kein explizites Trennzeichen zwischen Author und Year
+%      yysep{;}% Komma als Trennzeichen zwischen mehreren Jahren
+%      }
+
+%% Nassi-Shneidermann-Struktogramme
+% \usepackage[
+%    pict2e,              % Ausgew�hltes Grafikpaket verwenden
+%    nofiller,            % Keine F�llzeichen
+%    verification,        % \assert als Kommando zur Verf�gung stellen 
+%    final                % Finalversion, Alternativ-Option: draft
+%    ]{struktex}
+
+%% Listings %%
+%\usepackage{listings}
+%	\definecolor{darkgreen}{rgb}{0,0.4,0}
+%	\lstset{	%Listings Einstellungen
+%   	language=[Visual]C++, %Sprache C (Pascal, ... [Dialect]Language Bsp: [Visual]C++)
+%   	frame = none, %Rahmen (none, leftline, topline, bottomline, lines, single, shadowbox, trbl, Trbl, ..., 
+% TRBL)
+%   	%framround = fttt, %Runde oder Eckige Ecken (Start: Obere rechte Ecke, f = Eckig, t = Rund)
+%   	captionpos = b, %Position der �berschrift (b = bottom, t = top)
+%   	%backgroundcolor=\color{yellow}, %Hintergrundfarbe (\color{Farbe})
+%   	%emph={square,root}, %Die W�rter square und root werden mit den emphstyle hervorgehoben. Siehe n�chste 
+%Zeile.
+%   	%emphstyle=\underbar, %Die W�rter square und root werden unterstrichen. Siehe letzte Zeile. 
+%   	%emph={[2]basic,test}, %Die W�rter basic und test werden gesondert hervorgehoben
+%   	%emphstyle={[2]\color{blue}}, %Die W�rter basic unt test werden blau geschrieben
+%%    	basicstyle=\ttfamily\footnotesize, %Schriftart: Courier New und Klein
+%      basicstyle=\ttfamily\normalsize, %Schriftart: Courier New und Klein 
+%   	keywordstyle=\color{blue}, %Blaue Schl�sselw�rter
+%   	commentstyle=\color{darkgreen}, %Gr�ne Kommentare
+%   	float = htbp, %Floating figure (htbp = Here, top, bottom, page)
+%   	extendedchars=true, %Deutsche Umlaute nicht verwenden (true: Verwenden)
+%   	numbers=left, %Zeilennummerierung auf der linken Seite
+%   	numberstyle=\tiny, %Gr��e der Zeilennummern
+%   	stepnumber=1, %Jede Zeile wird gez�hlt (-1: Es wird r�ckw�rts gez�hlt, 2: Jede zweite wird gez�hlt)
+%   	numbersep=5pt %Abstand zum Code
+%   	%firstnumber = 100, %Zeilennummerierung f�ngt bei 100 an
+%   	%firstline=2, %Beginnt mit der zweiten Zeile
+%   	%lastline=7 %Endet bei der Zeile 7
+%      }
+
+%%Packages f�r Kopf- und Fu�zeile%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}%
+
+%%Packages f"ur Fu"snoten%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\counterwithin\relax
+\let\counterwithout\relax
+\usepackage{chngcntr}%
+\counterwithout*{footnote}{chapter} %Deaktiviert das Zur"ucksetzen des Fu"snoten-Counters
+
+%% Mathematik-Packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}             %% AMS Mathematikumgebungen/-erweiterungen   
+\usepackage{amssymb}             %% AMS Symbol/Font-Paket
+\usepackage{accents}             %% Erweiterung f�r Akzente im Mathematik-Modus
+\usepackage{mathcomp}            %% Symbolerweiterungen f�r Mathematikmodus
+\usepackage{amsthm}
+\usepackage{amsbsy}
+%\usepackage{cancel}              %% Durchstreicehn in Mathematikumgebung
+
+%% Erscheinungsbild von Paragraph �ndern %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Schrift beginnt bei <paragraph> in n�chster Zeile
+\usepackage{titlesec}%
+%\titleformat{\paragraph}[hang]{\sffamily\bfseries}{\theparagraph}{.5em}{}%
+\titleformat{\paragraph}[hang]{\sffamily\bfseries}{\theparagraph}{1ex}{}
+\titlespacing{\section}{0pt}{6pt}{6pt}
+
+%% Package zum einbinden von einzelnen Querseiten %%%%%%%%%%%%%%%%%%%%%
+% \usepackage{pdflscape}        %% Einzelne Querseite ins PDF einbinden
+
+%% Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\usepackage[]{acronym}
+
+\usepackage{upgreek}
+%\usepackage{pdfpages}
+%\usepackage{fancyhdr} 
+%\pagestyle{fancy}
+
+%\usepackage{subfigure}
+
+\usepackage{setspace} 
+
+%%Hyperlink-Package%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACHTUNG: Als letztes package einf�gen!
+% Erleichtert das Navigieren. 
+\usepackage[                  %% Paket zum Navigieren innerhalb eines Dokuments
+   plainpages=false,           %% Arabische Zeichen f�r Link-Darstellung
+   bookmarksopen=true,        %% Lesezeichenbaum aufklappen
+   bookmarksopenlevel=1,      %% Aufklapptiefe
+   pdfborder={0 0 0},         %% Rahmenfarbe
+   pdfsubject={\Topic},       %% PDF Thema
+   pdfauthor={\Author},       %% Author
+   pdfpagemode=UseOutlines,	  %% Ansicht im Adobe Reader
+%   xetex,                     %% Ausgabe mit XeTeX
+   pdftex                     %% Ausgabe mit pdfTeX
+   ]{hyperref}
+   % \hypersetup{
+      % colorlinks=true,%
+      % citecolor=black,%
+      % filecolor=black,%
+      % linkcolor=black,%
+      % urlcolor=black
+      % } % Links werden weder umrandet noch farbig dargestellt.

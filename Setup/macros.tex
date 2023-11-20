@@ -1,0 +1,104 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Makros für Schirftzüge & zusätzliche Symbole 
+% Symbole
+\newcommand*{\registeredname}{\textsuperscript{\textregistered}}               % Registered Zeichen
+\newcommand*{\copyrightname}{\textsuperscript{\textcopyright}}                 % Copyright Zeichen
+\newcommand*{\trademarkname}{\texttrademark}                                   % Trademark Zeichen
+\newcommand*{\degree}{\ensuremath{^\circ}}                                     % ° Zeichen
+\newcommand*{\gegreeCelsius}{\ensuremath{^\circ \mathrm{C}}}                   % °C Zeichen
+\newcommand*{\R}{\ensuremath{\mathbb{R}}}                                      % R (reelle Zahlen)
+
+% C++ Schriftzug
+\newcommand*{\cpp}{\texorpdfstring{C\raisebox{0.3ex}{\footnotesize{++}}}{C++}} % C++ Text mit modifizierten Plus-Zeichen
+
+% MATLAB Schriftzug
+\newcommand*{\matlab}{\texorpdfstring{MATLAB\textsuperscript{\textregistered}}{MATLAB}}
+
+% Visual Studio Schriftzug
+% #1: Versionsnummer (Jahr)
+\newcommand*{\visualstudio}[1]{%
+   \texorpdfstring{Visual Studio\textsuperscript{\textregistered} #1}{Visual Studio #1}%
+}
+
+% Microsoft Schriftzug
+\newcommand*{\microsoft}{\texorpdfstring{Microsoft\textsuperscript{\textregistered}}{Microsoft}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Allgemeine n"utzliche Makros
+% et al.
+\newcommand{\etal}{et~al.\ }
+
+% engl.
+\newcommand{\engl}[1]{(engl.\ \textit{#1})}
+
+% engl. f"ur Abk"urzungen
+\newcommand{\Engl}[1]{(engl.\ #1)}
+
+% dt.
+\newcommand{\dt}[1]{(dt.\ #1)}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Makros für den Mathematik-Modus
+% Setzt Einheiten in Formeln
+\newcommand*{\unit}[1]{\,\mathrm{#1}}
+
+% Setz einen Punkt f"ur das Satzende innerhalb einer Formel
+\newcommand*{\punkt}{\ensuremath{\mbox{\,.}}}
+
+% Setz ein Komma innerhalb einer Formel
+\newcommand*{\komma}{\ensuremath{\mbox{\,,}}}
+
+% Setz einen Text zwischen zwei Formeln
+\newcommand*{\Text}[1]{\ensuremath{\mbox{\,#1\,}}}
+
+% Macht das Setzen von Indizes einfacher
+\newcommand{\ind}[1]{\ensuremath{_{\text{\tiny#1}}}}
+
+% Erzeugt Vektoren mit runden Klammern
+\newenvironment*{Vect}{\left(\begin{matrix}}{\end{matrix}\right)}
+
+% Erzeugt Matrizen mit eckigen Klammern
+\newenvironment*{Mat}{\left[\begin{matrix}}{\end{matrix}\right]}
+
+% Setzt die WENN Bedingung in Formeln
+\DeclareMathOperator{\ifOperator}{wenn}
+\newcommand*{\mathif}{& \ifOperator\;\;}
+
+% Setzt den SONST Ausdruck in Formeln
+\DeclareMathOperator{\elseOperator}{sonst}
+\newcommand*{\mathelse}{& \elseOperator}
+
+% Setzt den argmin Operator
+\DeclareMathOperator{\argminOperator}{\arg\min}
+\newcommand*{\argmin}[1]{\underset{#1}{\argminOperator}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Makros für das Einbinden von SVG Dateien
+% Vergleicht das Modifikationsdatum der SVG und PDF Dateien
+
+\newcommand{\executeiffilenewer}[3]{
+   \ifnum\pdfstrcmp
+      {\pdffilemoddate{#1}}
+      {\pdffilemoddate{#2}}
+      >0
+      {\immediate\write18{#3}}
+   \fi
+}
+% Definiert den Installationspfad von Inkscape
+%\makeatletter
+%   \def\inkscape{C:/Programs/Inkscape/inkscape}
+%\makeatother
+
+
+% Bindet SVG Dateien ein; falls die SVG Datei ge"andert wurde wird diese vorher nochmals kompiliert (zu .pdf_tex)
+\newcommand{\includesvg}[1]{
+   \executeiffilenewer{#1.svg}{#1.pdf}
+      {inkscape -z -D --file=#1.svg --export-pdf=#1.pdf --export-latex}
+   \input{#1.pdf_tex}
+}

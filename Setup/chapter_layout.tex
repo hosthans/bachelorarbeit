@@ -1,0 +1,27 @@
+%% Kapitelüberschrift-Stil %%
+\colorlet{chapter}{black!75}
+\addtokomafont{chapter}{\color{chapter}}
+
+\makeatletter%
+ \renewcommand*{\chapterformat}{% 
+   \begingroup% %\unitlength-Änderung lokal
+     \setlength{\unitlength}{1mm}% 
+     \begin{picture}(20,30)(0,5) %\begin{picture}(20,40)(0,5) 
+       \setlength{\fboxsep}{0pt} 
+       %\put(0,0){\framebox(20,40){}}% %Kästchen über Zahl
+       %\put(0,20){\makebox(20,20){\rule{20\unitlength}{20\unitlength}}}% %siehe oben
+       \put(20,15){\line(1,0){\dimexpr 
+           \textwidth-20\unitlength\relax\@gobble}}% 
+       \put(0,0){\makebox(20,20)[r]{% 
+           \fontsize{28\unitlength}{28\unitlength}\selectfont\thechapter 
+           \kern-.02em% %Ziffer in der Zeichenzelle nach rechts schieben 
+         }}% 
+       \put(20,15){\makebox(\dimexpr 
+           \textwidth-20\unitlength\relax\@gobble,\ht\strutbox\@gobble)[l]{% 
+             \ \normalsize\color{black}\chapapp~\thechapter\autodot 
+           }}% 
+     \end{picture}% %Leerzeichen lassen, TeX-Compiler hat sonst Probleme
+   \endgroup
+ } 
+ 
+\parindent0pt 

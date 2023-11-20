@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Einbinden des Seiten Layouts
+\input{Setup/page}
+
+% Einbinden eigener Kommandos
+\input{Setup/commands}
+
+% Einbinden der Packages
+\input{Setup/packages}
+
+% Einbinden eigener Makros
+%\input{Setup/macros}
+
+% Einbinden des Chapter Layouts
+\input{Setup/chapter_layout}
+
+% Kopf- und Fußzeile definieren
+\input{Setup/head_foot}
+
+% Erstelle Index f�r 'glossaries'
+%\makeglossaries
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                          Dokumentanfang                         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+   % Dokument erstmalig initialisieren (Front Matter)
+   \initDokument
+   
+   %\usepackage[utf8]{inputenc}
+   
+   % Deckblatt einbinden
+   \input{Kapitel/0_Start/Deckblatt}
+   
+   % Ehrenwörtliche Erklärung einbinden
+   \input{Kapitel/0_Start/Erklaerung}
+   
+   % Abstractum einfügen
+  % \newpage
+   %\renewcommand\abstractname{Abstract}   	 	    % "`Abstract"' anstatt "`Zusammenfassung"'
+   %\input{Kapitel/0_Start/Abstract}                			% Kein Abstract bei scrbook
+   
+   % Danksagung einfügen
+   \newpage									        % Leerseite zwischen "Zusammenfassung" und "Danksagung"
+   \input{Kapitel/0_Start/Danksagung}
+   
+   % Inhaltsverzeichnis einfügen
+   \setcounter{secnumdepth}{3}						% Tiefe des Inhaltsverzeichnisses festlegen
+   \setcounter{tocdepth}{2}
+   
+  
+   %\pdfbookmark{\contentsname}{TABLE_OF_CONTENTS}  % Inhaltsverzeichnis in PDF Lesezeichenliste aufnehmen
+   \tableofcontents								    % Inhaltsverzeichnis erzeugen
+   
+   \addtocontents{toc}{\protect\enlargethispage{2\normalbaselineskip}} %auf eine Seite skalieren
+   
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+   
+   % Dokument initialisieren
+   \InitDokument
+   
+   \input{Kapitel/0_Start/Acronyme}							% Abkürzungsverzeichnis	
+   
+   % Kapitel einbinden
+   \input{Kapitel/1_Einleitung/1_0_Einleitung}
+   \input{Kapitel/Grundlagen/Grundlagen}
+   \input{Kapitel/2_Stand_der_Technik/2_0_Stand_der_Technik}
+   \input{Kapitel/3_Implementierung/3_0_Implementierung}
+   \input{Kapitel/4_Ergebnisse/4_0_Ergebnisse}
+   \input{Kapitel/5_Zusammenfassung/5_0_Zusammenfassung_und_Ausblick}
+   \input{Kapitel/6_Anhang/6_0_Anhang}
+   
+       
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+   % Weitere Verzeichnisse
+   
+   \listoffigures          							% Abbildungsverzeichnis
+   \listoftables           							% Tabellenverzeichnis
+   %   \lstlistoflistings      						% Codeverzeichnis   
+   
+   %   \setbibpreamble{Prambel}    					% Text vor dem Verzeichnis
+   %   \nocite{*}									% Falls eine nicht-zitierte Quelle im PDF erscheinen soll
+   %   \bibliographystyle{dinat}
+   %   \begin{flushleft}
+   % \begin{small} 
+   % Bibliographie Style - dinat muss installiert sein
+   %   \bibliography{Kapitel/Literatur}					% Bibliographie erzeugen
+   %\end{small} 
+   %	\end{flushleft}	
+   
+   \nocite{*}
+   \printbibheading
+   \printbibliography[heading=subbibliography,keyword=article, title={Artikel}]
+   \printbibliography[heading=subbibliography,keyword=book, title={B{\"u}cher}]
+   \newpage
+   \printbibliography[heading=subbibliography,keyword=MBA, title={Doktorarbeiten und Masterthesis}]
+   \printbibliography[heading=subbibliography,keyword=online, title={Internet}]
+   
+   
+   
+   %\printbibliography	
+		
+%   \includepdfset{pagecommand={\thispagestyle{headings}}}
+%   \automark[section]{section}
+%   \lhead{Abkuerzungen}
+   
+   %\refstepcounter{chapter}
+   %\chaptermark{Abkürzungen}
+   %\input{Kapitel/0_Start/Acronyme}							% Abkürzungsverzeichnis						   
+
+   
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                           Dokumentende                          %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

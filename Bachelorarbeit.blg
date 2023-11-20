@@ -1,0 +1,20 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'Bachelorarbeit.blg'
+[26] biber-darwin:313> INFO - === Wed Oct 11, 2023, 10:03:20
+[44] Biber.pm:371> INFO - Reading 'Bachelorarbeit.bcf'
+[99] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[109] Biber.pm:3976> INFO - Processing section 0
+[118] Biber.pm:4136> INFO - Looking for bibtex format file 'Kapitel/7_Literatur/Literatur.bib' for section 0
+[119] bibtex.pm:1500> INFO - LaTeX decoding ...
+[125] bibtex.pm:1316> INFO - Found BibTeX data source 'Kapitel/7_Literatur/Literatur.bib'
+[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 4, warning: 138 characters of junk seen at toplevel
+[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 18, warning: 140 characters of junk seen at toplevel
+[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 30, warning: 140 characters of junk seen at toplevel
+[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 43, warning: 141 characters of junk seen at toplevel
+[157] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[157] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[157] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[157] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[163] bbl.pm:617> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
+[164] bbl.pm:720> INFO - Output to Bachelorarbeit.bbl
+[164] Biber.pm:110> INFO - WARNINGS: 4
