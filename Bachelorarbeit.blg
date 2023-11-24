@@ -1,20 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'Bachelorarbeit.blg'
-[26] biber-darwin:313> INFO - === Wed Oct 11, 2023, 10:03:20
-[44] Biber.pm:371> INFO - Reading 'Bachelorarbeit.bcf'
-[99] Biber.pm:854> INFO - Using all citekeys in bib section 0
-[109] Biber.pm:3976> INFO - Processing section 0
-[118] Biber.pm:4136> INFO - Looking for bibtex format file 'Kapitel/7_Literatur/Literatur.bib' for section 0
-[119] bibtex.pm:1500> INFO - LaTeX decoding ...
-[125] bibtex.pm:1316> INFO - Found BibTeX data source 'Kapitel/7_Literatur/Literatur.bib'
-[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 4, warning: 138 characters of junk seen at toplevel
-[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 18, warning: 140 characters of junk seen at toplevel
-[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 30, warning: 140 characters of junk seen at toplevel
-[150] Utils.pm:193> WARN - BibTeX subsystem: /var/folders/sf/1w4qbq1n5tjcdc16hcvkfvjh0000gn/T/dtdxoc4nXO/Literatur.bib_28986.utf8, line 43, warning: 141 characters of junk seen at toplevel
-[157] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[157] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[157] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[157] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[163] bbl.pm:617> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
-[164] bbl.pm:720> INFO - Output to Bachelorarbeit.bbl
-[164] Biber.pm:110> INFO - WARNINGS: 4
+[24] biber-darwin:313> INFO - === Fri Nov 24, 2023, 02:19:12
+[39] Biber.pm:371> INFO - Reading 'Bachelorarbeit.bcf'
+[93] Biber.pm:854> INFO - Using all citekeys in bib section 0
+[102] Biber.pm:3976> INFO - Processing section 0
+[110] Biber.pm:4136> INFO - Looking for bibtex format file 'Kapitel/7_Literatur/Literatur.bib' for section 0
+[111] bibtex.pm:1500> INFO - LaTeX decoding ...
+[114] bibtex.pm:1316> INFO - Found BibTeX data source 'Kapitel/7_Literatur/Literatur.bib'
+[125] Utils.pm:193> WARN - ISBN '978-3-662-61650-5 978-3-662-61651-2' in entry 'lorenz_reinforcement_2020' is invalid - run biber with '--validate_datamodel' for details.
+[134] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[134] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[134] Biber.pm:3804> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[134] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[138] bbl.pm:617> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
+[138] bbl.pm:720> INFO - Output to Bachelorarbeit.bbl
+[138] Biber.pm:110> INFO - WARNINGS: 1

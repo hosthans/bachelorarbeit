@@ -23,9 +23,9 @@
 \contentsline {section}{\numberline {4.2}Code-Beschreibung}{7}{section.4.2}
 \contentsline {chapter}{\numberline {5}Ergebnisse}{8}{chapter.5}
 \contentsline {section}{\numberline {5.1}Beobachtungen}{8}{section.5.1}
-\contentsline {section}{\numberline {5.2}R\IeC {\"u}ckschl\IeC {\"u}sse}{8}{section.5.2}
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{9}{chapter.6}
-\contentsline {chapter}{\numberline {7}Anhang}{10}{chapter.7}
-\contentsline {chapter}{\nonumberline Bilderverzeichnis}{12}{chapter*.5}
-\contentsline {chapter}{\nonumberline Tabellen}{13}{chapter*.6}
-\contentsline {chapter}{\nonumberline Literatur}{14}{chapter*.7}
+\contentsline {section}{\numberline {5.2}R\IeC {\"u}ckschl\IeC {\"u}sse}{9}{section.5.2}
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{10}{chapter.6}
+\contentsline {chapter}{\numberline {7}Anhang}{11}{chapter.7}
+\contentsline {chapter}{\nonumberline Bilderverzeichnis}{13}{chapter*.6}
+\contentsline {chapter}{\nonumberline Tabellen}{14}{chapter*.7}
+\contentsline {chapter}{\nonumberline Literatur}{15}{chapter*.8}
