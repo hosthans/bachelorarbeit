@@ -18,14 +18,15 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global}
+  \datalist[entry]{nyt/global//global/global}
     \entry{lorenz_reinforcement_2020}{book}{}
       \name{author}{1}{}{%
-        {{hash=8a862104cedf12a3c82f476a82c0f5f5}{%
+        {{uniquename=0,uniquepart=base,hash=8a862104cedf12a3c82f476a82c0f5f5}{%
            family={Lorenz},
            familyi={L\bibinitperiod},
            given={Uwe},
-           giveni={U\bibinitperiod}}}%
+           giveni={U\bibinitperiod},
+           givenun=0}}%
       }
       \list{language}{1}{%
         {de}%
@@ -39,8 +40,10 @@
       \strng{authorbibnamehash}{8a862104cedf12a3c82f476a82c0f5f5}
       \strng{authornamehash}{8a862104cedf12a3c82f476a82c0f5f5}
       \strng{authorfullhash}{8a862104cedf12a3c82f476a82c0f5f5}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{isbn}{978-3-662-61650-5 978-3-662-61651-2}
@@ -63,6 +66,10 @@
       \keyw{book}
     \endentry
   \enddatalist
+  \missing{Bar-Shalom}
+  \missing{Goldhammer}
+  \missing{S. 4}
+  \missing{WHO-2004}
 \endrefsection
 \endinput
 
