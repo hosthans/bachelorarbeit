@@ -19,6 +19,53 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{joshi_machine_2020}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=21585f2b1376237b6195bfb24bbd664f}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Ameet\bibnamedelima V},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{21585f2b1376237b6195bfb24bbd664f}
+      \strng{fullhash}{21585f2b1376237b6195bfb24bbd664f}
+      \strng{bibnamehash}{21585f2b1376237b6195bfb24bbd664f}
+      \strng{authorbibnamehash}{21585f2b1376237b6195bfb24bbd664f}
+      \strng{authornamehash}{21585f2b1376237b6195bfb24bbd664f}
+      \strng{authorfullhash}{21585f2b1376237b6195bfb24bbd664f}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-030-26621-9 978-3-030-26622-6}
+      \field{title}{Machine {Learning} and {Artificial} {Intelligence}}
+      \field{urlday}{24}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-030-26622-6
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-030-26622-6
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-030-26622-6
+      \endverb
+    \endentry
     \entry{lorenz_reinforcement_2020}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=8a862104cedf12a3c82f476a82c0f5f5}{%
@@ -30,6 +77,9 @@
       }
       \list{language}{1}{%
         {de}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
       }
       \list{publisher}{1}{%
         {Springer Berlin Heidelberg}%
@@ -63,12 +113,10 @@
       \verb{url}
       \verb http://link.springer.com/10.1007/978-3-662-61651-2
       \endverb
-      \keyw{book}
     \endentry
   \enddatalist
   \missing{Bar-Shalom}
   \missing{Goldhammer}
-  \missing{S. 4}
   \missing{WHO-2004}
 \endrefsection
 \endinput
