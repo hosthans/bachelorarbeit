@@ -15,7 +15,7 @@ Mögliche Arten von neuronalen Netzwerken, die über diese Methode trainiert wur
 	\hspace{-30mm}
 	\centering
 	\includegraphics[width=0.8\linewidth]{Bilder/SupervisedLearning.png}
-	\caption{Visualisierung grundlegender Prozesse während des Ablaufs eines überwachten Lernens}
+	\caption{Prozessvisualisierung: überwachtes Lernen}
 \end{figure}
 Der \textit{Ablauf} des Trainings lässt sich wie folgt beschreiben: nach Beenden von Datensammlung, Datenvorverarbeitung und Datensatztrennung in einen Trainings-, Validierungs- und Testdatensatz beginnt der eigentliche Teil des Trainings, wobei die Trainings- und Validierungsdaten für die aktualisierung der Modellparameter verwendet werden. Die Optimierung der Parameter wird auf Basis der Verlustfunktion mit Hilfe eines Rückwärtsdurchlaufes (eng.: Backward Propagation) durchgeführt, die mit der Differenz zwischen Vorhersagen des Modells aus dem Vorwärtsdurchlauf (eng.: Forward Propagation) und den realen Labeln berechnet wird.
 
@@ -24,7 +24,7 @@ Die \textit{Qualität} des Trainings wird meist anhand der Genauigkeit von Vorhe
 \text{Accuracy} = \frac{\text{Anzahl korrekter Vorhersagen}}{\text{Gesamtanzahl der Vorhersagen}}
 \]
  Weitere Metriken können die Präzision (eng.: Precision), der Recall oder auch der F1-Score sein. Neben Messungen der Modell-Genauigkeit kann man die Qualität des trainierten Modells auch anhand der Verlustfunktion (eng.: loss-function) oder der 'Area Under the Curve' (AUC), welche die Fläche unter der 'Receiver Operating Characteristic' (ROC) -- dem Verhältnis zwischen der True- und False-Positive-Rate -- messen.
-\subsection{Unüberwachtes Lernen}
+\subsection{Unüberwachtes Lernen}\label{subsec:unsupervisedlearning}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Bilder/unsupervised_sample.png}
@@ -35,9 +35,16 @@ Unüberwachtes Lernen (eng.: unsupervised learning) stellt einen anderen bedeute
 	\hspace{-15mm}
 	\centering
 	\includegraphics[width=0.8\linewidth]{Bilder/UnsupervisedLearning.png}
-	\caption{Visualisierung grundlegender Prozesse während des Ablaufs eines unüberwachten Lernens}
+	\caption{Prozessvisualisierung: unüberwachtes Lernen}
 \end{figure}
-Der \textit{Ablauf} des Trainigs gestaltet sich wie folgt: Nach Abschluss von Datensammlung und Vorverarbeitung beginnt der eigentliche Prozess des unüberwachten Lernens. Im Gegensatz zum überwachten Lernen (\ref{subsec:supervisedlearning}) gibt es hierbei keine vordefinierten Zielvariablen. Den Datenpunkten $X = x_1, x_2, \ldots, x_n$ ist also initial keine Kategorie beziehungsweise kein Label zugeordnet, da die Menge $Y$ bist dato nicht existent ist. Im Gegensatz zu überwachtem Lernen nutzt man hier Algorithmen wie beispielsweise k-means Clustering, um eine bestimmte Operation auf den zu behandelnden Datensatz auszuführen. Mit Hilfe des Algorithmus wird ein bestimmtes Modell dahingehend trainiert, dass es einen bestimmten Datensatz zum Beispiel in bestimmte Kategorien unterteilen kann. Dafür analysiert der Algorithmus die jeweiligen Datenpunkte und versucht diese mit Hilfe von Zusammenhängen und verschiedenen extrahierten Merkmalen zu interpretieren. Anhand des dabei erlangten Wissens werden Modellparameter aktualisiert, wonach das unüberwachte Lernen beendet ist. Ein Ergebnis kann hierbei beispielsweise ein kategorisierter Datensatz sein.
+Der \textit{Ablauf} des Trainigs gestaltet sich wie folgt: Nach Abschluss von Datensammlung und Vorverarbeitung beginnt der eigentliche Prozess des unüberwachten Lernens. Im Gegensatz zum überwachten Lernen (\ref{subsec:supervisedlearning}) gibt es hierbei keine vordefinierten Zielvariablen. Den Datenpunkten $X = x_1, x_2, \ldots, x_n$ ist also initial keine Kategorie beziehungsweise kein Label zugeordnet, da die Menge $Y$ bist dato nicht existent ist. Im Gegensatz zu überwachtem Lernen nutzt man hier Algorithmen wie beispielsweise '$k$-Nearest Neighbors (KNN)' (\cite[38]{joshi_machine_2020}), um eine bestimmte Operation auf den zu behandelnden Datensatz auszuführen. Mit Hilfe des Algorithmus wird ein bestimmtes Modell dahingehend trainiert, dass es einen bestimmten Datensatz zum Beispiel in bestimmte Kategorien unterteilen kann. Dafür analysiert der Algorithmus die jeweiligen Datenpunkte und versucht diese mit Hilfe von Zusammenhängen und verschiedenen extrahierten Merkmalen zu interpretieren. Anhand des dabei erlangten Wissens werden Modellparameter aktualisiert, wonach das unüberwachte Lernen beendet ist. Ein Ergebnis kann hierbei beispielsweise ein kategorisierter Datensatz sein.
 
 Die  \textit{Qualität} eines Modells ist schwieriger zu messen als bei überwachtem Lernen \ref{subsec:supervisedlearning}, da keine klar definierte Zielvariable vorliegt, mit Hilfe welcher eine Genauigkeitsanalyse durchgeführt werden kann. Dennoch lässt sich auch dieses mit verschiedenen Metriken evaluieren. Zum einen kann man mit dem sogenannten Silhouette Score (\cite{shahapure_cluster_2020}) Clustering-Algorithmen evaluieren, da dieser das Zusammenpassen der verschiedenen Datenpunkte innerhalb eines Clusters bewertet. Je höher dieser Wert, desto besser sind die jeweiligen Cluster definiert. Neben Metriken, die durch bestimmte Berechnungen repräsentiert werden, lässt sich die Qualität eines Modells auch durch visuelle Methoden wie der Auswahl geeigneter Plots messen, die die Zugehörigkeit verschiedener Datenpunkte darstellen.
 \subsection{Bestärkendes Lernen}
+Das bestärkende Lernen (eng.: reinforcement learning) ist ein maschinelles Lernverfahren, das auf Feedback der Umgebung angewiesen ist. Zudem besitzen Datenpunkte kein Label, weshalb dieser weder voll der Kategorie von überwachten noch der unüberwachter Lernverfahren zugeordnet werden. Die Interaktion mit der Umgebung findet hier mit Hilfe eines Agenten statt, welcher verschiedene Erfahrungen sammelt. Das Hauptziel des Algorithmus liegt darin, den Agenten so zu trainieren, dass er in seiner bestimmten Umgebung optimale Aktionen ausführt, die eine maximale Belohnung herbeiführen. Diese Aktionen werden innerhalb einer bestimmten Umgebung ausgeführt, welche -- basierend auf die Tat -- ein bestimmtes Feedback in Form von Belohung oder Strafe zurück gibt. Dadurch hat der Agent über die Dauer des Lernprozesses das Ziel, die maximale kumulative Belohung zu erzielen.
+\begin{figure}[H]\label{img:reinforcementworkflow}
+	\hspace{-10mm}
+	\centering
+	\includegraphics[width=0.8\linewidth]{Bilder/ReinforcementLearning.png}
+	\caption{Prozessvisualisierung: bestärkendes Lernen}
+\end{figure}
