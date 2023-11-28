@@ -28,9 +28,6 @@
            giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod},
            givenun=0}}%
       }
-      \list{language}{1}{%
-        {en}%
-      }
       \list{location}{1}{%
         {Cham}%
       }
@@ -46,15 +43,17 @@
       \field{sortinit}{J}
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-030-26621-9 978-3-030-26622-6}
-      \field{title}{Machine {Learning} and {Artificial} {Intelligence}}
+      \field{langid}{english}
+      \field{title}{Machine Learning and Artificial Intelligence}
       \field{urlday}{24}
       \field{urlmonth}{11}
       \field{urlyear}{2023}
       \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/978-3-030-26622-6
@@ -75,9 +74,6 @@
            giveni={U\bibinitperiod},
            givenun=0}}%
       }
-      \list{language}{1}{%
-        {de}%
-      }
       \list{location}{1}{%
         {Berlin, Heidelberg}%
       }
@@ -93,16 +89,18 @@
       \field{sortinit}{L}
       \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{isbn}{978-3-662-61650-5 978-3-662-61651-2}
-      \field{shorttitle}{Reinforcement {Learning}}
-      \field{title}{Reinforcement {Learning}: {Aktuelle} {Ansätze} verstehen - mit {Beispielen} in {Java} und {Greenfoot}}
+      \field{langid}{german}
+      \field{shorttitle}{Reinforcement Learning}
+      \field{title}{Reinforcement Learning: Aktuelle Ansätze verstehen - mit Beispielen in Java und Greenfoot}
       \field{urlday}{4}
       \field{urlmonth}{10}
       \field{urlyear}{2023}
       \field{year}{2020}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/978-3-662-61651-2
@@ -112,6 +110,67 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/10.1007/978-3-662-61651-2
+      \endverb
+    \endentry
+    \entry{shahapure_cluster_2020}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=3aba07428cf65c86c997bfd074b6ccae}{%
+           family={Shahapure},
+           familyi={S\bibinitperiod},
+           given={Ketan\bibnamedelima Rajshekhar},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4e28885f5b0e11ece7e7434891b2467b}{%
+           family={Nicholas},
+           familyi={N\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {sydney, Australia}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{de22e472baf254f138040a7e32d80469}
+      \strng{fullhash}{de22e472baf254f138040a7e32d80469}
+      \strng{bibnamehash}{de22e472baf254f138040a7e32d80469}
+      \strng{authorbibnamehash}{de22e472baf254f138040a7e32d80469}
+      \strng{authornamehash}{de22e472baf254f138040a7e32d80469}
+      \strng{authorfullhash}{de22e472baf254f138040a7e32d80469}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clustering is an important phase in data mining. Selecting the number of clusters in a clustering algorithm, e.g. choosing the best value of k in the various k-means algorithms [1], can be difﬁcult. We studied the use of silhouette scores and scatter plots to suggest, and then validate, the number of clusters we speciﬁed in running the k-means clustering algorithm on two publicly available data sets. Scikit-learn’s [4] silhouette score method, which is a measure of the quality of a cluster, was used to ﬁnd the mean silhouette co-efﬁcient of all the samples for different number of clusters. The highest silhouette score indicates the optimal number of clusters. We present several instances of utilizing the silhouette score to determine the best value of k for those data sets.}
+      \field{booktitle}{2020 {IEEE} 7th International Conference on Data Science and Advanced Analytics ({DSAA})}
+      \field{eventtitle}{2020 {IEEE} 7th International Conference on Data Science and Advanced Analytics ({DSAA})}
+      \field{isbn}{978-1-72818-206-3}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Cluster Quality Analysis Using Silhouette Score}
+      \field{urlday}{28}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{747\bibrangedash 748}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/DSAA49011.2020.00096
+      \endverb
+      \verb{file}
+      \verb Shahapure und Nicholas - 2020 - Cluster Quality Analysis Using Silhouette Score.pdf:/Users/hannes/Zotero/storage/LCZ2BTG6/Shahapure und Nicholas - 2020 - Cluster Quality Analysis Using Silhouette Score.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9260048/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9260048/
       \endverb
     \endentry
   \enddatalist
