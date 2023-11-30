@@ -1,21 +1,22 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'Bachelorarbeit.blg'
-[24] biber-darwin:313> INFO - === Tue Nov 28, 2023, 10:12:17
-[40] Biber.pm:371> INFO - Reading 'Bachelorarbeit.bcf'
-[97] Biber.pm:857> INFO - Found 6 citekeys in bib section 0
-[107] Biber.pm:3976> INFO - Processing section 0
-[115] Biber.pm:4136> INFO - Looking for bibtex format file 'Kapitel/7_Literatur/Literatur.bib' for section 0
-[116] bibtex.pm:1500> INFO - LaTeX decoding ...
-[123] bibtex.pm:1316> INFO - Found BibTeX data source 'Kapitel/7_Literatur/Literatur.bib'
-[135] Utils.pm:193> WARN - ISBN '978-3-030-26621-9 978-3-030-26622-6' in entry 'joshi_machine_2020' is invalid - run biber with '--validate_datamodel' for details.
-[140] Utils.pm:193> WARN - ISBN '978-3-662-61650-5 978-3-662-61651-2' in entry 'lorenz_reinforcement_2020' is invalid - run biber with '--validate_datamodel' for details.
-[145] Utils.pm:193> WARN - I didn't find a database entry for 'Bar-Shalom' (section 0)
-[145] Utils.pm:193> WARN - I didn't find a database entry for 'Goldhammer' (section 0)
-[145] Utils.pm:193> WARN - I didn't find a database entry for 'WHO-2004' (section 0)
-[153] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[153] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[153] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[153] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[23] biber-darwin:313> INFO - === Wed Nov 29, 2023, 17:43:05
+[39] Biber.pm:371> INFO - Reading 'Bachelorarbeit.bcf'
+[94] Biber.pm:857> INFO - Found 7 citekeys in bib section 0
+[103] Biber.pm:3976> INFO - Processing section 0
+[111] Biber.pm:4136> INFO - Looking for bibtex format file 'Kapitel/7_Literatur/Literatur.bib' for section 0
+[112] bibtex.pm:1500> INFO - LaTeX decoding ...
+[119] bibtex.pm:1316> INFO - Found BibTeX data source 'Kapitel/7_Literatur/Literatur.bib'
+[131] Utils.pm:193> WARN - ISBN '978-3-030-26621-9 978-3-030-26622-6' in entry 'joshi_machine_2020' is invalid - run biber with '--validate_datamodel' for details.
+[135] Utils.pm:193> WARN - ISBN '978-3-662-61650-5 978-3-662-61651-2' in entry 'lorenz_reinforcement_2020' is invalid - run biber with '--validate_datamodel' for details.
+[140] Utils.pm:193> WARN - ISBN '978-3-030-32643-2 978-3-030-32644-9' in entry 'balas_recent_2020' is invalid - run biber with '--validate_datamodel' for details.
+[143] Utils.pm:193> WARN - I didn't find a database entry for 'Bar-Shalom' (section 0)
+[143] Utils.pm:193> WARN - I didn't find a database entry for 'Goldhammer' (section 0)
+[143] Utils.pm:193> WARN - I didn't find a database entry for 'WHO-2004' (section 0)
+[152] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[152] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[152] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[152] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
 [158] bbl.pm:617> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
 [160] bbl.pm:720> INFO - Output to Bachelorarbeit.bbl
-[160] Biber.pm:110> INFO - WARNINGS: 5
+[160] Biber.pm:110> INFO - WARNINGS: 6

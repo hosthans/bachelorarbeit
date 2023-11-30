@@ -11,22 +11,24 @@
 \contentsline {subsection}{\numberline {2.1.1}\IeC {\"U}berwachtes Lernen}{6}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Un\IeC {\"u}berwachtes Lernen}{7}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Best\IeC {\"a}rkendes Lernen}{8}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Bilderkennung /-klassifikation}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Angriffsm\IeC {\"o}glichkeiten auf Neuronale Netzwerke}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Modell-Inversionsangriffe}{10}{subsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.1.1}Angriffsziel}{10}{subsubsection.2.3.1.1}
-\contentsline {subsubsection}{\numberline {2.3.1.2}Angriffsvektoren}{10}{subsubsection.2.3.1.2}
-\contentsline {subsubsection}{\numberline {2.3.1.3}Verteidigungsstrategien}{10}{subsubsection.2.3.1.3}
-\contentsline {chapter}{\numberline {3}Stand der Technik}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Forschungsergebnisse}{11}{section.3.1}
-\contentsline {chapter}{\numberline {4}Implementierung}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}Funktionalit\IeC {\"a}t des Codes}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}Code-Beschreibung}{12}{section.4.2}
-\contentsline {chapter}{\numberline {5}Ergebnisse}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Beobachtungen}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}R\IeC {\"u}ckschl\IeC {\"u}sse}{14}{section.5.2}
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{15}{chapter.6}
-\contentsline {chapter}{\numberline {7}Anhang}{16}{chapter.7}
-\contentsline {chapter}{\nonumberline Bilderverzeichnis}{18}{chapter*.10}
-\contentsline {chapter}{\nonumberline Tabellen}{19}{chapter*.11}
-\contentsline {chapter}{\nonumberline Literatur}{20}{chapter*.12}
+\contentsline {section}{\numberline {2.2}Bilderkennung /-klassifikation}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Networks (CNN)}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Merkmalextrahierung}{11}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Angriffsm\IeC {\"o}glichkeiten auf Neuronale Netzwerke}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Modell-Inversionsangriffe}{12}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Angriffsziel}{12}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Angriffsvektoren}{12}{subsubsection.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.1.3}Verteidigungsstrategien}{12}{subsubsection.2.3.1.3}
+\contentsline {chapter}{\numberline {3}Stand der Technik}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Forschungsergebnisse}{13}{section.3.1}
+\contentsline {chapter}{\numberline {4}Implementierung}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Funktionalit\IeC {\"a}t des Codes}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Code-Beschreibung}{14}{section.4.2}
+\contentsline {chapter}{\numberline {5}Ergebnisse}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Beobachtungen}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}R\IeC {\"u}ckschl\IeC {\"u}sse}{16}{section.5.2}
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{17}{chapter.6}
+\contentsline {chapter}{\numberline {7}Anhang}{18}{chapter.7}
+\contentsline {chapter}{\nonumberline Bilderverzeichnis}{20}{chapter*.11}
+\contentsline {chapter}{\nonumberline Tabellen}{21}{chapter*.12}
+\contentsline {chapter}{\nonumberline Literatur}{22}{chapter*.13}

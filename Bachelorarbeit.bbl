@@ -19,6 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{balas_recent_2020}{collection}{}
+      \name{editor}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=93439a15ac9085326b06aa75b319753c}{%
+           family={Balas},
+           familyi={B\bibinitperiod},
+           given={Valentina\bibnamedelima E.},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=48199b4eef9fc39a76c3283255f56af2}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Raghvendra},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6f28b7a34ca160351e94cd6862af1b05}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Rajshree},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{fe33c63e7ad860f4a912fcf9c57478ae}
+      \strng{fullhash}{fe33c63e7ad860f4a912fcf9c57478ae}
+      \strng{bibnamehash}{fe33c63e7ad860f4a912fcf9c57478ae}
+      \strng{editorbibnamehash}{fe33c63e7ad860f4a912fcf9c57478ae}
+      \strng{editornamehash}{fe33c63e7ad860f4a912fcf9c57478ae}
+      \strng{editorfullhash}{fe33c63e7ad860f4a912fcf9c57478ae}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-030-32643-2 978-3-030-32644-9}
+      \field{langid}{english}
+      \field{series}{Intelligent Systems Reference Library}
+      \field{title}{Recent Trends and Advances in Artificial Intelligence and Internet of Things}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{172}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-030-32644-9
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-030-32644-9
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-030-32644-9
+      \endverb
+    \endentry
     \entry{joshi_machine_2020}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=21585f2b1376237b6195bfb24bbd664f}{%
