@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  30 NOV 2023 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 DEC 2023 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1622,7 +1622,7 @@ LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 27.
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (./Kapitel/0_Start/Deckblatt.tex
-<Bilder/thab_logo.png, id=116, 583.781pt x 399.894pt>
+<Bilder/thab_logo.png, id=132, 583.781pt x 399.894pt>
 File: Bilder/thab_logo.png Graphic file (type png)
 <use Bilder/thab_logo.png>
 Package pdftex.def Info: Bilder/thab_logo.png  used on input line 10.
@@ -1651,7 +1651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-<Bilder/kav_logo.png, id=128, 3208.788pt x 937.904pt>
+<Bilder/kav_logo.png, id=144, 3208.788pt x 937.904pt>
 File: Bilder/kav_logo.png Graphic file (type png)
 <use Bilder/kav_logo.png>
 Package pdftex.def Info: Bilder/kav_logo.png  used on input line 70.
@@ -1850,7 +1850,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
-<Bilder/SupervisedLearning.png, id=202, 865.7946pt x 420.1296pt>
+<Bilder/SupervisedLearning.png, id=223, 865.7946pt x 420.1296pt>
 File: Bilder/SupervisedLearning.png Graphic file (type png)
 <use Bilder/SupervisedLearning.png>
 Package pdftex.def Info: Bilder/SupervisedLearning.png  used on input line 17.
@@ -1871,7 +1871,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
-<Bilder/unsupervised_sample.png, id=208, 718.6047pt x 226.6869pt>
+<Bilder/unsupervised_sample.png, id=229, 718.6047pt x 226.6869pt>
 File: Bilder/unsupervised_sample.png Graphic file (type png)
 <use Bilder/unsupervised_sample.png>
 Package pdftex.def Info: Bilder/unsupervised_sample.png  used on input line 30.
@@ -1886,7 +1886,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 33.
  [6 <./Bilder/SupervisedLearning.png>]
-<Bilder/UnsupervisedLearning.png, id=222, 903.375pt x 451.6875pt>
+<Bilder/UnsupervisedLearning.png, id=243, 903.375pt x 451.6875pt>
 File: Bilder/UnsupervisedLearning.png Graphic file (type png)
 <use Bilder/UnsupervisedLearning.png>
 Package pdftex.def Info: Bilder/UnsupervisedLearning.png  used on input line 37
@@ -1905,7 +1905,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 43.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 43.
-<Bilder/ReinforcementLearning.png, id=236, 699.3327pt x 348.3414pt>
+<Bilder/ReinforcementLearning.png, id=257, 699.3327pt x 348.3414pt>
 File: Bilder/ReinforcementLearning.png Graphic file (type png)
 <use Bilder/ReinforcementLearning.png>
 Package pdftex.def Info: Bilder/ReinforcementLearning.png  used on input line 5
@@ -1950,7 +1950,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 16.
  [10]
-<Bilder/sobelfilter.png, id=256, 252.945pt x 252.945pt>
+<Bilder/sobelfilter.png, id=277, 252.945pt x 252.945pt>
 File: Bilder/sobelfilter.png Graphic file (type png)
 <use Bilder/sobelfilter.png>
 Package pdftex.def Info: Bilder/sobelfilter.png  used on input line 20.
@@ -2066,25 +2066,52 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-<Bilder/dp_acc.png, id=314, 215.6055pt x 180.675pt>
-File: Bilder/dp_acc.png Graphic file (type png)
-<use Bilder/dp_acc.png>
-Package pdftex.def Info: Bilder/dp_acc.png  used on input line 9.
-(pdftex.def)             Requested size: 215.60497pt x 180.67455pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+
+Overfull \hbox (13.6646pt too wide) in paragraph at lines 6--7
+\T1/lmr/m/n/10.95 rend auf ei-nem Klas-si-fi-zie-rungs-mo-dell für Zah-len und 
+Ge-sich-tern auf-ge-zeigt. 
+ []
+
+<Bilder/0_mnist.png, id=335, 340.27126pt x 337.26pt>
+File: Bilder/0_mnist.png Graphic file (type png)
+<use Bilder/0_mnist.png>
+Package pdftex.def Info: Bilder/0_mnist.png  used on input line 13.
+(pdftex.def)             Requested size: 159.33823pt x 157.92555pt.
+<Bilder/401_celeba.png, id=336, 64.24pt x 64.24pt>
+File: Bilder/401_celeba.png Graphic file (type png)
+<use Bilder/401_celeba.png>
+Package pdftex.def Info: Bilder/401_celeba.png  used on input line 15.
+(pdftex.def)             Requested size: 159.33823pt x 159.35176pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 22.
+[15
+
+
+ <./Bilder/0_mnist.png> <./Bilder/401_celeba.png (PNG copy)>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
 )
 (./Kapitel/4_Ergebnisse/4_2_Rueckschluesse.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
- [15
-
-
- <./Bilder/dp_acc.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2143,7 +2170,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--39
 
  []
 
-<Bilder/Neural_Network.jpg, id=330, 937.5025pt x 544.0325pt>
+<Bilder/Neural_Network.jpg, id=354, 937.5025pt x 544.0325pt>
 File: Bilder/Neural_Network.jpg Graphic file (type jpg)
 <use Bilder/Neural_Network.jpg>
 Package pdftex.def Info: Bilder/Neural_Network.jpg  used on input line 46.
@@ -2270,16 +2297,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 3248D6C08D4D1D8DA58409A9CB6B0EA7;1750.
+(rerunfilecheck)             Checksum: 1EAE002CE25C3E7BAEFAA551E17EEA29;2051.
 Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
 \openout1 = `Bachelorarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33084 strings out of 492649
- 612048 string characters out of 6129622
- 1249115 words of memory out of 5000000
- 36325 multiletter control sequences out of 15000+600000
+ 33100 strings out of 492649
+ 612332 string characters out of 6129622
+ 1249321 words of memory out of 5000000
+ 36335 multiletter control sequences out of 15000+600000
  618202 words of font info for 76 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  51i,12n,80p,10397b,2178s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2300,10 +2327,10 @@ ocal/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/public/lm/lmtt9.pfb>
-Output written on Bachelorarbeit.pdf (29 pages, 1245743 bytes).
+Output written on Bachelorarbeit.pdf (29 pages, 1288032 bytes).
 PDF statistics:
- 460 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
- 108 named destinations out of 1000 (max. 500000)
- 270 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 420 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

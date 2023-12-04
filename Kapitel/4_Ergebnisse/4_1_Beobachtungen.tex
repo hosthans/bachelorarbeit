@@ -1,12 +1,25 @@
 \section{Beobachtungen} \label{chpt:Ergebnisse_Beobachtungen}
-Hier sollen die Beobachtungen der Verteidigungsstrategien stehen ...
+Beobachtungen
+\subsection{Modellleistung}
 
-Bild einfügen: Das ist ein TEstBild
-Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... 
-\begin{figure}
-    \hspace{-10mm}
-    \centering
-	\includegraphics[]{Bilder/dp_acc.png}
-	\caption{Beschreibung der Grafik}
+\subsection{Bildqualität}
+Aufgrund der verschiedenen Angriffs-Verfahren variiert die Genauigkeit der Bilder in den unterschiedlichen Durchgängen, wobei die Qualität - abhängig von der Komplexität des Generative-Adversarial Networks - gleich ist. Die Genauigkeit des neu generierten Bildes, das aus privaten Daten abgeleitet ist, wird mit Hilfe des Confidence-Scores bezüglich Ziel-Klasse bestimmt. Im Folgenden werden einige Vergleiche über die Bildqualität nach der Ausführung des Angriffs basierend auf einem Klassifizierungsmodell für Zahlen und Gesichtern aufgezeigt.
+
+Die \textit{Qualität} der Bilder ist abhängig von genutztem GAN (Generative adversarial network), das für die Generierung verwendet wird. Generierungen basierend auf dem DCGAN sind aufgrund geringerer Parameter, kürzerer Trainingsdauer und anderer Faktoren qualitativ nicht so hochwertig wie die des genutzten StyleGANs.
+
+\begin{figure}[H]
+	\centering
+	
+	\includegraphics[width=0.35\linewidth]{Bilder/0_mnist.png}
+	\hspace{1cm} % Einfügen von horizontalen Abständen zwischen den Bildern
+	\includegraphics[width=0.35\linewidth]{Bilder/401_celeba.png}
+	
+	\caption{Generierung der Zahl 0 auf Basis eines DCGAN (links) und einer Frau mit Hilfe eines StyleGANs (rechts)}
+	\label{img:gen_img}
 \end{figure}
-Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... Hier steht ganz viel Text... 
+
+Wie auf dem linken Teil des Bildes \ref{img:gen_img} zu erkennen, sind diese relativ gering aufgelöst mit vergleichsweise wenigen Pixeln repräsentiert. Die Qualität ist allerdings für eine effizientere Ausführung des Angriffs ausreichend, da Zahlen gut erkennbar sind. Bilder aus der angesprochenen StyleGAN-Architektur sind im Grunde höher aufgelöst, werden aber im Laufe des Algorithmus für die Performance reduziert (siehe rechter Teil des Bildes \ref{img:gen_img}).
+\subsection{Angriffsperformance}
+
+\subsection{Auswertung der Verteidigungsstrategie}
+

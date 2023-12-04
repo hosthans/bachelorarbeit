@@ -26,6 +26,10 @@
 \contentsline {section}{\numberline {4.2}Code-Beschreibung}{14}{section.4.2}
 \contentsline {chapter}{\numberline {5}Ergebnisse}{15}{chapter.5}
 \contentsline {section}{\numberline {5.1}Beobachtungen}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Modellleistung}{15}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Bildqualit\IeC {\"a}t}{15}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Angriffsperformance}{16}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Auswertung der Verteidigungsstrategie}{16}{subsection.5.1.4}
 \contentsline {section}{\numberline {5.2}R\IeC {\"u}ckschl\IeC {\"u}sse}{16}{section.5.2}
 \contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{17}{chapter.6}
 \contentsline {chapter}{\numberline {7}Anhang}{18}{chapter.7}
