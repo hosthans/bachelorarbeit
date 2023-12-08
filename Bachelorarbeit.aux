@@ -28,9 +28,11 @@
 \@writefile{toc}{\contentsline {chapter}{Abk\IeC {\"u}rzungen}{1}{chapter*.2}}
 \newacro{ML}[\AC@hyperlink{ML}{ML}]{\textit  {Maschinelles Lernen}}
 \newacro{CNN}[\AC@hyperlink{CNN}{CNN}]{\textit  {Convolutional Neural Network}}
-\newacro{DCGAN}[\AC@hyperlink{DCGAN}{DCGAN}]{Deep Convolutional Generative Adversarial Network}
+\newacro{DCGAN}[\AC@hyperlink{DCGAN}{DCGAN}]{\textit  {Deep Convolutional Generative Adversarial Network}}
 \newacro{KNN}[\AC@hyperlink{KNN}{KNN}]{\textit  {K\IeC {\"u}nstlich-Neuronales Netzwerk}}
+\newacro{KEDMI}[\AC@hyperlink{KEDMI}{KEDMI}]{\textit  {Knowledge-Enriched-Distributional Model Inversion}}
 \newacro{NN}[\AC@hyperlink{NN}{NN}]{\textit  {Neuronales Netzwerk, eng.: Neural Network}}
+\newacro{RBMI}[\AC@hyperlink{RBMI}{RBMI}]{\textit  {Reinforcement-Based Model Inverion}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Einleitung}{2}{chapter.1}}
 \@writefile{lof}{\addvspace {\baselineskip }}
 \@writefile{lot}{\addvspace {\baselineskip }}
@@ -116,63 +118,73 @@
 \@writefile{lot}{\addvspace {\baselineskip }}
 \@writefile{lol}{\addvspace {\baselineskip }}
 \newlabel{chpt:Ergebnisse_Main}{{5}{16}{Ergebnisse}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Beobachtungen}{16}{section.5.1}}
-\newlabel{chpt:Ergebnisse_Beobachtungen}{{5.1}{16}{Beobachtungen}{section.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Modellleistung}{16}{subsection.5.1.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Modellleistung}{16}{section.5.1}}
 \newlabel{img:acc_vgg_dp}{{5.1a}{16}{Modell-Genauigkeit\relax }{figure.caption.9}{}}
 \newlabel{sub@img:acc_vgg_dp}{{a}{16}{Modell-Genauigkeit\relax }{figure.caption.9}{}}
 \newlabel{img:loss_vgg_dp}{{5.1b}{16}{Verlust\relax }{figure.caption.9}{}}
 \newlabel{sub@img:loss_vgg_dp}{{b}{16}{Verlust\relax }{figure.caption.9}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Verlust- und Genauigkeitsgegen\IeC {\"u}berstellung eines auf den MNIST-Datensatz normal und privat trainierten Modells\relax }}{16}{figure.caption.9}}
 \newlabel{img:mnist_figure}{{5.1}{16}{Verlust- und Genauigkeitsgegenüberstellung eines auf den MNIST-Datensatz normal und privat trainierten Modells\relax }{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Bildqualit\IeC {\"a}t}{17}{subsection.5.1.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Bildqualit\IeC {\"a}t}{17}{section.5.2}}
 \newlabel{img:gen_img_dcgan}{{5.2a}{17}{Generierung der Zahl 0 auf Basis eines DCGAN\relax }{figure.caption.10}{}}
 \newlabel{sub@img:gen_img_dcgan}{{a}{17}{Generierung der Zahl 0 auf Basis eines DCGAN\relax }{figure.caption.10}{}}
 \newlabel{img:gen_img_stylegan}{{5.2b}{17}{Generierung einer Frau mit Hilfe eines StyleGANs\relax }{figure.caption.10}{}}
 \newlabel{sub@img:gen_img_stylegan}{{b}{17}{Generierung einer Frau mit Hilfe eines StyleGANs\relax }{figure.caption.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Bildqualit\IeC {\"a}t der GAN-Modelle\relax }}{17}{figure.caption.10}}
 \newlabel{img:gen_img}{{5.2}{17}{Bildqualität der GAN-Modelle\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Angriffsperformance}{18}{subsection.5.1.3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3.1}Bildqualit\IeC {\"a}t der Angriffe}{18}{subsubsection.5.1.3.1}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3.2}Angriffsstatistiken}{18}{subsubsection.5.1.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Auswertung der Verteidigungsstrategie}{18}{subsection.5.1.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}R\IeC {\"u}ckschl\IeC {\"u}sse}{18}{section.5.2}}
-\newlabel{chpt:Ergebnisse_Rueckschluesse}{{5.2}{18}{Rückschlüsse}{section.5.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{19}{chapter.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Angriffsperformance}{18}{section.5.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Genauigkeit der Angriffe}{18}{subsection.5.3.1}}
+\newlabel{img:kedmi_orig}{{5.3a}{19}{60 Originalbilder des MNIST-Datensatzes\relax }{figure.caption.11}{}}
+\newlabel{sub@img:kedmi_orig}{{a}{19}{60 Originalbilder des MNIST-Datensatzes\relax }{figure.caption.11}{}}
+\newlabel{img:kedmi_gen}{{5.3b}{19}{60 durch den \glqq KEDMI\grqq -Angriff generierte Bilder\relax }{figure.caption.11}{}}
+\newlabel{sub@img:kedmi_gen}{{b}{19}{60 durch den \glqq KEDMI\grqq -Angriff generierte Bilder\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Gegen\IeC {\"u}berstellung der generierten und originalen Bilder\relax }}{19}{figure.caption.11}}
+\newlabel{img:kedmi_visual}{{5.3}{19}{Gegenüberstellung der generierten und originalen Bilder\relax }{figure.caption.11}{}}
+\newlabel{img:kedmi_celeba_orig}{{5.4a}{19}{60 Originalbilder des CelebA-Datensatzes\relax }{figure.caption.12}{}}
+\newlabel{sub@img:kedmi_celeba_orig}{{a}{19}{60 Originalbilder des CelebA-Datensatzes\relax }{figure.caption.12}{}}
+\newlabel{img:kedmi_celeba_gen}{{5.4b}{19}{60 durch den \glqq KEDMI\grqq -Angriff generierte Bilder\relax }{figure.caption.12}{}}
+\newlabel{sub@img:kedmi_celeba_gen}{{b}{19}{60 durch den \glqq KEDMI\grqq -Angriff generierte Bilder\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Gegen\IeC {\"u}berstellung der generierten und originalen Bilder\relax }}{19}{figure.caption.12}}
+\newlabel{img:kedmi_celeba_visuell}{{5.4}{19}{Gegenüberstellung der generierten und originalen Bilder\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Angriffsstatistiken}{20}{subsection.5.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Auswertung der Verteidigungsstrategie}{20}{section.5.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}R\IeC {\"u}ckschl\IeC {\"u}sse}{20}{section.5.5}}
+\newlabel{chpt:Ergebnisse_Rueckschluesse}{{5.5}{20}{Rückschlüsse}{section.5.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{21}{chapter.6}}
 \@writefile{lof}{\addvspace {\baselineskip }}
 \@writefile{lot}{\addvspace {\baselineskip }}
 \@writefile{lol}{\addvspace {\baselineskip }}
-\newlabel{chpt:Zusammenfassung_und_Ausblick_Main}{{6}{19}{Zusammenfassung und Ausblick}{chapter.6}{}}
+\newlabel{chpt:Zusammenfassung_und_Ausblick_Main}{{6}{21}{Zusammenfassung und Ausblick}{chapter.6}{}}
 \abx@aux@segm{0}{0}{Bar-Shalom}
 \abx@aux@cite{Goldhammer}
 \abx@aux@segm{0}{0}{Goldhammer}
 \abx@aux@cite{WHO-2004}
 \abx@aux@segm{0}{0}{WHO-2004}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Anhang}{20}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Anhang}{22}{chapter.7}}
 \@writefile{lof}{\addvspace {\baselineskip }}
 \@writefile{lot}{\addvspace {\baselineskip }}
 \@writefile{lol}{\addvspace {\baselineskip }}
-\newlabel{chpt:Anhang_Main}{{7}{20}{Anhang}{chapter.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Beispieltabelle\relax }}{20}{table.caption.11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Beispielbild\relax }}{21}{figure.caption.12}}
-\newlabel{fig: Neural_Network_Fig}{{7.1}{21}{Beispielbild\relax }{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Bilderverzeichnis}{22}{chapter*.13}}
+\newlabel{chpt:Anhang_Main}{{7}{22}{Anhang}{chapter.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7.1}{\ignorespaces Beispieltabelle\relax }}{22}{table.caption.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Beispielbild\relax }}{23}{figure.caption.14}}
+\newlabel{fig: Neural_Network_Fig}{{7.1}{23}{Beispielbild\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Bilderverzeichnis}{24}{chapter*.15}}
 \abx@aux@segm{0}{0}{lorenz_reinforcement_2020}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellen}{23}{chapter*.14}}
-\abx@aux@page{7}{23}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{24}{chapter*.15}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Tabellen}{25}{chapter*.16}}
+\abx@aux@page{7}{25}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{26}{chapter*.17}}
 \@writefile{lof}{\addvspace {\baselineskip }}
 \@writefile{lot}{\addvspace {\baselineskip }}
 \@writefile{lol}{\addvspace {\baselineskip }}
-\abx@aux@page{8}{24}
-\abx@aux@page{9}{24}
-\abx@aux@page{10}{25}
+\abx@aux@page{8}{26}
+\abx@aux@page{9}{26}
+\abx@aux@page{10}{27}
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{0}{joshi_machine_2020}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{lorenz_reinforcement_2020}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{balas_recent_2020}{nyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{shahapure_cluster_2020}{nyt/global//global/global}
-\abx@aux@page{11}{26}
+\abx@aux@page{11}{28}
 \global\@namedef{scr@dte@chapter@lastmaxnumwidth}{10.84041pt}
 \global\@namedef{scr@dte@section@lastmaxnumwidth}{18.37155pt}
 \global\@namedef{scr@dte@subsection@lastmaxnumwidth}{26.88818pt}
