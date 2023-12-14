@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 DEC 2023 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 DEC 2023 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2291,22 +2291,27 @@ File: Bilder/0_rbmi_dp.png Graphic file (type png)
 <use Bilder/0_rbmi_dp.png>
 Package pdftex.def Info: Bilder/0_rbmi_dp.png  used on input line 248.
 (pdftex.def)             Requested size: 159.33823pt x 159.35176pt.
- (./Kapitel/4_Ergebnisse/4_2_Rueckschluesse.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 259.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 259.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 259.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 259.
+ [25 <./Bilder/0_rbmi.png (PNG copy)> <./Bilder/0_rbmi_dp.png (PNG copy)>]
+Overfull \hbox (15.8163pt too wide) in paragraph at lines 260--261
+[]\T1/lmr/m/n/10.95 Im Ge-gen-satz da-zu er-folg-te die Ge-ne-rie-rung des zwei
+-ten Bil-des un-ter An-wen-dung der Reinforcement-
+ []
+
+(./Kapitel/4_Ergebnisse/4_2_Rueckschluesse.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 ))
 (./Kapitel/5_Zusammenfassung/5_0_Zusammenfassung_und_Ausblick.tex
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 1.
- [25 <./Bilder/0_rbmi.png (PNG copy)> <./Bilder/0_rbmi_dp.png (PNG copy)>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2359,7 +2364,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--39
 
  []
 
-<Bilder/Neural_Network.jpg, id=465, 937.5025pt x 544.0325pt>
+<Bilder/Neural_Network.jpg, id=467, 937.5025pt x 544.0325pt>
 File: Bilder/Neural_Network.jpg Graphic file (type jpg)
 <use Bilder/Neural_Network.jpg>
 Package pdftex.def Info: Bilder/Neural_Network.jpg  used on input line 46.
@@ -2512,10 +2517,10 @@ ive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dis
 t/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
 pe1/public/lm/lmtt9.pfb>
-Output written on Bachelorarbeit.pdf (38 pages, 8276292 bytes).
+Output written on Bachelorarbeit.pdf (38 pages, 8278880 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 525 compressed objects within 6 object streams
+ 625 PDF objects out of 1000 (max. 8388607)
+ 527 compressed objects within 6 object streams
  141 named destinations out of 1000 (max. 500000)
  388 words of extra memory for PDF output out of 10000 (max. 10000000)
 

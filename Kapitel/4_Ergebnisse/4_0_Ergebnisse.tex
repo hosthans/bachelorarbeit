@@ -253,6 +253,20 @@ Eine mögliche Erklärung für die fehlgeschlagene KEDMI-Ausführung auf das Zie
 	\label{img:rbmi_dpvsnorm}
 \end{figure}
 
+In einem weiteren Test wurde die Wirksamkeit der Modelle in Bezug auf eine alternative Modellinversionsattacke, nämlich die RBMI Methode, evaluiert. Hierbei wurden 2 Bilder generiert, wobei die Zielsetzung darin bestand, die Repräsentationsfähigkeit der Modelle unter Verwendung eines anderen Angriffsszenarios zu überprüfen.
+
+Für den ersten Durchlauf erfolgte die Generierung mithilfe der Reinforcement-basierten Modellinversionsattacke auf Grundlage eines herkömmlichen VGG16-Netzwerks. Ein exemplarisches Bild, das die erfolgreiche Generierung der Zahl 0 durch das normale Modell zeigt, ist in Bild \ref{img:rbmi_0} dargestellt. Die visuelle Analyse verdeutlicht, dass das herkömmliche Modell auch unter diesem alternativen Angriffsszenario in der Lage ist, die Zielklasse präzise zu reproduzieren.
+
+Im Gegensatz dazu erfolgte die Generierung des zweiten Bildes unter Anwendung der Reinforcement-basierten Modellinversionsattacke auf einem VGG16-Modell, das mit differenzieller Privatsphäre trainiert wurde. Ein repräsentatives Bild dieses Sets, das die Zahl 0 durch das differenziell private Modell darstellen soll, ist in Bild \ref{img:rbmi_0_dp} zu sehen. Bei der visuellen Analyse fällt auf, dass im Gegensatz zum normalen Modell die Generierung durch das differenziell private Modell fehlschlägt, und die Zahl 0 nicht erkennbar ist. Stattdessen lässt sich die Zahl 4 erkennen.
+
+Die festgestellten Unterschiede in der Generierung zwischen den beiden Modellen bei Anwendung der Reinforcement-basierten Modellinversionsattacke legen nahe, dass das Modell mit differenzieller Privatsphäre auch unter dieser alternativen Bedrohung effektive Schutzmechanismen aufweist. Während das herkömmliche Modell weiterhin die gewünschten Muster präzise reproduziert, bleibt das differenzielle Modell widerstandsfähig gegenüber dem Angriff und verhindert die korrekte Rekonstruktion der Zielklasse. Dies untermauert die Robustheit der differenziellen Privatsphäre als Verteidigungsstrategie, selbst unter unterschiedlichen Angriffsszenarien.
+
+Die visuelle Analyse der Verteidigungsstrategie \glqq Differential Privacy\grqq{} demonstriert eine erfolgreiche Verfremdung der Generierungen durch ein Modell mit differenzieller Privatsphäre im Vergleich zu einem herkömmlichen Modell. Bei der Anwendung von Modellinversionsattacken wie dem \glqq KEDMI\grqq- und \glqq RBMI\grqq-Angriff zeigt sich eine deutliche Unkenntlichmachung der Zielklassen. Dies verdeutlicht die Effektivität von Differential Privacy im Schutz sensibler Informationen in den visuellen Repräsentationen.
+
+Die festgestellten Unterschiede in der Generierung zwischen den Modellen deuten darauf hin, dass das Modell mit differenzieller Privatsphäre auch unter unterschiedlichen Angriffsszenarien robust agiert. Die visuelle Unkenntlichmachung der Zielklassen kann als positiver Effekt gewertet werden, da sie darauf hinweist, dass Differential Privacy sensible Informationen effektiv schützt. Der Schwerpunkt auf der visuellen Analyse liefert einen klaren Einblick in die Wirksamkeit der Verteidigungsstrategie.
+
+Die visuelle Auswertung bildet jedoch nur einen Teil der umfassenden Analyse. Der statistische Teil wird nun genauer betrachtet, wobei quantitative Metriken und qualitative Aspekte berücksichtigt werden. Dies ermöglicht eine detailliertere Bewertung der Wirksamkeit von Differential Privacy und dessen Auswirkungen auf die Präzision von Angriffen und Klassifikationen.
+
 \begin{table}[h]
 	\centering
 	\renewcommand{\arraystretch}{1.5}
