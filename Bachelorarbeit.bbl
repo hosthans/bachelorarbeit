@@ -172,6 +172,33 @@
       \verb http://link.springer.com/10.1007/978-3-662-61651-2
       \endverb
     \endentry
+    \entry{noauthor_nvlabsffhq-dataset_2023}{software}{}
+      \list{publisher}{1}{%
+        {{NVIDIA} Research Projects}%
+      }
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Flickr-Faces-{HQ} Dataset ({FFHQ})}
+      \field{day}{11}
+      \field{month}{12}
+      \field{note}{original-date: 2019-02-04T15:35:08Z}
+      \field{title}{{NVlabs}/ffhq-dataset}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/NVlabs/ffhq-dataset
+      \endverb
+      \verb{url}
+      \verb https://github.com/NVlabs/ffhq-dataset
+      \endverb
+    \endentry
     \entry{shahapure_cluster_2020}{inproceedings}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=3aba07428cf65c86c997bfd074b6ccae}{%

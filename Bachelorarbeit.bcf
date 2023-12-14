@@ -1982,10 +1982,12 @@
     <bcf:citekey order="5">joshi_machine_2020</bcf:citekey>
     <bcf:citekey order="6">shahapure_cluster_2020</bcf:citekey>
     <bcf:citekey order="7">balas_recent_2020</bcf:citekey>
-    <bcf:citekey order="8">Bar-Shalom</bcf:citekey>
-    <bcf:citekey order="9">Goldhammer</bcf:citekey>
-    <bcf:citekey order="10">WHO-2004</bcf:citekey>
-    <bcf:citekey order="11">lorenz_reinforcement_2020</bcf:citekey>
+    <bcf:citekey order="8">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="9">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="10">Bar-Shalom</bcf:citekey>
+    <bcf:citekey order="11">Goldhammer</bcf:citekey>
+    <bcf:citekey order="12">WHO-2004</bcf:citekey>
+    <bcf:citekey order="13">lorenz_reinforcement_2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
