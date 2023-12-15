@@ -160,9 +160,9 @@ Des Weiteren wird die Genauigkeit der Angriffe als entscheidende Metrik betracht
 			\hline
 			\textbf{Modell-Art} & \textbf{Generator} & \textbf{Datensatz} & \textbf{Iterationen} & \textbf{Dauer pro Iteration} & \textbf{Gesamtdauer} & \textbf{Genauigkeit}\\
 			\hline
-			\textit{VGG-16} & DCGAN & MNIST & 2.000 & 0,11 sec & 4 min & \textbf{100,0\%}\\
+			\textit{VGG-16} & DCGAN & MNIST & 2.400 & 0,11 sec & 4 min & \textbf{100,0\%}\\
 			\hline
-			\textit{VGG-16} & DCGAN & CelebA & 2.000 & 0,12 sec & 4 min & \textbf{100,0\%}\\
+			\textit{VGG-16} & DCGAN & CelebA & 2.400 & 0,12 sec & 4 min & \textbf{100,0\%}\\
 			\hline
 		\end{tabular}
 	}
@@ -271,18 +271,30 @@ Die visuelle Auswertung bildet jedoch nur einen Teil der umfassenden Analyse. De
 	\centering
 	\renewcommand{\arraystretch}{1.5}
 	\resizebox{\textwidth}{!}{
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\begin{tabular}{|c|c|c|c|c|c|}
 			\hline
-			\textbf{Modell-Art} & \textbf{Verteidigungsart} & \textbf{Angriffsart} & \textbf{Datensatz} & \textbf{Iterationen} & \textbf{Dauer pro Iteration} & \textbf{Gesamtdauer} & \textbf{Genauigkeit}\\
+		\textbf{Zielmodell} & \textbf{Angriffsart} & \textbf{Datensatz} & \textbf{Iterationen} & \textbf{Gesamtdauer} & \textbf{Genauigkeit}\\
 			\hline
-			\textit{VGG-16} & DP & KEDMI & MNIST & 2.000 & ? & ? & \textbf{13,0\%}\\
+			\textit{VGG16} & KEDMI & MNIST & 2.400 & 4 min & \textbf{100,0\%}\\
 			\hline
-			\textit{VGG-16} & DP & RBMI & MNIST & 40.000 & ? & ? & \textbf{98,44\%}\\
+  			\textit{DP-VGG16} & KEDMI & MNIST & 2.400 & 4 min 30 sec & \textbf{13,33\%}\\
+			\hline
+			\textit{VGG16} & RBMI & MNIST & 40.000 & 12 min & \textbf{100,0\%}\\
+			\hline
+		    \textit{DP-VGG16} & RBMI & MNIST & 40.000 & 11 min 24 sec & \textbf{10,17\%}\\
 			\hline
 		\end{tabular}
 	}
-	\caption{Auswertung verschiedener Angriffszenarios auf \glqq geschützte\grqq{} Modelle}
+	\caption{Auswertung zweier Angriffsalgorithmen auf \glqq abgesicherte\grqq{} und ungeschützte Modelle}
 	\label{tab:dp_stats}
 \end{table}
+
+Die Analyse der Ergebnisse in Tabelle \ref{tab:dp_stats} offenbart eine deutliche Abnahme der Genauigkeit von Modell-Inversionsangriffen bei einem Modell, das mit differenzieller Privatsphäre trainiert wurde. Diese Abnahme der Genauigkeit lässt sich als Indikator interpretieren, dass die generierten Bilder größtenteils nicht korrekt der Zielklasse zugeordnet werden können und somit die Wirksamkeit der differenziellen Privatsphäre in der Abwehr von Modell-Inversionsangriffen verdeutlicht wird.
+
+Die Integration von Rauschen in die Trainingsdaten hat sich als effektive Verteidigungsstrategie erwiesen, da die extrahierte Merkmalsrepräsentation für Modell-Inversionsangriffe erschwert wird. Die generierten Repräsentationen weisen häufiger falsche Klassifikationen auf, was darauf hindeutet, dass die Zielklassen nur unzureichend reproduziert werden können. Dies bestätigt die Schutzwirkung von Differential Privacy in Bezug auf die Verhinderung präziser Rekonstruktionen durch Modell-Inversionsangriffe.
+
+Die Dauer pro Iteration des Angriffs zeigt nur minimale Unterschiede zwischen einem normalen Modell und einem Modell mit differenzieller Privatsphäre. Dies lässt sich auf den unveränderten Generator und den gleichen Algorithmus des Angriffs zurückführen. Die vergleichbare Zeitdauer verdeutlicht, dass trotz der erschwerten Generierung durch Differential Privacy, die Effizienz des Angriffsprozesses nur geringfügig beeinflusst wird.
+
+Interessanterweise weisen verschiedene Arten von Modell-Inversionsangriffen, darunter Black- und Whitebox-Angriffe, keine signifikanten Unterschiede in der Genauigkeit auf. Dies legt nahe, dass die Verteidigungsmechanismen von Differential Privacy robust gegenüber unterschiedlichen Angriffsarten sind. Selbst bei Kenntnis der internen Struktur des Modells (Whitebox) oder im Falle fehlender interner Informationen (Blackbox) zeigt die differenzielle Privatsphäre eine gleichbleibende Schutzwirkung. Diese Homogenität in der Abwehrleistung unterstreicht die Vielseitigkeit von Differential Privacy als Verteidigungsstrategie gegenüber Modell-Inversionsangriffen.
 \input{Kapitel/4_Ergebnisse/4_2_Rueckschluesse}
 
