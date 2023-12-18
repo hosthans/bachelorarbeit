@@ -14,21 +14,28 @@
 \BOOKMARK [1][-]{section.2.3}{Angriffsm\366glichkeiten auf Neuronale Netzwerke}{chapter.2}% 14
 \BOOKMARK [2][-]{subsection.2.3.1}{Modell-Inversionsangriffe}{section.2.3}% 15
 \BOOKMARK [0][]{chapter.3}{Stand der Technik}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Forschungsergebnisse}{chapter.3}% 17
-\BOOKMARK [0][]{chapter.4}{Implementierung}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Experimentierumgebung}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.2}{Funktionalit\344t des Codes}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.3}{Code-Beschreibung}{chapter.4}% 21
-\BOOKMARK [0][]{chapter.5}{Ergebnisse}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Modellleistung}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{Bildqualit\344t}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.3}{Angriffsperformance}{chapter.5}% 25
-\BOOKMARK [2][-]{subsection.5.3.1}{Genauigkeit der Angriffe}{section.5.3}% 26
-\BOOKMARK [2][-]{subsection.5.3.2}{Angriffsstatistiken}{section.5.3}% 27
-\BOOKMARK [1][-]{section.5.4}{Auswertung der Verteidigungsstrategie}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.5}{R\374ckschl\374sse}{chapter.5}% 29
-\BOOKMARK [0][]{chapter.6}{Zusammenfassung und Ausblick}{}% 30
-\BOOKMARK [0][]{chapter.7}{Anhang}{}% 31
-\BOOKMARK [0][]{chapter*.23}{Bilderverzeichnis}{}% 32
-\BOOKMARK [0][]{chapter*.24}{Tabellen}{}% 33
-\BOOKMARK [0][]{chapter*.25}{Literatur}{}% 34
+\BOOKMARK [1][-]{section.3.1}{Grundlegende Konzepte und Modelle}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Bisherige Forschungsergebnisse}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Gegenma\337nahmen und Abwehrstrategien}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Bewertung von Modell-Inversions-Angriffen}{chapter.3}% 20
+\BOOKMARK [0][]{chapter.4}{Implementierung}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Experimentierumgebung}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.1.1}{Datens\344tze}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.2}{Modelle}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.3}{Angriffsmethoden}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.4}{Verteidigungsma\337nahmen}{section.4.1}% 26
+\BOOKMARK [1][-]{section.4.2}{Funktionalit\344t des Codes}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Code-Beschreibung}{chapter.4}% 28
+\BOOKMARK [0][]{chapter.5}{Ergebnisse}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Modellleistung}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Bildqualit\344t}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.3}{Angriffsperformance}{chapter.5}% 32
+\BOOKMARK [2][-]{subsection.5.3.1}{Genauigkeit der Angriffe}{section.5.3}% 33
+\BOOKMARK [2][-]{subsection.5.3.2}{Angriffsstatistiken}{section.5.3}% 34
+\BOOKMARK [1][-]{section.5.4}{Auswertung der Verteidigungsstrategie}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.5}{R\374ckschl\374sse}{chapter.5}% 36
+\BOOKMARK [0][]{chapter.6}{Zusammenfassung und Ausblick}{}% 37
+\BOOKMARK [0][]{chapter.7}{Anhang}{}% 38
+\BOOKMARK [0][]{chapter*.23}{Bilderverzeichnis}{}% 39
+\BOOKMARK [0][]{chapter*.24}{Tabellen}{}% 40
+\BOOKMARK [0][]{chapter*.25}{Literatur}{}% 41

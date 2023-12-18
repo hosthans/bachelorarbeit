@@ -79,6 +79,27 @@
       \verb http://link.springer.com/10.1007/978-3-030-32644-9
       \endverb
     \endentry
+    \entry{noauthor_celeba_nodate}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{{CelebA} Dataset}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb CelebA Dataset:/Users/hannes/Zotero/storage/MVN4M7TR/CelebA.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
+      \endverb
+      \verb{url}
+      \verb https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
+      \endverb
+    \endentry
     \entry{joshi_machine_2020}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=21585f2b1376237b6195bfb24bbd664f}{%
@@ -172,10 +193,28 @@
       \verb http://link.springer.com/10.1007/978-3-662-61651-2
       \endverb
     \endentry
-    \entry{noauthor_nvlabsffhq-dataset_2023}{software}{}
-      \list{publisher}{1}{%
-        {{NVIDIA} Research Projects}%
-      }
+    \entry{noauthor_mnist_nodate}{online}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{{MNIST} — Torchvision main documentation}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb MNIST — Torchvision main documentation:/Users/hannes/Zotero/storage/EW3CS42P/torchvision.datasets.MNIST.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://pytorch.org/vision/main/generated/torchvision.datasets.MNIST.html
+      \endverb
+      \verb{url}
+      \verb https://pytorch.org/vision/main/generated/torchvision.datasets.MNIST.html
+      \endverb
+    \endentry
+    \entry{noauthor_nvlabsffhq-dataset_2023}{online}{}
       \field{sortinit}{N}
       \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{extradatescope}{labelyear}
