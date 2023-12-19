@@ -1987,9 +1987,10 @@
     <bcf:citekey order="10">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
     <bcf:citekey order="11">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
     <bcf:citekey order="12">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
-    <bcf:citekey order="13">Bar-Shalom</bcf:citekey>
-    <bcf:citekey order="14">Goldhammer</bcf:citekey>
-    <bcf:citekey order="15">WHO-2004</bcf:citekey>
+    <bcf:citekey order="13">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="14">Bar-Shalom</bcf:citekey>
+    <bcf:citekey order="15">Goldhammer</bcf:citekey>
+    <bcf:citekey order="16">WHO-2004</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

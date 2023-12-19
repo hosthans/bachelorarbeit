@@ -27,11 +27,29 @@ Neben dem MNIST- wurde auch der CelebA-Datensatz (\cite{noauthor_celeba_nodate})
 
 Der CelebA-Datensatz wurde als Vergleichsdatensatz zum zuvor genannten MNIST-Datensatz ausgewählt. Dies geschah sowohl, um Angriffe auf komplexere Datensätze zu prüfen, als auch, um Black-Box-Angriffe basierend auf einen bezüglich des CelebA-Datensatz trainierten Klassifizierer auf Grundlage eines anderen Gesichtsdatensatzes (\cite{noauthor_nvlabsffhq-dataset_2023}) zu erforschen. Diese Entscheidung ermöglichte die Simulation verschiedener Angriffsszenarien, die diverse Strategien und Durchführungsprozesse umfassen.
 
-%hier noch ein Bild einfügen
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\linewidth]{Bilder/0_celeba_one.png}
+	\caption{Beispielbild des CelebA-Datensatzes}
+	\label{img:celeba}
+\end{figure}
 
 Die Auswahl des CelebA-Datensatzes ermöglichte eine erweiterte Untersuchung der Robustheit von Modellen gegenüber Angriffen, insbesondere auf dem Gebiet der Gesichtsbilderkennung. Die Verwendung von CelebA erlaubte nicht nur die Erweiterung des Anwendungsbereichs auf komplexere und realistischere Bilder, sondern ermöglichte auch eine generalisiertere Beurteilung der Sicherheitsmechanismen. Hierbei wurde der Fokus auf die Diversität von Gesichtsmerkmalen und -attributen gelegt, um die Widerstandsfähigkeit gegenüber unterschiedlichen Angriffsdurchführungen zu prüfen.
 
 Die vielseitige Nutzung des CelebA-Datensatzes erstreckte sich über verschiedene Trainingsparadigmen. Einerseits wurde der Datensatz zur Schulung von Klassifikatoren herangezogen, die auf der VGG16-Architektur basierten. Andererseits wurde er auch für das Training eines herkömmlichen DCGAN-Netzwerks verwendet, um die Generierung von \glqq neuen\grqq{} Gesichtsbildern zu ermöglichen. Dies ermöglichte die Evaluierung der Anfälligkeit von Modellen unterschiedlicher Architekturen gegenüber Angriffen und trug zur Erweiterung des Verständnisses für die Sicherheit von Gesichtsdatensätzen bei.
+
+Neben den Hauptdatensätzen CelebA und MNIST wurde der FFHQ-Datensatz (\cite{noauthor_nvlabsffhq-dataset_2023}) in dieser Arbeit integriert. Die \glqq rohen\grqq{} Bilddaten dieses Datensatzes weisen eine beeindruckende Größe von $1024 \times 1024$ auf und repräsentieren qualitativ hochwertige Bilder. Der FFHQ-Datensatz wurde eingeführt, um die Untersuchungen auf realistische Gesichtsbilder und einen unbekannten Datensatz zu erweitern. Hierbei wurde ein vortrainiertes Style-GAN Netzwerk auf Basis dieses Datensatzes verwendet, um realistische Gesichtsbilder zu generieren.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{Bilder/ffhq.png}
+	\caption{Beispielbilder des Flickr-Faces-HQ-Datensatzes}
+	\label{img:ffhq}
+\end{figure}
+
+Das Style-GAN Netzwerk, basierend auf dem FFHQ-Datensatz, ermöglichte nicht nur die Erstellung von hochqualitativen Gesichtsbildern, sondern trug auch zur Erweiterung der Vielfalt in den untersuchten Merkmalen bei. Im Gegensatz zu CelebA bietet der FFHQ-Datensatz eine breitere Auswahl an Herkunft, Altersgruppen und anderen charakteristischen Merkmalen.
+
+Die Integration des FFHQ-Datensatzes eröffnete die Möglichkeit, reale Bildqualität in die Evaluierung von Angriffsszenarien einzubeziehen. Die repräsentativen Bilder des FFHQ-Datensatzes förderten die präzise Analyse von Angriffen auf hochauflösende Gesichtsbilder und trugen zur Entwicklung eines umfassenderen Verständnisses der Sicherheit von Gesichtsdatensätzen bei.
 \subsection{Modelle}
 %VGG16
 %DCGAN
