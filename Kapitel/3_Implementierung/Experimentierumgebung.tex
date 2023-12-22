@@ -1,6 +1,6 @@
-\section{Experimentierumgebung}
+\section{Experimentelles Setup}
 Das folgende Kapitel verdeutlicht den Aufbau der Experimentierumgebung, die für die technische Durchführung benötigt wurde. Dabei wird auf Datensätze, Modelle und deren Strukturen, wie auch auf die Implementierung von Angriffsmethoden und Verteidigungsmaßnahmen eingegangen. Die Auswahl und Konfiguration dieser Elemente sind entscheidend für die Reproduzierbarkeit der Experimente sowie für die Validität und Aussagekraft der ausgearbeiteten Ergebnisse.
-\subsection{Datensätze}
+\subsection{Datensätze}\label{subsection:datensaetze}
 %mnist
 %celeba
 %ffhq
@@ -54,11 +54,93 @@ Die Integration des FFHQ-Datensatzes eröffnete die Möglichkeit, reale Bildqual
 %VGG16
 %DCGAN
 %StyleGAN
-Die Architektur der eingesetzten Modelle spielt eine zentrale Rolle in der Experimentierumgebung. Hier werden die gewählten Modelle hinsichtlich ihrer Struktur und Hyperparameter, die während des Traininsprozesses verwendet wurde, detailliert beschrieben. Eine genaue Vorstellung der Modelle ist entscheidend, um nachvollziehen zu können, wie diese auf die Datensätze angewendet wurden und welche Rolle sie in den folgenden Angriffs- und Verteidigungsszenarien spielen.
+Die \textit{Architektur} der eingesetzten Modelle spielt eine zentrale Rolle in der Experimentierumgebung. Hier werden die gewählten Modelle hinsichtlich ihrer Struktur und Hyperparameter, die während des Traininsprozesses verwendet wurde, detailliert beschrieben. Eine genaue Vorstellung der Modelle ist entscheidend, um nachvollziehen zu können, wie diese auf die Datensätze angewendet wurden und welche Rolle sie in den folgenden Angriffs- und Verteidigungsszenarien spielen.
+
+Die essentielle Architektur, die als Grundlage für den Klassifizierer dient, ist das VGG-16 Netzwerk (\cite{simonyan_very_2015}), ein CNN, das in der Bilderkennung eingesetzt wird. Dieses Netzwerk folgt dem Prinzip der \glqq Very Deep Convolutional Networks\grqq{} und zeichnet sich durch herausragende Merkmalsextraktionseigenschaften aus, wodurch es besonders für Bildklassifikationsaufgaben geeignet ist. Die Struktur setzt sich durch die sequenzielle Anordnung verschiedener Schichten zusammen, darunter Fully-Connected-, Pooling- und Convolutional-Schichten.
+Das VGG-16 Netzwerk besteht insgesamt aus 16 Schichten, von denen 13 Convolutional- und 3 Fully-Connected-Schichten sind. Diese Schichten ermöglichen eine tiefgehende und hierarchische Repräsentation von Merkmalen, beginnend mit einfachen lokalen Strukturen bis hin zu abstrakteren und komplexeren Konzepten im Verlauf der Schichtfolge. Hervorzuheben ist, dass die Convolutional-Schichten Filter mit einer Größe von 3x3 Pixeln und einer Schrittweite von 1 Pixel verwenden, die Max-Pooling-Schichten eine Größe von 2x2 Pixeln und eine Schrittweite von 2 Pixeln aufweisen, und die Aktivierungsfunktion in allen Schichten, bis auf die finale Klassifikationsschicht, die ReLU-Funktion ist. Während des Vorwärtsdurchlaufs eines bestimmten Datenpunkts sind die Convolutional-Schichten maßgeblich für die Extraktion von Merkmalen verantwortlich.
+Die Integration der vollvermaschten Schichten im Netzwerk fügt extrahierte Merkmale zusammen, um diese in der abschließenden Schicht des Bildklassifikators interpretieren zu können. Das Resultat ist ein Vektor, dessen Länge der Anzahl der Klassen im Datensatz entspricht, und der durch die Softmax-Aktivierungsfunktion erzeugt wird. Die Klassifikation erfolgt auf Basis eines personalisierten Headers, der eine vollvermaschte Schicht mit einer Softmax Aktivierungsfunktion als abschließende Schicht enthält. Die Neuronenanzahl dieser Schicht gleicht der Anzahl der Klassen im Datensatz.
+Besondere Bedeutung kommt der Integration von Max-Pooling-Schichten in bestimmten Abschnitten des Netzwerks zu. Diese Schichten reduzieren die Merkmalskartengröße und erhöhen die Invarianz gegenüber kleinen Translationen im Eingabebild. Diese Struktur trägt dazu bei, die Robustheit des Modells zu steigern und seine Fähigkeit zur Erfassung invarianten Wissens zu stärken.
+Hervorzuheben ist, dass das VGG-16 Netzwerk auf dem ImageNet-Datensatz trainiert wurde, der 1000 verschiedene Klassen von Objekten enthält. Die hohe Genauigkeit bei der Klassifizierung von Bildern macht es zu einem oft verwendeten vortrainierten Modell in verschiedenen Computer-Vision-Anwendungen. 
+
+\textit{Anwendung} fand das neuronale Netzwerk, das auf der VGG-16 Netzarchitektur aufbaut, in zwei Klassifikationsmodellen, welche auf der einen Seite handgeschriebene Ziffern und auf der anderen Seite berühmte Gesichter klassifizieren sollen. Trainiert wurde hierbei auf Basis der in \ref{subsection:datensaetze} beschriebenen MNIST- und CelebA-Datensätze.
+
+
+%% muss noch überarbeitet werden
+\begin{table}[h]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{c|ccccc|c}
+			\textbf{Datensatz} & \textbf{Lernrate} & \textbf{Epochenanzahl} & \textbf{Batch-Größe} & \textbf{Momentum} & \textbf{Weight-Decay} & \textbf{Genauigkeit bezüglich Testdaten}\\
+			\hline
+			\textit{CelebA} & 1e-3 & 40 & 128 & 0.9 & 1e-4 & \textbf{99,6\%}\\
+			\hline
+			\textit{MNIST} & 1e-3 & 8 & 64 & 0.9 & 1e-4 & \textbf{99,6\%}\\
+			\hline
+		\end{tabular}
+	}
+	\caption{Hyperparameter des \glqq normalen\grqq{} Trainings bezüglich der angegebenen Datensätze}
+	\label{tab:nn_train}
+\end{table}
+
+% Trainingsteil des VGG hinzufügen 
+Hier soll erstmal blabla über Training eines VGG16 Netzwerks gemacht werden (wie es bei mir war).
+
+Zur Durchführung der im vorliegenden Kontext beschriebenen Modell-Inversions-Angriffe ist ein neuronales Netzwerk erforderlich, das die Fähigkeit besitzt, spezifische Bilder zu generieren. In diesem Zusammenhang wurde das Deep Convolutional Generative Adversarial Network (DCGAN) gemäß der Arbeit von Radford et al. (\cite{radford_unsupervised_2016}) eingesetzt. Dieses Netzwerk zeichnet sich durch eine Vielzahl von speziellen architektonischen Merkmalen aus. Es besteht primär aus zwei Hauptkomponenten: dem Generator, der die Generierung neuer Datenpunkte durch zufälliges Rauschen übernimmt, und dem Diskriminator, der versucht, zwischen realen und gefälschten Bildern zu differenzieren.
+
+Ein zentraler Aspekt dieser Architektur ist die tiefe Faltungsstruktur, die sowohl im Generator als auch im Diskriminator Verwendung findet. Diese Struktur ermöglicht die Erfassung räumlicher Strukturen in den generierten Daten. Im Gegensatz zu herkömmlichen Convolutional Neural Networks (CNNs) werden in der Architektur von DCGANs keine Pooling-Schichten verwendet, um Unschärfe zu vermeiden. Stattdessen setzt man auf Normalisierungsschichten, um das Training stabil zu gestalten und die Konvergenz der Verlustfunktionen zu beschleunigen.
+
+Eine weitere Abweichung von konventionellen CNNs besteht in der Verwendung der LeakyReLU-Aktivierungsfunktion anstelle der üblichen ReLU-Funktion. Die LeakyReLU-Funktion lautet:
+\[
+\text{LeakyReLU}(x) = \begin{cases}
+	x, & \text{if } x > 0 \\
+	\alpha x, & \text{otherwise}
+\end{cases}
+\]
+Hier repräsentiert $\alpha$ eine kleine, positive Konstante. Der Einsatz dieser modifizierten Aktivierungsfunktion zielt darauf ab, das Problem der \glqq tötenden Neuronen\grqq{} zu umgehen, das bei der Verwendung der ReLU-Aktivierungsfunktion auftreten kann. Dabei werden Neuronen während des Trainings inaktiv und tragen somit nicht zur Leistungssteigerung des Modells bei, sondern verschlechtern diese sogar.
+
+Die Trainingseffizienz des DCGAN kann variieren, abhängig von der verwendeten Hardware. Es wird empfohlen, das Netzwerk auf einer oder mehreren GPUs zu trainieren, da diese leistungsfähiger sind als eine ausschließliche Verwendung der CPU. Eine alternative Möglichkeit besteht im Transfer Learning, bei dem ein bereits trainiertes Modell als Ausgangspunkt für das aktuelle Training dient. Allgemein lässt sich feststellen, dass mit zunehmenden Epochen eine Verbesserung der Qualität der neu generierten Bilder erkennbar ist.
+
+%% muss noch überarbeitet werden
+\begin{table}[h]
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{c|ccccc}
+			\textbf{Datensatz} & \textbf{Lernrate} & \textbf{Epochenanzahl} & \textbf{Batch-Größe} & \textbf{Momentum} & \textbf{Weight-Decay}\\
+			\hline
+			\textit{CelebA} & 1e-3 & 40 & 128 & 0.9 & 1e-4\\
+			\hline
+			\textit{MNIST} & 1e-3 & 8 & 64 & 0.9 & 1e-4 \\
+			\hline
+		\end{tabular}
+	}
+	\caption{Hyperparameter eines DCGAN-Trainings bezüglich der angegebenen Datensätze}
+	\label{tab:dcgan}
+\end{table}
+
+% Trainingsteil des DCGAN hinzufügen 
+Hier soll erstmal blabla über Training eines DCGAN Netzwerks gemacht werden (wie es bei mir war).
+
+Um die Angriffsszenarien erweitern zu können, wurde ein weiteres generatives Modell zur Erzeugung hochauflösender Gesichtsbilder verwendet. Dieses StyleGAN (\cite{karras_style-based_2019}) basiert auf dem Konzept der generativen adverariellen Netzwerke und umfass -- wie ein DCGAN -- sowohl Generator und Diskriminator. Hierbei generiert der Generator die neuen Bilder, die dann vom Diskriminator nach Qualität bewertet werden. Während des Trainings werden beide Komponenten verbessert, was qualitativ hochwertigere und realistischere Bilder mit sich bringt. Die StyleGAN-Architektur hat neben den realistischen Bildausgaben die Besonderheit, dass Stilvarationen in Generierungen gut zu kontrollieren sind. Dies bedeutet, dass bestimmte Merkmale, wie beispielsweise Mimik und Haarfarbe, separat manipuliert werden können, um dadurch individuelle Ergebnisse zu erzielen. Diese Art des GANs wurde nicht selbst trainiert, sondern vortrainiert von NVIDIA geladen.
+
+Die Auswahl der genutzten Modelle, nämlich das VGG-16 Netzwerk, das Deep Convolutional Generative Adversarial Network (DCGAN) und das StyleGAN, erfolgte aufgrund ihrer spezifischen Eigenschaften und Anwendungsbereiche, die im Kontext der Experimente von entscheidender Bedeutung waren.
+
+Das VGG-16 Netzwerk wurde als essenzielle Architektur für den Klassifizierer gewählt. Dieses Convolutional Neural Network (CNN) ist aufgrund seiner \glqq Very Deep Convolutional Networks\grqq-Struktur besonders geeignet für Bildklassifikationsaufgaben. Mit insgesamt 16 Schichten, darunter Convolutional-, Pooling- und Fully-Connected-Schichten, ermöglicht das VGG-16 Netzwerk eine tiefgehende und hierarchische Repräsentation von Merkmalen. Die Verwendung von 3x3 Pixel großen Filtern in den Convolutional-Schichten, 2x2 Pixel großen Max-Pooling-Schichten und der ReLU-Aktivierungsfunktion trägt zur Merkmalsextraktion und Robustheit des Modells bei. Die Integration von Max-Pooling-Schichten in bestimmten Abschnitten des Netzwerks unterstützt die Reduzierung der Merkmalskartengröße und erhöht die Invarianz gegenüber kleinen Translationen im Eingabebild. Das VGG-16 Netzwerk wurde auf dem ImageNet-Datensatz trainiert, was seine hohe Genauigkeit bei der Klassifizierung von Bildern erklärt. Diese Merkmale machten es zu einem geeigneten Modell für die Klassifikation von handgeschriebenen Ziffern und berühmten Gesichtern in den durchgeführten Experimenten.
+
+Für die Durchführung von Modell-Inversions-Angriffen wurde das DCGAN ausgewählt. Die Entscheidung basierte auf seiner Fähigkeit, spezifische Bilder zu generieren, insbesondere im Kontext der Modell-Inversion. Die tiefe Faltungsarchitektur des DCGAN, ohne Pooling-Schichten, sondern mit Normalisierungsschichten, ermöglichte die Erfassung räumlicher Strukturen in den generierten Daten. Die Verwendung der LeakyReLU-Aktivierungsfunktion half, das Problem der "tötenden Neuronen" zu umgehen, und trug zur Verbesserung der Trainingseffizienz bei. Die Anpassung an unterschiedliche Hardware, einschließlich der Möglichkeit des Trainings auf GPUs und des Einsatzes von Transfer Learning, machte das DCGAN zu einem flexiblen Modell für die Experimente. Für die Szenarioerweiterung auf ungesehene Daten wurde das StyleGAN verwendet. Dieses GAN basiert auf dem generativen adversariellen Netzwerk-Konzept und ermöglicht die Kontrolle von Stilvariationen in den Generierungen. Die spezielle Fähigkeit, bestimmte Merkmale separat zu manipulieren, machte StyleGAN besonders geeignet für die Erzeugung realistischer und individualisierter Gesichtsbilder. Das Modell wurde nicht selbst trainiert, sondern vortrainiert von NVIDIA geladen, um qualitativ hochwertige Ergebnisse zu gewährleisten.
+
+Insgesamt wurden die Modelle entsprechend ihrer Architektur, Trainingsdaten und Anwendungsbereiche ausgewählt, um die Experimente zu unterstützen und eine präzise Analyse der Angriffsszenarien und Verteidigungsstrategien zu ermöglichen.
 \subsection{Angriffsmethoden}
 %KEDMI
 %RBMI
-Dieser Abschnitt beleuchtet die implementierten Angriffsmethoden, die darauf abzielen, die Integrität und Sicherheit der Modelle zu kompromittieren. Die Wahl der Angriffsvektoren, deren Ausführung und Auswirkungen werden systematisch erläutert. Zusätzlich werden mögliche Schwächen der Modelle aufgezeigt, die durch die Angriffsmethoden ausgenutzt wurden. Die detaillierte Beschreibung ermöglicht es, die Reproduzierbarkeit der Angriffe zu gewährleisten und die Robustheit der Modelle zu bewerten.
+Dieser Abschnitt beleuchtet die implementierten Angriffsmethoden, die darauf abzielen, die Integrität und Sicherheit der Modelle zu kompromittieren. Die Wahl der Angriffsvektoren, deren Ausführung und Auswirkungen werden systematisch erläutert. Zusätzlich werden mögliche Schwächen der Modelle aufgezeigt, die durch die Angriffsmethoden ausgenutzt wurden. Die detaillierte Beschreibung ermöglicht es, die Reproduzierbarkeit der Angriffe zu gewährleisten und die Robustheit der Modelle zu bewerten. Der Angreifer nutzt das Wissen über en Trainingsdatensatz und die Modellparameter, um das Modell zu invertieren und ursprüngliche Trainings-Datenpunkte zu rekonstruieren. Hierbei finden verschiedene Verfahren für die Rekonstuktion, wie beispielsweise Regularisierung oder Gradientenabstiegsverfahren, Verwendung.
+
+Der \glqq KEDMI\grqq-Angriff, wie in der Arbeit von Chen et al. (\cite{chen_knowledge-enriched_2021}) beschrieben, repräsentiert eine der beiden Angriffsmethoden, die für die durchgeführten Experimente von Relevanz waren. In diesem Kontext wird das Bestreben verfolgt, sensible Informationen aus einem bereits trainierten maschinellen Lernmodell zu rekonstruieren, indem das interne Wissen und die Struktur des Modells gezielt ausgenutzt werden. Durch die Anwendung des bekannten Modellwissens und die Implementierung des Konzepts der \glqq Wissensanreicherung\grqq, bei dem zusätzliche Informationen des Modells erfasst werden, handelt es sich um einen \glqq WhiteBox-basierten\grqq{} Angriff. Hierbei hat der Angreifer uneingeschränkten Zugriff auf die internen Funktionsweisen des Modells, einschließlich der Parameter, Architektur sowie der internen Darstellungen, und auf den genutzten Datensatz. Die Wissensanreicherung zielt darauf ab, Merkmale oder andere interne Repräsentationen des Modells zu extrahieren.
+
+Des Weiteren wurde eine Modellinversionsmethode angewandt, die auf dem Prinzip des bestärkenden Lernens basiert. Bei dieser Methode werden Konfidenzwerte oder -vektoren der generierten Bilder verwendet, um einem Agenten Belohnungen zuzuführen. Der Agent nutzt diese Belohnungen, um private Daten zu rekonstruieren, die während des Trainingsprozesses des Modells verwendet wurden. Aufgrund der begrenzten Zugriffsmöglichkeiten auf das Modell, bei dem der Zugriff auf die Konfidenzwertausgabe des Modells eingeschränkt ist, handelt es sich hierbei um einen sogenannten BlackBox-Angriff.
+Der Ansatz des bestärkenden Lernens beinhaltet die Verwendung von Konfidenzwerten, die die Zuversicht oder Sicherheit des Modells in Bezug auf die generierten Daten repräsentieren. Diese Konfidenzwerte dienen als Belohnungen für den Agenten, der daraufhin die Aufgabe hat, die privaten Daten so zu rekonstruieren, dass die Belohnungen maximiert werden.
+Dieser Ansatz stellt eine besondere Herausforderung dar, da der Angreifer aufgrund der begrenzten Kenntnis über die internen Strukturen und Parameter des Modells alternative Methoden finden muss, um an sensible Informationen zu gelangen. In diesem Szenario wird bestärkendes Lernen als Mechanismus genutzt, um den Agenten dazu zu bringen, die unsichtbaren Merkmale der generierten Daten zu erlernen und somit private Informationen zu rekonstruieren.
 \subsection{Verteidigungsmaßnahmen}
 %Differential Privacy
 Um den experimentellen Rahmen abzurunden, werden in diesem Abschnitt die implementierten Verteidigungsmaßnahmen präsentiert. Dies beinhaltet Schutzmechanismen, die darauf abzielen, Modelle gegen Angriffe zu stärken und ihre Robustheit zu verbessern. Die Wirksamkeit dieser Verteidigungsstrategien wird kritisch betrachtet, und es werden etwaige Limitationen oder Trade-offs diskutiert.

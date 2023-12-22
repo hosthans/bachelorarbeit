@@ -100,6 +100,75 @@
       \verb https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
       \endverb
     \endentry
+    \entry{chen_knowledge-enriched_2021}{misc}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=52c4ef412d2f59be1bebd88049345484}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Si},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=659f62de8927e3a9b7bc8f9e18b3f62c}{%
+           family={Kahla},
+           familyi={K\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=047fd30cb23973caae3e3b6d51c4e51a}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Ruoxi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b6af811e0e3598405e9586cb98a8fdd4}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Guo-Jun},
+           giveni={G\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{b76fc0818e917fd73336623efb2ede96}
+      \strng{fullhash}{506ebac4f48ad98c726731478ef5eca9}
+      \strng{bibnamehash}{b76fc0818e917fd73336623efb2ede96}
+      \strng{authorbibnamehash}{b76fc0818e917fd73336623efb2ede96}
+      \strng{authornamehash}{b76fc0818e917fd73336623efb2ede96}
+      \strng{authorfullhash}{506ebac4f48ad98c726731478ef5eca9}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Model inversion ({MI}) attacks are aimed at reconstructing training data from model parameters. Such attacks have triggered increasing concerns about privacy, especially given a growing number of online model repositories. However, existing {MI} attacks against deep neural networks ({DNNs}) have large room for performance improvement. We present a novel inversion-speciﬁc {GAN} that can better distill knowledge useful for performing attacks on private models from public data. In particular, we train the discriminator to differentiate not only the real and fake samples but the soft-labels provided by the target model. Moreover, unlike previous work that directly searches for a single data point to represent a target class, we propose to model a private data distribution for each target class. Our experiments show that the combination of these techniques can signiﬁcantly boost the success rate of the state-of-the-art {MI} attacks by 150\%, and generalize better to a variety of datasets and models. Our code is available at https://github.com/{SCccc}21/Knowledge-Enriched-{DMI}.}
+      \field{day}{19}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{{arXiv}:2010.04092}
+      \field{title}{Knowledge-Enriched Distributional Model Inversion Attacks}
+      \field{urlday}{21}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2010.04092 [cs]
+      \endverb
+      \verb{file}
+      \verb Chen et al. - 2021 - Knowledge-Enriched Distributional Model Inversion .pdf:/Users/hannes/Zotero/storage/7DRMLYAI/Chen et al. - 2021 - Knowledge-Enriched Distributional Model Inversion .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2010.04092
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2010.04092
+      \endverb
+      \keyw{Computer Science - Machine Learning}
+    \endentry
     \entry{joshi_machine_2020}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=21585f2b1376237b6195bfb24bbd664f}{%
@@ -145,6 +214,69 @@
       \verb{url}
       \verb http://link.springer.com/10.1007/978-3-030-26622-6
       \endverb
+    \endentry
+    \entry{karras_style-based_2019}{misc}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=9c6cb97b8c2c22b41d64c2c4f4520c11}{%
+           family={Karras},
+           familyi={K\bibinitperiod},
+           given={Tero},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e83c74e19bcc032813595328513ebd5c}{%
+           family={Laine},
+           familyi={L\bibinitperiod},
+           given={Samuli},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=70c1210f7c167faac22c68d1db1d9175}{%
+           family={Aila},
+           familyi={A\bibinitperiod},
+           given={Timo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{ed3d2bdb10a6f295a440707814f6393e}
+      \strng{fullhash}{ed3d2bdb10a6f295a440707814f6393e}
+      \strng{bibnamehash}{ed3d2bdb10a6f295a440707814f6393e}
+      \strng{authorbibnamehash}{ed3d2bdb10a6f295a440707814f6393e}
+      \strng{authornamehash}{ed3d2bdb10a6f295a440707814f6393e}
+      \strng{authorfullhash}{ed3d2bdb10a6f295a440707814f6393e}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose an alternative generator architecture for generative adversarial networks, borrowing from style transfer literature. The new architecture leads to an automatically learned, unsupervised separation of high-level attributes (e.g., pose and identity when trained on human faces) and stochastic variation in the generated images (e.g., freckles, hair), and it enables intuitive, scale-speciﬁc control of the synthesis. The new generator improves the state-of-the-art in terms of traditional distribution quality metrics, leads to demonstrably better interpolation properties, and also better disentangles the latent factors of variation. To quantify interpolation quality and disentanglement, we propose two new, automated methods that are applicable to any generator architecture. Finally, we introduce a new, highly varied and high-quality dataset of human faces.}
+      \field{day}{29}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{{arXiv}:1812.04948}
+      \field{title}{A Style-Based Generator Architecture for Generative Adversarial Networks}
+      \field{urlday}{20}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1812.04948 [cs, stat]
+      \endverb
+      \verb{file}
+      \verb Karras et al. - 2019 - A Style-Based Generator Architecture for Generativ.pdf:/Users/hannes/Zotero/storage/N63BV4RT/Karras et al. - 2019 - A Style-Based Generator Architecture for Generativ.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1812.04948
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1812.04948
+      \endverb
+      \keyw{Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,Statistics - Machine Learning}
     \endentry
     \entry{lorenz_reinforcement_2020}{book}{}
       \name{author}{1}{}{%
@@ -238,6 +370,69 @@
       \verb https://github.com/NVlabs/ffhq-dataset
       \endverb
     \endentry
+    \entry{radford_unsupervised_2016}{misc}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1a5dc3b488533e7e2dff1b6b8568678d}{%
+           family={Metz},
+           familyi={M\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8ef51a0906e47d2b4472c4e714ed598f}{%
+           family={Chintala},
+           familyi={C\bibinitperiod},
+           given={Soumith},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{fullhash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{bibnamehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{authorbibnamehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{authornamehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{authorfullhash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, supervised learning with convolutional networks ({CNNs}) has seen huge adoption in computer vision applications. Comparatively, unsupervised learning with {CNNs} has received less attention. In this work we hope to help bridge the gap between the success of {CNNs} for supervised learning and unsupervised learning. We introduce a class of {CNNs} called deep convolutional generative adversarial networks ({DCGANs}), that have certain architectural constraints, and demonstrate that they are a strong candidate for unsupervised learning. Training on various image datasets, we show convincing evidence that our deep convolutional adversarial pair learns a hierarchy of representations from object parts to scenes in both the generator and discriminator. Additionally, we use the learned features for novel tasks - demonstrating their applicability as general image representations.}
+      \field{day}{7}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{{arXiv}:1511.06434}
+      \field{title}{Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1511.06434 [cs]
+      \endverb
+      \verb{file}
+      \verb Radford et al. - 2016 - Unsupervised Representation Learning with Deep Con.pdf:/Users/hannes/Zotero/storage/IA8GEYRF/Radford et al. - 2016 - Unsupervised Representation Learning with Deep Con.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1511.06434
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.06434
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning}
+    \endentry
     \entry{shahapure_cluster_2020}{inproceedings}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=3aba07428cf65c86c997bfd074b6ccae}{%
@@ -298,6 +493,63 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/9260048/
       \endverb
+    \endentry
+    \entry{simonyan_very_2015}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=9d16b7284df92c9adaee86c37ab992df}{%
+           family={Simonyan},
+           familyi={S\bibinitperiod},
+           given={Karen},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c72fc39e94030f67717052309266a44d}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{fullhash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{bibnamehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{authorbibnamehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{authornamehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{authorfullhash}{25d2f3c4577a6632d37f0126cc781232}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3 × 3) convolution ﬁlters, which shows that a signiﬁcant improvement on the prior-art conﬁgurations can be achieved by pushing the depth to 16–19 weight layers. These ﬁndings were the basis of our {ImageNet} Challenge 2014 submission, where our team secured the ﬁrst and the second places in the localisation and classiﬁcation tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing {ConvNet} models publicly available to facilitate further research on the use of deep visual representations in computer vision.}
+      \field{day}{10}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{{arXiv}:1409.1556}
+      \field{title}{Very Deep Convolutional Networks for Large-Scale Image Recognition}
+      \field{urlday}{19}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1409.1556 [cs]
+      \endverb
+      \verb{file}
+      \verb Simonyan und Zisserman - 2015 - Very Deep Convolutional Networks for Large-Scale I.pdf:/Users/hannes/Zotero/storage/L56MLLRV/Simonyan und Zisserman - 2015 - Very Deep Convolutional Networks for Large-Scale I.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1409.1556
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1409.1556
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
     \endentry
   \enddatalist
   \missing{Bar-Shalom}
