@@ -145,4 +145,39 @@ Dieser Ansatz stellt eine besondere Herausforderung dar, da der Angreifer aufgru
 %Differential Privacy
 Um den experimentellen Rahmen abzurunden, werden in diesem Abschnitt die implementierten Verteidigungsmaßnahmen präsentiert. Dies beinhaltet Schutzmechanismen, die darauf abzielen, Modelle gegen Angriffe zu stärken und ihre Robustheit zu verbessern. Die Wirksamkeit dieser Verteidigungsstrategien wird kritisch betrachtet, und es werden etwaige Limitationen oder Trade-offs diskutiert.
 
+Für dieses Vorhaben wurde die Methode der differentiellen Privatsphäre, wie in Abschnitt \ref{diff_privacy} beschrieben, eingebunden. Diese Methode zielt darauf ab, Überanpassung (Overfitting) durch das Einbringen von Rauschen in die Trainingsdaten zu verhindern und die erfolgreiche Durchführung von Inferenzangriffen zu erschweren. Die Integration erfolgt mittels des sogenannten Opacus-Frameworks (\cite{noauthor_opacus_nodate}), welches die direkte Implementierung von Trainingsroutinen auf Basis von mit PyTorch erstellten Modellen ermöglicht.
+
+\begin{figure}[H]
+	\centering
+	\hspace{-1.5cm}
+	\includegraphics[width=0.9\linewidth]{Bilder/dpsgd.png}
+	\caption{Trainingsprozess eines mit differentieller Privatsphäre durchgeführten Trainings}
+	\label{img:dpsgd}
+\end{figure}
+
+Im Bild \ref{img:dpsgd} wird eine oberflächliche Visualisierung der Trainingsroutine eines neuronalen Netzwerks gezeigt, das auf Basis differentieller Privatsphäre trainiert wird. Dabei wird hervorgehoben, dass sich der Trainingsprozess von dem des \glqq normalen\grqq{} Trainings in verschiedenen Abschnitten durch spezifische Erweiterungen unterscheidet. Diese zusätzlichen Werte repräsentieren allesamt einen besonderen Mehrwert in den zusätzlichen Phasen des DP-SGD-Algorithmus (\cite[3]{abadi_deep_2016}).
+
+Der \textit{Ablauf} des Algorithmus beginnt mit der Initialisierung verschiedener Parameter, die die Rahmenbedingungen des Trainings festlegen. Dazu zählen neben Hyperparametern wie der Lernrate $\eta_t$, dem Sensitivitätswert $S$, der Gruppierungs- und Rauschgröße ($L$ und $\sigma$), der Gradientenobergrenze $C$ auch Verlustfunktion 
+\begin{equation}
+	\mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1} \mathcal{L}(\theta,x_i)
+\end{equation}
+sowie die Menge der Trainingsdaten $X$ bestehend aus Datenpunkten \{$x_1, x_2, \dots x_n$\}. Auf Basis dieser Werte folgt anschließend eine Schleife über eine bestimmte Epochenanzahl, die auch durch den Trainierenden festgelegt werden muss. In dieser Schleife führt man eine weitere aus, die zufällig über jeden Datenpunkt $x$ iteriert, um auf Basis des Werts verschiedene Operationen auszuführen. Zuerst wird der Gradient auf Basis der angegebenen Verlustfunktion und den aktuellen Modellparametern berechnet: 
+\begin{equation}
+	g_t(x_i) \leftarrow \nabla_{\theta_t} L(\theta_t, x_i)
+\end{equation}
+Durch die Berechnung eines Gradienten für jeden einzelnen Datenpunkt kann das Modell auf die spezifischen Eigenschaften angepasst und eine bessere Modellleistung herbeigeführt werden. Im folgenden Schritt wird auf Basis der übergebenen Gradientenobergrenze $C$ der zuvor erechnete Wert angepasst. Das sogenannte \glqq Gradienten-Clipping\grqq{} beschränkt den Datenpunkt der einzelnen Gradienten auf eine bestimmte Größe $C$: 
+\begin{equation} 
+	g_t(x_i) \leftarrow \frac{g_t(x_i)}{\max \left(1, \frac{\|g_t(x_i)\|_2}{C}\right)}
+\end{equation}
+Dadurch wird das Problem der explodierenden Gradienten (eng.: Gradient Explosion), das die Leistung und Qualität des Trainings stark beeinflusst, verhindert. Wenn der Wert von $g_t(x_i)$ den Wert $C$ übersteigt, wird dieser durch den Faktor der genannten Formel dividiert. Ein weiterer Vorteil ist dabei die Beschränkung der Sensitivität bezüglich einzelner Datenpunkte, die durch die Oberschwelle $C$ gesteuert werden kann. Je höher diese, desto größer ist das Rauschen, das in folgenden Schritten hinzugefügt werden muss, um den Schutz der Privatsphäre gewährleisten zu können.
+Nachdem die Gradienten an das vorgegebene Intervall angepasst wurden, erfolgt die Zugabe von Rauschen zu den Datenpunkten auf Grundlage dieser Formel:
+\begin{equation}
+	\tilde{g}_t \leftarrow \frac{1}{L} \left( \sum_i \bar{g}_t(x_i) + N(0, \sigma^2C^2I) \right)
+\end{equation}
+Dabei wird jedem Datenpunkt für den bereits \glqq geclippten\grqq{} Gradienten ein Rauschterm hinzugefügt. Dieser wird durch die Normalverteilung mit Mittelwert 0 und einer Kovarianzmatrix $\Sigma = \sigma^2C^2I $ berechnet. $\sigma$ steht hierbei für die Standardabweichung des Rauschens und $C$ für die Obergrenze des Clippings. Durch das Hinzufügen des Rauschens versucht man die Sensitivität der einzelnen Datenpunkte zu verschleiern und den verstärkten Einfluss bestimmter Parameter auf die Aktualisierung der Modellparameter zu verhindern. Dies hat den Schutz der Privatsphäre zur Folge.
+
+Nach Abschluss sämtlicher Berechnungen für eine festgelegte Anzahl von Datenpunkten, welche durch die Gruppierungsgröße $L$ definiert ist, werden diese zu einem sogenannten Mini-Batch zusammengeführt. Auf Grundlage dieses Mini-Batches erfolgt dann eine Aktualisierung der Modellparameter.
+
+Die Anwendung dieses beschriebenen Prozesses dient dem Schutz der Privatsphäre der während des Trainings verwendeten Datenpunkte. Das wird durch die Vermeidung eines zu großen Einflusses spezifischer Datenpunkte während der Aktualisierung der Modellparameter erreicht.
+
 Die detaillierte Darstellung dieser Elemente bildet das Fundament für die nachfolgenden Experimente und ermöglicht es, die Ergebnisse in einem klaren Kontext zu interpretieren. Die sorgfältige Auswahl und Konfiguration der Experimentierumgebung ist entscheidend für die Zuverlässigkeit und Aussagekraft der gesamten Forschungsarbeit.

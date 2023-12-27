@@ -19,6 +19,95 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{abadi_deep_2016}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{uniquename=0,uniquepart=base,hash=9a04ae935da573a7aa9c83afdf2fd845}{%
+           family={Abadi},
+           familyi={A\bibinitperiod},
+           given={Martín},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=25446ff761c3633df18431097f7205ca}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e0e10b13fa94d1bbe0aa9743336c7655}{%
+           family={{McMahan}},
+           familyi={M\bibinitperiod},
+           given={H.\bibnamedelimi Brendan},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2eea0075441c4e9acfc378c1345323f2}{%
+           family={Mironov},
+           familyi={M\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1754a40f9d600dea756c1dd1047ce170}{%
+           family={Talwar},
+           familyi={T\bibinitperiod},
+           given={Kunal},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=32a08717e0d6dcde59bc98b96800ed6c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{fullhash}{e6328702d536ea7665b1c0c670f890e0}
+      \strng{bibnamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authorbibnamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authornamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authorfullhash}{e6328702d536ea7665b1c0c670f890e0}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Machine learning techniques based on neural networks are achieving remarkable results in a wide variety of domains. Often, the training of models requires large, representative datasets, which may be crowdsourced and contain sensitive information. The models should not expose private information in these datasets. Addressing this goal, we develop new algorithmic techniques for learning and a reﬁned analysis of privacy costs within the framework of diﬀerential privacy. Our implementation and experiments demonstrate that we can train deep neural networks with non-convex objectives, under a modest privacy budget, and at a manageable cost in software complexity, training eﬃciency, and model quality.}
+      \field{booktitle}{Proceedings of the 2016 {ACM} {SIGSAC} Conference on Computer and Communications Security}
+      \field{day}{24}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Deep Learning with Differential Privacy}
+      \field{urlday}{27}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{308\bibrangedash 318}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/2976749.2978318
+      \endverb
+      \verb{eprint}
+      \verb 1607.00133 [cs, stat]
+      \endverb
+      \verb{file}
+      \verb Abadi et al. - 2016 - Deep Learning with Differential Privacy.pdf:/Users/hannes/Zotero/storage/7Q4ZZB7Q/Abadi et al. - 2016 - Deep Learning with Differential Privacy.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1607.00133
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1607.00133
+      \endverb
+      \keyw{Computer Science - Cryptography and Security,Computer Science - Machine Learning,Statistics - Machine Learning}
+    \endentry
     \entry{balas_recent_2020}{collection}{}
       \name{editor}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=93439a15ac9085326b06aa75b319753c}{%
@@ -368,6 +457,28 @@
       \endverb
       \verb{url}
       \verb https://github.com/NVlabs/ffhq-dataset
+      \endverb
+    \endentry
+    \entry{noauthor_opacus_nodate}{online}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Train {PyTorch} models with Differential Privacy}
+      \field{title}{Opacus · Train {PyTorch} models with Differential Privacy}
+      \field{urlday}{23}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/hannes/Zotero/storage/IFXYWE3L/opacus.ai.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://opacus.ai/
+      \endverb
+      \verb{url}
+      \verb https://opacus.ai/
       \endverb
     \endentry
     \entry{radford_unsupervised_2016}{misc}{}

@@ -1990,11 +1990,13 @@
     <bcf:citekey order="13">radford_unsupervised_2016</bcf:citekey>
     <bcf:citekey order="14">karras_style-based_2019</bcf:citekey>
     <bcf:citekey order="15">chen_knowledge-enriched_2021</bcf:citekey>
-    <bcf:citekey order="16">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
-    <bcf:citekey order="17">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
-    <bcf:citekey order="18">Bar-Shalom</bcf:citekey>
-    <bcf:citekey order="19">Goldhammer</bcf:citekey>
-    <bcf:citekey order="20">WHO-2004</bcf:citekey>
+    <bcf:citekey order="16">noauthor_opacus_nodate</bcf:citekey>
+    <bcf:citekey order="17">abadi_deep_2016</bcf:citekey>
+    <bcf:citekey order="18">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="19">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="20">Bar-Shalom</bcf:citekey>
+    <bcf:citekey order="21">Goldhammer</bcf:citekey>
+    <bcf:citekey order="22">WHO-2004</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
