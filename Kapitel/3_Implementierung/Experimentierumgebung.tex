@@ -73,7 +73,7 @@ Hervorzuheben ist, dass das VGG-16 Netzwerk auf dem ImageNet-Datensatz trainiert
 		\begin{tabular}{c|ccccc|c}
 			\textbf{Datensatz} & \textbf{Lernrate} & \textbf{Epochenanzahl} & \textbf{Batch-Größe} & \textbf{Momentum} & \textbf{Weight-Decay} & \textbf{Genauigkeit bezüglich Testdaten}\\
 			\hline
-			\textit{CelebA} & 1e-3 & 40 & 128 & 0.9 & 1e-4 & \textbf{99,6\%}\\
+			\textit{CelebA} & 1e-3 & 40 & 128 & 0.9 & 1e-4 & \textbf{57,6\%}\\
 			\hline
 			\textit{MNIST} & 1e-3 & 8 & 64 & 0.9 & 1e-4 & \textbf{99,6\%}\\
 			\hline
@@ -84,7 +84,7 @@ Hervorzuheben ist, dass das VGG-16 Netzwerk auf dem ImageNet-Datensatz trainiert
 \end{table}
 
 % Trainingsteil des VGG hinzufügen 
-Hier soll erstmal blabla über Training eines VGG16 Netzwerks gemacht werden (wie es bei mir war).
+Die Trainingsroutine des VGG-16 Netzwerks basiert auf einem überwachten Lernverfahren (siehe \ref{subsec:supervisedlearning}), wobei eine Menge an Datenpunkten des Trainingssatzes, welchen eine bestimmte Kategorisierung/ein bestimmtes Label zugeordnet ist, genutzt wird, um die Parameter des Modells möglichst effizient und zielführend zu aktualisieren. Dabei wurde bei der Durchführung dieser Arbeit kein Wert auf eine optimalisierte Modellgenauigkeit und Leistung gelegt, weshalb ein mögliches Hyperparameter-Tuning eine Verbesserung der Modellleistung herbeiführen kann. Die Durchführung des Trainings auf Basis verschiedener Datensätze (CelebA und MNIST) wurde mit verschiedenen Hyperparametereinstellungen ausgeführt, wie in Tabelle \ref{tab:nn_train} beschrieben. Deutlich zu erkennen ist, dass die Testgenauigkeit des Modells bezüglich Gesichtdaten sehr niedrig ist, die Trainingsgenauigkeit allerdings deutlich höher. Dies ist auf den Aufbau des genutzten Datensatzes zurückzuführen, der aufgrund der großen Klassenanzahl (>1000) mit maximal 10 Bildern pro Klasse nicht für ein Training zur Klassifikation von Gesichtsbildern prominenter Persönlichkeiten geeignet ist. Durch die Divergenz zwischen Trainings- und Testgenauigkeit ist ersichtlich, dass es sich um ein sogenanntes Overfitting handelt, welches eine hohe Genauigkeit bezüglich der im Training verwendeten Daten aufweist, allerdings Testdaten nicht gut erkannt werden. Somit erkennt man ungefähr jedes 2. Bild richtig, was eine sehr schwache Modellleistung hervorhebt. 
 
 Zur Durchführung der im vorliegenden Kontext beschriebenen Modell-Inversions-Angriffe ist ein neuronales Netzwerk erforderlich, das die Fähigkeit besitzt, spezifische Bilder zu generieren. In diesem Zusammenhang wurde das Deep Convolutional Generative Adversarial Network (DCGAN) gemäß der Arbeit von Radford et al. (\cite{radford_unsupervised_2016}) eingesetzt. Dieses Netzwerk zeichnet sich durch eine Vielzahl von speziellen architektonischen Merkmalen aus. Es besteht primär aus zwei Hauptkomponenten: dem Generator, der die Generierung neuer Datenpunkte durch zufälliges Rauschen übernimmt, und dem Diskriminator, der versucht, zwischen realen und gefälschten Bildern zu differenzieren.
 
@@ -107,11 +107,11 @@ Die Trainingseffizienz des DCGAN kann variieren, abhängig von der verwendeten H
 	\renewcommand{\arraystretch}{1.5}
 	\resizebox{\textwidth}{!}{
 		\begin{tabular}{c|ccccc}
-			\textbf{Datensatz} & \textbf{Lernrate} & \textbf{Epochenanzahl} & \textbf{Batch-Größe} & \textbf{Momentum} & \textbf{Weight-Decay}\\
+			\textbf{Datensatz} & \textbf{Lernrate} & \textbf{Epochenanzahl} & \textbf{Batch-Größe} & \textbf{Momentum} & \textbf{Bildgröße}\\
 			\hline
-			\textit{CelebA} & 1e-3 & 40 & 128 & 0.9 & 1e-4\\
+			\textit{CelebA} & 2e-4 & 100 & 128 & 0.5 & 64 $\times$ 64\\
 			\hline
-			\textit{MNIST} & 1e-3 & 8 & 64 & 0.9 & 1e-4 \\
+			\textit{MNIST} & 2e-4 & 100 & 128 & 0.5 & 64 $\times$ 64 \\
 			\hline
 		\end{tabular}
 	}
@@ -120,7 +120,8 @@ Die Trainingseffizienz des DCGAN kann variieren, abhängig von der verwendeten H
 \end{table}
 
 % Trainingsteil des DCGAN hinzufügen 
-Hier soll erstmal blabla über Training eines DCGAN Netzwerks gemacht werden (wie es bei mir war).
+Das DCGAN wurde auf Basis der in Tabelle \ref{tab:dcgan} aufgelisteten Hyperparametern trainiert. Dabei wurde darauf geachtet, dass generierte Bilder \glqq weitesgehend fehlerunbehaftet\grqq{} dargestellt werden. Dies bedeutet, dass Gesichter und Ziffern deutlich erkennbar und nicht mit großer Störung versehen sind. Jedoch wurde kein Augenmerk auf den Realitätsgrad des Bildes gelegt, sodass Generierungen von echten, hochaufgelösten Bildern deutlich zu unterscheiden sind. 
+%%%% Hier muss das Training noch genauer beschrieben werden (mit Graph usw.)
 
 Um die Angriffsszenarien erweitern zu können, wurde ein weiteres generatives Modell zur Erzeugung hochauflösender Gesichtsbilder verwendet. Dieses StyleGAN (\cite{karras_style-based_2019}) basiert auf dem Konzept der generativen adverariellen Netzwerke und umfass -- wie ein DCGAN -- sowohl Generator und Diskriminator. Hierbei generiert der Generator die neuen Bilder, die dann vom Diskriminator nach Qualität bewertet werden. Während des Trainings werden beide Komponenten verbessert, was qualitativ hochwertigere und realistischere Bilder mit sich bringt. Die StyleGAN-Architektur hat neben den realistischen Bildausgaben die Besonderheit, dass Stilvarationen in Generierungen gut zu kontrollieren sind. Dies bedeutet, dass bestimmte Merkmale, wie beispielsweise Mimik und Haarfarbe, separat manipuliert werden können, um dadurch individuelle Ergebnisse zu erzielen. Diese Art des GANs wurde nicht selbst trainiert, sondern vortrainiert von NVIDIA geladen.
 
@@ -145,15 +146,29 @@ Der \glqq KEDMI\grqq-Angriff, wie in der Arbeit von Chen et al. (\cite{chen_know
 	\label{img:kedmi_process}
 \end{figure}
 
+Der \glqq KEDMI\grqq-Angriff erfordert für eine effektive Angriffsqualität detailliertes Wissen über interne Strukturen und Parameter des Zielmodells, sowie umfassende Informationen über die Trainingsdaten. Um diesen Angriff erfolgreich durchzuführen ist es erforderlich nicht nur Zugriff auf das Zielmodell, sondern auch auf einen Generator und seinen zugehörigen Diskriminator zu haben, die für die Generierung und Validierung von Bildern verwendet werden. Der Ablauf des Angriffs, wie in Abbildung \ref{img:kedmi_process} dargestellt, beginnt mit der Initialisierung verschiedener Parameter im Angriffsskript. Zusätzlich muss explizit angegeben werden, welche Klasse rekonstruiert werden soll.
+
+Die resultierenden latenten Variablen spielen im Verlauf des Angriffs eine entscheidende Rolle bei der Rekonstruktion der gewünschten Klassen. Um diese Variablen während des Angriffs präzise anzupassen kommt ein Optimierer zum Einsatz, der die Vektoren in den gewünschten latenten Raum zu optimieren versucht. In der anschließenden Angriffsschleife wird iterativ jeweils ein Bild auf Grundlage der angepassten latenten Variablen erzeugt, das anschließend vom Diskriminator als gefälscht oder real klassifiziert wird. Parallel dazu wird die Zielklasse durch die Eingabe des generierten Bildes in das Zielmodell überprüft.
+
+Anhand dieser ermittelten Variablen werden verschiedene Verluste berechnet, die für die Optimierung des Angriffs verwendet werden. Die Rückwärtsdurchläufe, üblicherweise in herkömmlichen Trainingsprozessen verwendet, werden gefolgt von einer Optimierung basierend auf den berechneten Verlusten durchgeführt. Dieser Prozess wiederholt sich über eine vordefinierte Anzahl von Iterationen, wobei in jedem Schritt eine bestimmte Anzahl von Rekonstruktionsbildern erzeugt wird. Diese generierten Bilder werden gespeichert und ermöglichen es dem Angreifer, die Leistung des Angriffs über die Angriffszeit hinweg zu analysieren, indem die Qualität und Genauigkeit der Rückgewinnungen betrachtet werden. Dieser fortlaufende Analyseprozess ermöglicht es dem Angreifer, Einsichten in die Wirksamkeit des Angriffs zu erlangen.
+
 Des Weiteren wurde eine Modellinversionsmethode angewandt, die auf dem Prinzip des bestärkenden Lernens basiert. Bei dieser Methode werden Konfidenzwerte oder -vektoren der generierten Bilder verwendet, um einem Agenten Belohnungen zuzuführen. Der Agent nutzt diese Belohnungen, um private Daten zu rekonstruieren, die während des Trainingsprozesses des Modells verwendet wurden. Aufgrund der begrenzten Zugriffsmöglichkeiten auf das Modell, bei dem der Zugriff auf die Konfidenzwertausgabe des Modells eingeschränkt ist, handelt es sich hierbei um einen sogenannten BlackBox-Angriff.
 Der Ansatz des bestärkenden Lernens beinhaltet die Verwendung von Konfidenzwerten, die die Zuversicht oder Sicherheit des Modells in Bezug auf die generierten Daten repräsentieren. Diese Konfidenzwerte dienen als Belohnungen für den Agenten, der daraufhin die Aufgabe hat, die privaten Daten so zu rekonstruieren, dass die Belohnungen maximiert werden.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\linewidth]{Bilder/RBMI_PROCESS.png}
+	\includegraphics[width=\linewidth]{Bilder/RBMI_PROCESS.png}
 	\caption{Prozessablauf eines RBMI-Angriffs}
 	\label{img:rbmi_process}
 \end{figure}
+
+Gemäß der Abbildung \ref{img:rbmi_process} erfordert die Durchführung dieser Attacke neben dem eigentlichen Angriffsskript (dargestellt als Angreifer) Zugriff auf einen Agenten, der als Generator fungiert und Bilder der gewünschten Form erzeugt, sowie auf ein Zielmodell, das zur Vorhersage eines bestimmten Inputs $I$ verwendet wird. Das Skript des Angreifers ist verantwortlich für die korrekte Ausführung und Verarbeitung verschiedener Werte und Generierungen, um das bestärkende Lernen effektiv zu koordinieren. Der Angriff erfolgt mithilfe mehrerer Schleifen, deren Dauer zu Beginn spezifiziert wird und einen direkten Einfluss auf die Leistung hat.
+
+Mit der Initialisierung des Angriffs wird der Zustand des Agenten mit einem zufälligen Vektor initialisiert, der im Laufe der Ausführungsdauer immer weiter dem zu generierenden Originalbild ähnelt. Um das bestärkende Lernverfahren effektiver durchzuführen, folgt eine Schleife, die über eine vordefinierte Anzahl von Durchgängen läuft. Durch Zustandsaktualisierungen, die auf Belohnungen basieren, wird versucht, dem Originalbild näher zu kommen. Dabei erzeugt der Generator ein bestimmtes Bild auf Basis des aktualisierten Agentenzustands, und der Confidence-Score wird über das Zielmodell berechnet. Ein bestimmter Reward (Belohnung) wird aus diesem Score berechnet, was die nächste Aktualisierung des Agentenzustands beeinflusst und eine Korrektur \glqq in die richtige Richtung \grqq{} veranlasst..
+
+Nach Abschluss der inneren Schleife, die die Zustände dem latenten Vektorraum der Zielklasse anzugleichen versucht, wird der Zustand erneut mit dem bereits beschriebenen Verfahren aktualisiert und das Ergebnis anschließend gespeichert. Auf diese Weise erhält man nach jeder Iteration eine aktualisierte, gespeicherte Momentaufnahme des Angriffsfortschritts sowie der Angriffsqualität. Die Zustandsaktualisierungen basieren immer auf bereits aktualisierte Zustände der vorherigen Iteration.
+
+Nach Abschluss der Ausführung lässt sich das "zurückgenerierte" Bild im Verzeichnis der Angriffsergebnisse einsehen.
 
 Dieser Ansatz stellt eine besondere Herausforderung dar, da der Angreifer aufgrund der begrenzten Kenntnis über die internen Strukturen und Parameter des Modells alternative Methoden finden muss, um an sensible Informationen zu gelangen. In diesem Szenario wird bestärkendes Lernen als Mechanismus genutzt, um den Agenten dazu zu bringen, die unsichtbaren Merkmale der generierten Daten zu erlernen und somit private Informationen zu rekonstruieren.
 \subsection{Verteidigungsmaßnahmen}
