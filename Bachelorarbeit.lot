@@ -4,11 +4,11 @@
 \addvspace {\baselineskip }
 \addvspace {\baselineskip }
 \addvspace {\baselineskip }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Hyperparameter des \glqq normalen\grqq {} Trainings bez\IeC {\"u}glich der angegebenen Datens\IeC {\"a}tze\relax }}{23}{table.caption.13}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Hyperparameter eines DCGAN-Trainings bez\IeC {\"u}glich der angegebenen Datens\IeC {\"a}tze\relax }}{24}{table.caption.14}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Hyperparameter des \glqq normalen\grqq {} Trainings bez\IeC {\"u}glich der angegebenen Datens\IeC {\"a}tze\relax }}{24}{table.caption.15}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Hyperparameter eines DCGAN-Trainings bez\IeC {\"u}glich der angegebenen Datens\IeC {\"a}tze\relax }}{25}{table.caption.16}
 \addvspace {\baselineskip }
-\contentsline {table}{\numberline {5.1}{\ignorespaces \glqq KEDMI\grqq -Angriffsstatistik\relax }}{38}{table.caption.25}
-\contentsline {table}{\numberline {5.2}{\ignorespaces \glqq RBMI\grqq -Angriffsstatistik\relax }}{39}{table.caption.26}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Auswertung zweier Angriffsalgorithmen auf \glqq abgesicherte\grqq {} und ungesch\IeC {\"u}tzte Modelle\relax }}{42}{table.caption.29}
+\contentsline {table}{\numberline {5.1}{\ignorespaces \glqq KEDMI\grqq -Angriffsstatistik\relax }}{39}{table.caption.27}
+\contentsline {table}{\numberline {5.2}{\ignorespaces \glqq RBMI\grqq -Angriffsstatistik\relax }}{40}{table.caption.28}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Auswertung zweier Angriffsalgorithmen auf \glqq abgesicherte\grqq {} und ungesch\IeC {\"u}tzte Modelle\relax }}{43}{table.caption.31}
 \addvspace {\baselineskip }
 \addvspace {\baselineskip }

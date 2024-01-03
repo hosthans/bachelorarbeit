@@ -10,22 +10,24 @@
 \addvspace {\baselineskip }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Modell-Inversionsangriff Ergebnisse (\cite [S. 7, Figure 3]{fredrikson_privacy_2014})\relax }}{17}{figure.caption.8}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces MI-Ergebnisse f\IeC {\"u}r BigML-Modelle (\cite [S. 6, Figure 4]{fredrikson_model_2015})\relax }}{18}{figure.caption.9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces MI-Ergebnisse des \glqq Mechanical Turk Survey\grqq {} (\cite [S. 10, Figure 9]{fredrikson_model_2015})\relax }}{18}{figure.caption.10}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces MI-Generierungsqualit\IeC {\"a}t der verschiedenen Modelle (\cite [S. 10, Figure 10]{fredrikson_model_2015})\relax }}{19}{figure.caption.11}
 \addvspace {\baselineskip }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Beispielbild des MNIST-Datensatzes\relax }}{19}{figure.caption.10}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispielbild des CelebA-Datensatzes\relax }}{21}{figure.caption.11}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Beispielbilder des Flickr-Faces-HQ-Datensatzes\relax }}{21}{figure.caption.12}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Prozessablauf eines KEDMI-Angriffs\relax }}{26}{figure.caption.15}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Prozessablauf eines RBMI-Angriffs\relax }}{27}{figure.caption.16}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Trainingsprozess eines mit differentieller Privatsph\IeC {\"a}re durchgef\IeC {\"u}hrten Trainings\relax }}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Beispielbild des MNIST-Datensatzes\relax }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Beispielbild des CelebA-Datensatzes\relax }}{22}{figure.caption.13}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Beispielbilder des Flickr-Faces-HQ-Datensatzes\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Prozessablauf eines KEDMI-Angriffs\relax }}{27}{figure.caption.17}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Prozessablauf eines RBMI-Angriffs\relax }}{28}{figure.caption.18}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Trainingsprozess eines mit differentieller Privatsph\IeC {\"a}re durchgef\IeC {\"u}hrten Trainings\relax }}{30}{figure.caption.19}
 \addvspace {\baselineskip }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Verlust- und Genauigkeitsgegen\IeC {\"u}berstellung eines auf den MNIST-Datensatz normal und privat trainierten Modells\relax }}{32}{figure.caption.18}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Bildqualit\IeC {\"a}t der GAN-Modelle\relax }}{33}{figure.caption.19}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gegen\IeC {\"u}berstellung der generierten und originalen Bilder\relax }}{35}{figure.caption.20}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Gegen\IeC {\"u}berstellung der generierten und originalen Bilder\relax }}{35}{figure.caption.21}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Gegen\IeC {\"u}berstellung des generierten Bildes (\textit {rechts}) (mit \glqq RBMI\grqq -Angriff) mit den Originalbildern aus MNIST (\textit {links}) der Zielklasse\relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Gegen\IeC {\"u}berstellung des generierten Bildes (\textit {rechts}) (mit \glqq RBMI\grqq -Angriff und DCGAN) mit den Originalbildern aus CelebA (\textit {links}) der Zielklasse\relax }}{36}{figure.caption.23}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Gegen\IeC {\"u}berstellung des generierten Bildes (\textit {rechts}) (mit \glqq RBMI\grqq -Angriff und StyleGAN) mit den Originalbildern aus CelebA (\textit {links}) der Zielklasse\relax }}{37}{figure.caption.24}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Gegen\IeC {\"u}berstellung von R\IeC {\"u}ckgenerierungen basierend auf einem normalen Klassifizierer und einem mit differentieller Privatsph\IeC {\"a}re mit Hilfe des \glqq KEDMI\grqq -Angriffs\relax }}{40}{figure.caption.27}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Gegen\IeC {\"u}berstellung von R\IeC {\"u}ckgenerierungen der Zahl 0 basierend auf einen normalen Klassifizierer und einem mit differentieller Privatsph\IeC {\"a}re mit Hilfe des \glqq RBMI\grqq -Angriffs\relax }}{41}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Verlust- und Genauigkeitsgegen\IeC {\"u}berstellung eines auf den MNIST-Datensatz normal und privat trainierten Modells\relax }}{33}{figure.caption.20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Bildqualit\IeC {\"a}t der GAN-Modelle\relax }}{34}{figure.caption.21}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gegen\IeC {\"u}berstellung der generierten und originalen Bilder\relax }}{36}{figure.caption.22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Gegen\IeC {\"u}berstellung der generierten und originalen Bilder\relax }}{36}{figure.caption.23}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Gegen\IeC {\"u}berstellung des generierten Bildes (\textit {rechts}) (mit \glqq RBMI\grqq -Angriff) mit den Originalbildern aus MNIST (\textit {links}) der Zielklasse\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Gegen\IeC {\"u}berstellung des generierten Bildes (\textit {rechts}) (mit \glqq RBMI\grqq -Angriff und DCGAN) mit den Originalbildern aus CelebA (\textit {links}) der Zielklasse\relax }}{37}{figure.caption.25}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Gegen\IeC {\"u}berstellung des generierten Bildes (\textit {rechts}) (mit \glqq RBMI\grqq -Angriff und StyleGAN) mit den Originalbildern aus CelebA (\textit {links}) der Zielklasse\relax }}{38}{figure.caption.26}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Gegen\IeC {\"u}berstellung von R\IeC {\"u}ckgenerierungen basierend auf einem normalen Klassifizierer und einem mit differentieller Privatsph\IeC {\"a}re mit Hilfe des \glqq KEDMI\grqq -Angriffs\relax }}{41}{figure.caption.29}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Gegen\IeC {\"u}berstellung von R\IeC {\"u}ckgenerierungen der Zahl 0 basierend auf einen normalen Klassifizierer und einem mit differentieller Privatsph\IeC {\"a}re mit Hilfe des \glqq RBMI\grqq -Angriffs\relax }}{42}{figure.caption.30}
 \addvspace {\baselineskip }
 \addvspace {\baselineskip }
