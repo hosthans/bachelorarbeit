@@ -73,9 +73,9 @@ Hervorzuheben ist, dass das VGG-16 Netzwerk auf dem ImageNet-Datensatz trainiert
 		\begin{tabular}{c|ccccc|c}
 			\textbf{Datensatz} & \textbf{Lernrate} & \textbf{Epochenanzahl} & \textbf{Batch-Größe} & \textbf{Momentum} & \textbf{Weight-Decay} & \textbf{Genauigkeit bezüglich Testdaten}\\
 			\hline
-			\textit{CelebA} & 1e-3 & 40 & 128 & 0.9 & 1e-4 & \textbf{57,6\%}\\
+			\textit{CelebA} & 1e-3 & 100 & 256 & 0.9 & 5e-4 & \textbf{65,23\%}\\
 			\hline
-			\textit{MNIST} & 1e-3 & 8 & 64 & 0.9 & 1e-4 & \textbf{99,6\%}\\
+			\textit{MNIST} & 1e-3 & 15 & 64 & 0.9 & 1e-3 & \textbf{99,63\%}\\
 			\hline
 		\end{tabular}
 	}
@@ -83,8 +83,42 @@ Hervorzuheben ist, dass das VGG-16 Netzwerk auf dem ImageNet-Datensatz trainiert
 	\label{tab:nn_train}
 \end{table}
 
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.35\linewidth}
+		\includegraphics[width=\linewidth]{Bilder/mnist_nn_acc.png}
+		\caption{Genauigkeit während des Trainingsprozesses}
+		\label{img:mnist_nn_acc}
+	\end{subfigure}
+	\hspace{1cm} % Einfügen von horizontalen Abständen zwischen den Bildern
+	\begin{subfigure}[b]{0.35\linewidth}
+		\includegraphics[width=\linewidth]{Bilder/mnist_nn_loss.png}
+		\caption{Verlust während des Trainingsprozesses}
+		\label{img:mnist_nn_loss}
+	\end{subfigure}
+	\caption{Modellleistung eines MNIST-Trainings}
+	\label{img:mnist_training}
+\end{figure}
+
 % Trainingsteil des VGG hinzufügen 
-Die Trainingsroutine des VGG-16 Netzwerks basiert auf einem überwachten Lernverfahren (siehe \ref{subsec:supervisedlearning}), wobei eine Menge an Datenpunkten des Trainingssatzes, welchen eine bestimmte Kategorisierung/ein bestimmtes Label zugeordnet ist, genutzt wird, um die Parameter des Modells möglichst effizient und zielführend zu aktualisieren. Dabei wurde bei der Durchführung dieser Arbeit kein Wert auf eine optimalisierte Modellgenauigkeit und Leistung gelegt, weshalb ein mögliches Hyperparameter-Tuning eine Verbesserung der Modellleistung herbeiführen kann. Die Durchführung des Trainings auf Basis verschiedener Datensätze (CelebA und MNIST) wurde mit verschiedenen Hyperparametereinstellungen ausgeführt, wie in Tabelle \ref{tab:nn_train} beschrieben. Deutlich zu erkennen ist, dass die Testgenauigkeit des Modells bezüglich Gesichtdaten sehr niedrig ist, die Trainingsgenauigkeit allerdings deutlich höher. Dies ist auf den Aufbau des genutzten Datensatzes zurückzuführen, der aufgrund der großen Klassenanzahl (>1000) mit maximal 10 Bildern pro Klasse nicht für ein Training zur Klassifikation von Gesichtsbildern prominenter Persönlichkeiten geeignet ist. Durch die Divergenz zwischen Trainings- und Testgenauigkeit ist ersichtlich, dass es sich um ein sogenanntes Overfitting handelt, welches eine hohe Genauigkeit bezüglich der im Training verwendeten Daten aufweist, allerdings Testdaten nicht gut erkannt werden. Somit erkennt man ungefähr jedes 2. Bild richtig, was eine sehr schwache Modellleistung hervorhebt. 
+Die Trainingsroutine des VGG-16 Netzwerks basiert auf einem überwachten Lernverfahren (siehe \ref{subsec:supervisedlearning}), wobei eine Menge an Datenpunkten des Trainingssatzes, welchen eine bestimmte Kategorisierung/ein bestimmtes Label zugeordnet ist, genutzt wird, um die Parameter des Modells möglichst effizient und zielführend zu aktualisieren. Dabei wurde bei der Durchführung dieser Arbeit kein Wert auf eine optimalisierte Modellgenauigkeit und Leistung gelegt, weshalb ein mögliches Hyperparameter-Tuning eine Verbesserung der Modellleistung herbeiführen kann. Die Durchführung des Trainings auf Basis verschiedener Datensätze (CelebA und MNIST) wurde mit verschiedenen Hyperparametereinstellungen ausgeführt, wie in Tabelle \ref{tab:nn_train} beschrieben.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.35\linewidth}
+		\includegraphics[width=\linewidth]{Bilder/celeba_nn_acc.png}
+		\caption{Genauigkeit während des Trainingsprozesses}
+		\label{img:celeba_nn_acc}
+	\end{subfigure}
+	\hspace{1cm} % Einfügen von horizontalen Abständen zwischen den Bildern
+	\begin{subfigure}[b]{0.35\linewidth}
+		\includegraphics[width=\linewidth]{Bilder/celeba_nn_loss.png}
+		\caption{Verlust während des Trainingsprozesses}
+		\label{img:celeba_nn_loss}
+	\end{subfigure}
+	\caption{Modellleistung eines CelebA-Trainings}
+	\label{img:celeba_training}
+\end{figure}
+ Deutlich zu erkennen ist, dass die Testgenauigkeit (Abbildung \ref{img:celeba_nn_acc}) des Modells bezüglich Gesichtdaten sehr niedrig ist, die Trainingsgenauigkeit allerdings deutlich höher. Auch der Verlust des Modells (Abbildung \ref{img:celeba_nn_loss}) während des Trainings ist sehr hoch und passt sich nur sehr langsam an. Dies ist auf den Aufbau des genutzten Datensatzes zurückzuführen, der aufgrund der großen Klassenanzahl (>1000) mit maximal 10 Bildern pro Klasse nicht für ein Training zur Klassifikation von Gesichtsbildern prominenter Persönlichkeiten geeignet ist. Durch die Divergenz zwischen Trainings- und Testgenauigkeit ist ersichtlich, dass es sich um ein sogenanntes Overfitting handelt, welches eine hohe Genauigkeit bezüglich der im Training verwendeten Daten aufweist, allerdings Testdaten nicht gut erkannt werden. Somit erkennt man ungefähr jedes 2. Bild richtig, was eine sehr schwache Modellleistung hervorhebt. Die Leistung des auf den MNIST-Datensatz trainierten VGG-16 Modells ist deutlich besser, da sowohl Test- als auch Trainingsgenauigkeit (Abbildung \ref{img:mnist_nn_acc}) an den Wert von 100\% konvergieren. Auch der Verlust des Modells konvergiert gegen 0 (Abbildung \ref{img:mnist_nn_loss}).
 
 Zur Durchführung der im vorliegenden Kontext beschriebenen Modell-Inversions-Angriffe ist ein neuronales Netzwerk erforderlich, das die Fähigkeit besitzt, spezifische Bilder zu generieren. In diesem Zusammenhang wurde das Deep Convolutional Generative Adversarial Network (DCGAN) gemäß der Arbeit von Radford et al. (\cite{radford_unsupervised_2016}) eingesetzt. Dieses Netzwerk zeichnet sich durch eine Vielzahl von speziellen architektonischen Merkmalen aus. Es besteht primär aus zwei Hauptkomponenten: dem Generator, der die Generierung neuer Datenpunkte durch zufälliges Rauschen übernimmt, und dem Diskriminator, der versucht, zwischen realen und gefälschten Bildern zu differenzieren.
 
