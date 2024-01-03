@@ -258,6 +258,136 @@
       \endverb
       \keyw{Computer Science - Machine Learning}
     \endentry
+    \entry{fredrikson_model_2015}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=2,uniquepart=given,hash=ca53191803a563335db0f1917ff556b2}{%
+           family={Fredrikson},
+           familyi={F\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod},
+           givenun=2}}%
+        {{uniquename=0,uniquepart=base,hash=940ca4c2de6bee5757bbfe47cbff31bb}{%
+           family={Jha},
+           familyi={J\bibinitperiod},
+           given={Somesh},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4987cfb2b2fac291a9b2963bdc9b5d53}{%
+           family={Ristenpart},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Denver Colorado {USA}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{c94c976331a7fb5c6522a7daf7b0752a}
+      \strng{fullhash}{c94c976331a7fb5c6522a7daf7b0752a}
+      \strng{bibnamehash}{c94c976331a7fb5c6522a7daf7b0752a}
+      \strng{authorbibnamehash}{c94c976331a7fb5c6522a7daf7b0752a}
+      \strng{authornamehash}{c94c976331a7fb5c6522a7daf7b0752a}
+      \strng{authorfullhash}{c94c976331a7fb5c6522a7daf7b0752a}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Machine-learning ({ML}) algorithms are increasingly utilized in privacy-sensitive applications such as predicting lifestyle choices, making medical diagnoses, and facial recognition. In a model inversion attack, recently introduced in a case study of linear classiﬁers in personalized medicine by Fredrikson et al. [13], adversarial access to an {ML} model is abused to learn sensitive genomic information about individuals. Whether model inversion attacks apply to settings outside theirs, however, is unknown.}
+      \field{booktitle}{Proceedings of the 22nd {ACM} {SIGSAC} Conference on Computer and Communications Security}
+      \field{day}{12}
+      \field{eventtitle}{{CCS}'15: The 22nd {ACM} Conference on Computer and Communications Security}
+      \field{isbn}{978-1-4503-3832-5}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{title}{Model Inversion Attacks that Exploit Confidence Information and Basic Countermeasures}
+      \field{urlday}{2}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1322\bibrangedash 1333}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/2810103.2813677
+      \endverb
+      \verb{file}
+      \verb Fredrikson et al. - 2015 - Model Inversion Attacks that Exploit Confidence In.pdf:/Users/hannes/Zotero/storage/R7GAQI8Y/Fredrikson et al. - 2015 - Model Inversion Attacks that Exploit Confidence In.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/2810103.2813677
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/2810103.2813677
+      \endverb
+    \endentry
+    \entry{fredrikson_privacy_2014}{misc}{}
+      \name{author}{6}{}{%
+        {{uniquename=2,uniquepart=given,hash=8871b3db9b039f6f5885a199aa5169ab}{%
+           family={Fredrikson},
+           familyi={F\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=2}}%
+        {{uniquename=0,uniquepart=base,hash=bd4210a3c4952baaf04197bf09d57d8a}{%
+           family={Lantz},
+           familyi={L\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=940ca4c2de6bee5757bbfe47cbff31bb}{%
+           family={Jha},
+           familyi={J\bibinitperiod},
+           given={Somesh},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=bf3461d4efdb087ed94c89a5c6272234}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=20b8e0c60ae530a2091551bc0744a668}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4987cfb2b2fac291a9b2963bdc9b5d53}{%
+           family={Ristenpart},
+           familyi={R\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{131df8d1b921123a109d865f8c691ce2}
+      \strng{fullhash}{56cd04687744230a9bf5ce5882464ad7}
+      \strng{bibnamehash}{131df8d1b921123a109d865f8c691ce2}
+      \strng{authorbibnamehash}{131df8d1b921123a109d865f8c691ce2}
+      \strng{authornamehash}{131df8d1b921123a109d865f8c691ce2}
+      \strng{authorfullhash}{56cd04687744230a9bf5ce5882464ad7}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We initiate the study of privacy in pharmacogenetics, wherein machine learning models are used to guide medical treatments based on a patient’s genotype and background. Performing an in-depth case study on privacy in personalized warfarin dosing, we show that suggested models carry privacy risks, in particular because attackers can perform what we call model inversion: an attacker, given the model and some demographic information about a patient, can predict the patient’s genetic markers.}
+      \field{day}{20}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{title}{Privacy in Pharmacogenetics: An End-to-End Case Study of Personalized Warfarin Dosing}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Fredrikson et al. - Privacy in Pharmacogenetics An End-to-End Case St.pdf:/Users/hannes/Zotero/storage/VCQU8NNF/Fredrikson et al. - Privacy in Pharmacogenetics An End-to-End Case St.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{joshi_machine_2020}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=21585f2b1376237b6195bfb24bbd664f}{%
@@ -365,7 +495,7 @@
       \verb{url}
       \verb http://arxiv.org/abs/1812.04948
       \endverb
-      \keyw{Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing,Statistics - Machine Learning}
+      \keyw{Computer Science - Machine Learning,Statistics - Machine Learning,Computer Science - Neural and Evolutionary Computing}
     \endentry
     \entry{lorenz_reinforcement_2020}{book}{}
       \name{author}{1}{}{%
@@ -542,7 +672,7 @@
       \verb{url}
       \verb http://arxiv.org/abs/1511.06434
       \endverb
-      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning}
+      \keyw{Computer Science - Machine Learning,Computer Science - Computer Vision and Pattern Recognition}
     \endentry
     \entry{shahapure_cluster_2020}{inproceedings}{}
       \name{author}{2}{}{%
