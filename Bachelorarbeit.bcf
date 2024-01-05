@@ -2000,18 +2000,23 @@
     <bcf:citekey order="23">fredrikson_model_2015</bcf:citekey>
     <bcf:citekey order="24">fredrikson_model_2015</bcf:citekey>
     <bcf:citekey order="25">fredrikson_model_2015</bcf:citekey>
-    <bcf:citekey order="26">noauthor_mnist_nodate</bcf:citekey>
-    <bcf:citekey order="27">noauthor_celeba_nodate</bcf:citekey>
-    <bcf:citekey order="28">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
-    <bcf:citekey order="29">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
-    <bcf:citekey order="30">simonyan_very_2015</bcf:citekey>
-    <bcf:citekey order="31">radford_unsupervised_2016</bcf:citekey>
-    <bcf:citekey order="32">karras_style-based_2019</bcf:citekey>
-    <bcf:citekey order="33">chen_knowledge-enriched_2021</bcf:citekey>
-    <bcf:citekey order="34">noauthor_opacus_nodate</bcf:citekey>
-    <bcf:citekey order="35">abadi_deep_2016</bcf:citekey>
-    <bcf:citekey order="36">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
-    <bcf:citekey order="37">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="26">fredrikson_privacy_2014</bcf:citekey>
+    <bcf:citekey order="27">fredrikson_privacy_2014</bcf:citekey>
+    <bcf:citekey order="28">noauthor_mnist_nodate</bcf:citekey>
+    <bcf:citekey order="29">noauthor_celeba_nodate</bcf:citekey>
+    <bcf:citekey order="30">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="31">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="32">simonyan_very_2015</bcf:citekey>
+    <bcf:citekey order="33">radford_unsupervised_2016</bcf:citekey>
+    <bcf:citekey order="34">karras_style-based_2019</bcf:citekey>
+    <bcf:citekey order="35">chen_knowledge-enriched_2021</bcf:citekey>
+    <bcf:citekey order="36">chen_knowledge-enriched_2021</bcf:citekey>
+    <bcf:citekey order="37">han_reinforcement_2023</bcf:citekey>
+    <bcf:citekey order="38">noauthor_opacus_nodate</bcf:citekey>
+    <bcf:citekey order="39">abadi_deep_2016</bcf:citekey>
+    <bcf:citekey order="40">weber_hosthansba_code_2024</bcf:citekey>
+    <bcf:citekey order="41">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
+    <bcf:citekey order="42">noauthor_nvlabsffhq-dataset_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -388,6 +388,75 @@
       \verb Fredrikson et al. - Privacy in Pharmacogenetics An End-to-End Case St.pdf:/Users/hannes/Zotero/storage/VCQU8NNF/Fredrikson et al. - Privacy in Pharmacogenetics An End-to-End Case St.pdf:application/pdf
       \endverb
     \endentry
+    \entry{han_reinforcement_2023}{misc}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=f821840b4fc0f27966d6fba676ae2dec}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Gyojin},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=df76047e7db89139a345ee9bb7b54610}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jaehyun},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4334ceca28560d81e97a7daa83a1effc}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Haeil},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e0e6d59a822cb92f3bea43d96c20c85f}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Junmo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{ffecba11434121122efe3a7306c0d5e4}
+      \strng{fullhash}{861f1e3c213e0b1d85416a8fbdb719a2}
+      \strng{bibnamehash}{ffecba11434121122efe3a7306c0d5e4}
+      \strng{authorbibnamehash}{ffecba11434121122efe3a7306c0d5e4}
+      \strng{authornamehash}{ffecba11434121122efe3a7306c0d5e4}
+      \strng{authorfullhash}{861f1e3c213e0b1d85416a8fbdb719a2}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Model inversion attacks are a type of privacy attack that reconstructs private data used to train a machine learning model, solely by accessing the model. Recently, white-box model inversion attacks leveraging Generative Adversarial Networks ({GANs}) to distill knowledge from public datasets have been receiving great attention because of their excellent attack performance. On the other hand, current blackbox model inversion attacks that utilize {GANs} suffer from issues such as being unable to guarantee the completion of the attack process within a predetermined number of query accesses or achieve the same level of performance as whitebox attacks. To overcome these limitations, we propose a reinforcement learning-based black-box model inversion attack. We formulate the latent space search as a Markov Decision Process ({MDP}) problem and solve it with reinforcement learning. Our method utilizes the confidence scores of the generated images to provide rewards to an agent. Finally, the private data can be reconstructed using the latent vectors found by the agent trained in the {MDP}. The experiment results on various datasets and models demonstrate that our attack successfully recovers the private information of the target model by achieving state-of-the-art attack performance. We emphasize the importance of studies on privacy-preserving machine learning by proposing a more advanced black-box model inversion attack.}
+      \field{day}{10}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{{arXiv}:2304.04625}
+      \field{title}{Reinforcement Learning-Based Black-Box Model Inversion Attacks}
+      \field{urlday}{5}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2304.04625 [cs]
+      \endverb
+      \verb{file}
+      \verb Han et al. - 2023 - Reinforcement Learning-Based Black-Box Model Inver.pdf:/Users/hannes/Zotero/storage/47VD5AQX/Han et al. - 2023 - Reinforcement Learning-Based Black-Box Model Inver.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2304.04625
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2304.04625
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Cryptography and Security,Computer Science - Machine Learning}
+    \endentry
     \entry{joshi_machine_2020}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=21585f2b1376237b6195bfb24bbd664f}{%
@@ -792,10 +861,48 @@
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition}
     \endentry
+    \entry{weber_hosthansba_code_2024}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ed85dbe573d6fea1130a889184abfda6}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Hannes},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed85dbe573d6fea1130a889184abfda6}
+      \strng{fullhash}{ed85dbe573d6fea1130a889184abfda6}
+      \strng{bibnamehash}{ed85dbe573d6fea1130a889184abfda6}
+      \strng{authorbibnamehash}{ed85dbe573d6fea1130a889184abfda6}
+      \strng{authornamehash}{ed85dbe573d6fea1130a889184abfda6}
+      \strng{authorfullhash}{ed85dbe573d6fea1130a889184abfda6}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Code-Implementation for bachelor thesis.}
+      \field{day}{6}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{hosthans/ba\_code}
+      \field{titleaddon}{{GitHub}}
+      \field{urlday}{5}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/hosthans/ba_code
+      \endverb
+      \verb{url}
+      \verb https://github.com/hosthans/ba_code
+      \endverb
+    \endentry
   \enddatalist
   \missing{Bar-Shalom}
-  \missing{Goldhammer}
-  \missing{WHO-2004}
 \endrefsection
 \endinput
 

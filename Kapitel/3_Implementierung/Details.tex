@@ -1,0 +1,40 @@
+\section{Implementierungsdetails} \label{chpt:Implementierung_Details}
+Im Folgenden werden Details der Implementierung, wie Code-Strukturen und Ausführungsmethoden, dargestellt.
+\subsection{Repository-Struktur}
+Die grundlegende Struktur des Repositorys (\cite{weber_hosthansba_code_2024}) ist folgendermaßen in die verschiedenen Module untergliedert:
+\dirtree{%
+.1 repository.
+.2 attack\_results.
+.3 kedmi[\dots].
+.4 \dots.
+.3 reinforcment[\dots].
+.4 \dots.
+.2 config.
+.3 kedmi.
+.4 \dots.
+.3 reinforcment\_based.
+.4 \dots.
+.3 training.
+.4 data.json.
+.4 models.json.
+.2 graphs.
+.2 kedmi.
+.2 reinforcment\_based.
+.2 training .
+.2 \dots.
+}
+
+Anhand der Struktur wird erkennbar, dass verschiedene Code-Module mit unterschiedlicher Funktionalität gekapselt in Klassen implementiert sind. Dabei sind zum Beispiel die Klassen für die Durchführung der verschiedenen Angriffsmethoden innerhalb der jeweiligen Verzeichnisse zu finden (\textit{KEDMI} \& \textit{RBMI}). Das \textit{config}-Verzeichnis beinhaltet die Konfigurationen für verschiedene Ausführungen, wie Training und Angriff von neuronalen Netzwerken. Die Angriffsresultate der Durchführungen, wie beispielsweise auf dem KEDMI-Angriff basierte Generierungen bezüglich eines bestimmten Zielmodells, landen im Verzeichnis \textit{attack\_results}. Mit Hilfe eines Notebooks können Leistungs-Metriken, wie Verlustfunktion und Genauigkeit, in einem Plot visualisiert, welche im \textit{graphs}-Verzeichnis abgespeichert werden.
+
+
+\subsection{Code-Ausführung}
+Die Folgenden Unterkapitel beschreiben die Ausführung diverser Implementierungen von Trainingsroutinen und Angriffsdruchführungen.
+\subsubsection{Modell-Training}
+Um ein Modelltraining ausführen zu können, wurde eine \textit{Trainer}-Klasse implementiert, die das Training verschiedener Netzwerke zur Klassifikation von Bilddaten, sowie GANs, ermöglicht.
+\begin{lstlisting}[language=Python, caption=Training eines neuronalen Netzwerks, label=lst:1]
+from training.utils.trainer import Trainer 
+
+trainer = Trainer(dataset="mnist", mode="nn")
+loss_nn, acc_nn, loss_t_nn, acc_t_nn = trainer.train()
+\end{lstlisting}
+Die im Listing \ref{lst:1} präsentierten Codezeilen illustrieren die unkomplizierte Verwendung einer Trainer-Instanz zur Durchführung eines lokalen Trainings. Basierend auf den Übergabeparametern, die während der Instanziierung überreicht werden, kann der Ausführende nicht nur die Datensatzdefinition steuern, sondern auch die Art des Trainings durch Anpassung von Werten in Form von Zeichenketten festlegen. Dabei steht dem Nutzer einerseits die Möglichkeit offen, zwischen dem MNIST- und dem CelebA-Datensatz zu wählen. Andererseits kann er auch die erforderliche Trainingsmethode bestimmen, sei es konventionelles Training, Training unter Verwendung differentieller Privatsphäre oder das Training eines Generativen Netzwerks.
