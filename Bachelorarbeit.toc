@@ -34,14 +34,17 @@
 \contentsline {subsection}{\numberline {4.2.1}Repository-Struktur}{34}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Code-Ausf\IeC {\"u}hrung}{34}{subsection.4.2.2}
 \contentsline {subsubsection}{\numberline {4.2.2.1}Modell-Training}{34}{subsubsection.4.2.2.1}
-\contentsline {chapter}{\numberline {5}Ergebnisse}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Modellleistung}{36}{section.5.1}
-\contentsline {section}{\numberline {5.2}Bildqualit\IeC {\"a}t}{37}{section.5.2}
-\contentsline {section}{\numberline {5.3}Angriffsperformance}{38}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Genauigkeit der Angriffe}{38}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Angriffsstatistiken}{42}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Auswertung der Verteidigungsstrategie}{44}{section.5.4}
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{48}{chapter.6}
-\contentsline {chapter}{\nonumberline Bilderverzeichnis}{49}{chapter*.34}
-\contentsline {chapter}{\nonumberline Tabellen}{50}{chapter*.35}
-\contentsline {chapter}{\nonumberline Literatur}{51}{chapter*.36}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Metrikvisualisierung}{35}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Angriffsdurchf\IeC {\"u}hrung}{35}{subsubsection.4.2.2.3}
+\contentsline {chapter}{\numberline {5}Ergebnisse}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Modellleistung}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Bildqualit\IeC {\"a}t}{38}{section.5.2}
+\contentsline {section}{\numberline {5.3}Angriffsperformance}{39}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Genauigkeit der Angriffe}{39}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Angriffsstatistiken}{43}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Auswertung der Verteidigungsstrategie}{45}{section.5.4}
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{49}{chapter.6}
+\contentsline {chapter}{\nonumberline Bilderverzeichnis}{50}{chapter*.34}
+\contentsline {chapter}{\nonumberline Tabellen}{51}{chapter*.35}
+\contentsline {chapter}{\nonumberline Listings}{52}{chapter*.36}
+\contentsline {chapter}{\nonumberline Literatur}{53}{chapter*.37}

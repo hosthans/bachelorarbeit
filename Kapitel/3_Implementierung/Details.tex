@@ -28,7 +28,7 @@ Anhand der Struktur wird erkennbar, dass verschiedene Code-Module mit unterschie
 
 
 \subsection{Code-Ausführung}
-Die Folgenden Unterkapitel beschreiben die Ausführung diverser Implementierungen von Trainingsroutinen und Angriffsdruchführungen.
+Die Folgenden Unterkapitel beschreiben oberflächlich die Ausführung bestimmter Methoden, die für Trainings- und Angriffsdurchführung verwendet werden.
 \subsubsection{Modell-Training}
 Um ein Modelltraining ausführen zu können, wurde eine \textit{Trainer}-Klasse implementiert, die das Training verschiedener Netzwerke zur Klassifikation von Bilddaten, sowie GANs, ermöglicht.
 \begin{lstlisting}[language=Python, caption=Training eines neuronalen Netzwerks, label=lst:1]
@@ -37,4 +37,28 @@ from training.utils.trainer import Trainer
 trainer = Trainer(dataset="mnist", mode="nn")
 loss_nn, acc_nn, loss_t_nn, acc_t_nn = trainer.train()
 \end{lstlisting}
-Die im Listing \ref{lst:1} präsentierten Codezeilen illustrieren die unkomplizierte Verwendung einer Trainer-Instanz zur Durchführung eines lokalen Trainings. Basierend auf den Übergabeparametern, die während der Instanziierung überreicht werden, kann der Ausführende nicht nur die Datensatzdefinition steuern, sondern auch die Art des Trainings durch Anpassung von Werten in Form von Zeichenketten festlegen. Dabei steht dem Nutzer einerseits die Möglichkeit offen, zwischen dem MNIST- und dem CelebA-Datensatz zu wählen. Andererseits kann er auch die erforderliche Trainingsmethode bestimmen, sei es konventionelles Training, Training unter Verwendung differentieller Privatsphäre oder das Training eines Generativen Netzwerks.
+Die im Listing \ref{lst:1} präsentierten Codezeilen illustrieren die unkomplizierte Verwendung einer Trainer-Instanz zur Durchführung eines lokalen Trainings. Basierend auf den Übergabeparametern, die während der Instanziierung übergemen werden, kann der Ausführende nicht nur die Datensatzdefinition steuern, sondern auch die Art des Trainings durch Anpassung von Werten in Form von Zeichenketten festlegen. Dabei steht dem Nutzer einerseits die Möglichkeit offen, zwischen dem MNIST- und dem CelebA-Datensatz zu wählen. Andererseits kann er auch die erforderliche Trainingsmethode bestimmen, sei es konventionelles Training, Training unter Verwendung differentieller Privatsphäre oder das Training eines Generativen Netzwerks. Die fertig trainierten Modelle werden im \textit{checkpoints}-Verzeichnis gespeichert. 
+
+\subsubsection{Metrikvisualisierung}
+
+\begin{lstlisting}[language=Python, caption=Plot erstellen, label=lst:2]
+from evaluation.evaluator import Plot
+
+plotter = Plot()
+plotter.sciencePlot(save_path="PATH.png", plot_title="Titel", x_label="X-Achsen-Beschriftung", y_label="Y-Achsen-Beschriftung", graphs=list(), x_limit=[von,bis], y_limit=[von,bis])
+\end{lstlisting}
+Um die Leistung von klassifizierenden Modellen bewerten zu können, wird die Genauigkeit und der Verlust bezüglich Trainings- und Testdaten genutzt. Die visualisierende Klasse implementiert eine Methode, welche einen Plot, basierend auf verschiedenen Parametern, generiert, der in wissenschaftlicher Darstellungsform erstellt wird. Anhand des Listings \ref{lst:2} wird die Erzeugung des zugrundeliegenden Visualisierungsobjekts dargestellt (Zeile 3). In Zeile 4 wird symbolisch die Methode zur Erstellung des spezifischen Plots mit \glqq erklärenden\grqq{} Parametern aufgerufen. Diese legen den Speicherort, die Kurven, die Beschriftungen und andere Eigenschaften des Resultats fest. 
+
+\subsubsection{Angriffsdurchführung}
+Die Angriffe sind jeweils in einer bestimmten Methode implementiert, die über eine vorgegebene Anzahl an Iterationen durchgeführt wird. Das Repository (\cite{weber_hosthansba_code_2024}) beinhaltet Notebooks für die korrekte Ausführung dieser Methoden. Dabei ist zu beachten, dass diese Anhand des jeweiligen Angriffnamens benannt sind, und Ergebnisse generieren, die anschließend im \textit{attack\_results}-Verzeichnis abgespeichert werden.
+\begin{lstlisting}[language=Python, caption=Angriffsschleife einer RBMI-Attacke, label=lst:3]
+for i in targets:
+	start = time.time()
+	agent = Agent(state_size=Z_DIM, action_size=Z_DIM, random_seed=SEED, hidden_size=256, action_prior="uniform")
+	[...]
+	print("Classes {}/{}, Accuracy : {:.3f}, Top-5 Accuracy : {:.3f}".format(total, N_TARGET, acc, acc5))
+	end = time.time()
+	total_time = end-start
+	print(f"duration for {MAX_EPISODES} episodes: {total_time:.2f}")
+\end{lstlisting}
+Im Listing \ref{lst:3} wird eine mögliche Implementierung der Angriffsschleife dargestellt, die nach Instanziierung der jeweiligen Modelle und Parametern für die Durchführung einer RBMI-Attacke verwendet werden kann. Anhand der resultierenden Konsolenausgaben lässt sich zum einen die Angriffsgenauigkeit, aber auch die Dauer der Iterationen des Angriffs erlesen. Detailliertere Code-Einblicke und Ausführungsmechanismen sind innerhalb des Repositorys zu finden.
