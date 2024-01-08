@@ -894,11 +894,82 @@
       \field{year}{2024}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/hannes/Zotero/storage/EG695LZ9/main.html:text/html
+      \endverb
       \verb{urlraw}
       \verb https://github.com/hosthans/ba_code
       \endverb
       \verb{url}
       \verb https://github.com/hosthans/ba_code
+      \endverb
+    \endentry
+    \entry{wen_defending_2021}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=6a81545197eeeaa650337a6ef01cfac1}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0228c7e7b69957db0462b5f1c31cd5ca}{%
+           family={Yiu},
+           familyi={Y\bibinitperiod},
+           given={Siu-Ming},
+           giveni={S\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2a0fbedec0b37226f61328edeecf2865}{%
+           family={Hui},
+           familyi={H\bibinitperiod},
+           given={Lucas\bibnamedelima C.K.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Rhodes, Greece}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{05738d28370ad3ee617290bc5c9b0acc}
+      \strng{fullhash}{05738d28370ad3ee617290bc5c9b0acc}
+      \strng{bibnamehash}{05738d28370ad3ee617290bc5c9b0acc}
+      \strng{authorbibnamehash}{05738d28370ad3ee617290bc5c9b0acc}
+      \strng{authornamehash}{05738d28370ad3ee617290bc5c9b0acc}
+      \strng{authorfullhash}{05738d28370ad3ee617290bc5c9b0acc}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Model inversion ({MI}) attacks aim to infer and reconstruct the input data from the output of a neural network, which poses a severe threat to the privacy of input data. Inspired by adversarial examples, we propose defending against {MI} attacks by adding adversarial noise to the output. The critical challenge is ﬁnding a noise vector that maximizes the inversion error and introduces negligible utility loss to the target model. We propose an algorithm to craft such noise vectors, which also incorporates utility-loss constraints. Speciﬁcally, our algorithm takes advantage of the gradient of an inversion model we train to mimic the adversary and compute a noise vector to turn the output into an adversarial example that can maximize the reconstruction error of the inversion model. Then we apply a label modiﬁer that keeps the label unchanged to achieve zero accuracy loss of the target model. Our defense does not tamper with the training process or need the private training dataset. Thus it can be easily applied to any current neural networks or {APIs}. We evaluate our method under both standard and adaptive attack settings. Our empirical results show our approach is effective against state-of-the-art {MI} attacks due to the transferability of adversarial examples and outperforms existing defenses. Furthermore, it causes more reconstruction errors while introducing zero accuracy loss and less distortion than existing defenses.}
+      \field{booktitle}{2021 {IEEE} International Conference on Cyber Security and Resilience ({CSR})}
+      \field{day}{26}
+      \field{eventtitle}{2021 {IEEE} International Conference on Cyber Security and Resilience ({CSR})}
+      \field{isbn}{978-1-66540-285-9}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{title}{Defending Against Model Inversion Attack by Adversarial Examples}
+      \field{urlday}{7}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{551\bibrangedash 556}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/CSR51186.2021.9527945
+      \endverb
+      \verb{file}
+      \verb Wen et al. - 2021 - Defending Against Model Inversion Attack by Advers.pdf:/Users/hannes/Zotero/storage/28TMZAYI/Wen et al. - 2021 - Defending Against Model Inversion Attack by Advers.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9527945/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9527945/
       \endverb
     \endentry
   \enddatalist
