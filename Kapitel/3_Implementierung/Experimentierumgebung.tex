@@ -15,7 +15,7 @@ In dieser Arbeit wurde aus Gründen der Einfachheit der MNIST-Datensatz (\cite{n
 	\label{img:mnist}
 \end{figure}
 
-Die Datenpunkte sind in Form von sogenannten Ein-Kanal-Bildern repräsentiert, die vom menschlichen Auge in bestimmten Darstellungen als schwarz-weiß wahrgenommen werden (siehe Bild \ref{img:mnist}). Die Größe der Bilder, die zur Erstellung des Trainingsdatensatzes verwendet wurde, beträgt $64 \times 64$ Pixel. Dabei besitzt jeder Pixel einen normalisierten Wert zwischen 0 und 1, der die \glqq Farbe\grqq{} festlegt. Mit der Zusammensetzung aller Pixel entsteht das finale Bild.
+Die Datenpunkte sind in Form von sogenannten Ein-Kanal-Bildern repräsentiert, die vom menschlichen Auge in bestimmten Darstellungen als schwarz-weiß wahrgenommen werden (siehe Abbildung \ref{img:mnist}). Die Größe der Bilder, die zur Erstellung des Trainingsdatensatzes verwendet wurde, beträgt $64 \times 64$ Pixel. Dabei besitzt jeder Pixel einen normalisierten Wert zwischen 0 und 1, der die \glqq Farbe\grqq{} festlegt. Mit der Zusammensetzung aller Pixel entsteht das finale Bild.
 
 Die Entscheidung für den MNIST-Datensatz wurde aufgrund seiner weiten Verbreitung in der Forschung und seiner klaren Struktur zur Repräsentation von Ziffern getroffen, wobei die Bildmerkmale vergleichsweise als \glqq einfach\grqq{} gelten. Die Fokussierung auf Zahlen im Bereich von 0 bis 9 ermöglicht eine gezielte Untersuchung spezifischer Klassen und vereinfacht die Interpretation der Ergebnisse. Dies erleichtert eine anschaulichere Analyse der durchgeführten Angriffe und liefert dem Betrachter klare und eindeutige Ergebnisse.
 
@@ -173,7 +173,7 @@ Dieser Abschnitt beleuchtet die implementierten Angriffsmethoden, die darauf abz
 
 Der \glqq KEDMI\grqq-Angriff, wie in der Arbeit von Chen et al. (\cite{chen_knowledge-enriched_2021}) beschrieben, repräsentiert eine der beiden Angriffsmethoden, die für die durchgeführten Experimente von Relevanz waren. Die Implementierung des Angriffs basiert auf Code-Strukturen des dazugehörigen Papers (\cite{chen_knowledge-enriched_2021}). In diesem Kontext wird das Bestreben verfolgt, sensible Informationen aus einem bereits trainierten maschinellen Lernmodell zu rekonstruieren, indem das interne Wissen und die Struktur des Modells gezielt ausgenutzt werden. Durch die Anwendung des bekannten Modellwissens und die Implementierung des Konzepts der \glqq Wissensanreicherung\grqq, bei dem zusätzliche Informationen des Modells erfasst werden, handelt es sich um einen \glqq WhiteBox-basierten\grqq{} Angriff. Hierbei hat der Angreifer uneingeschränkten Zugriff auf die internen Funktionsweisen des Modells, einschließlich der Parameter, Architektur sowie der internen Darstellungen, und auf den genutzten Datensatz. Die Wissensanreicherung zielt darauf ab, Merkmale oder andere interne Repräsentationen des Modells zu extrahieren.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{Bilder/KEDMI_PROCESS.png}
 	\caption{Prozessablauf eines KEDMI-Angriffs}
@@ -189,7 +189,7 @@ Anhand dieser ermittelten Variablen werden verschiedene Verluste berechnet, die 
 Des Weiteren wurde eine Modellinversionsmethode angewandt, die auf dem Prinzip des bestärkenden Lernens basiert. Die Implementierungen basieren auf bereits vorhandenene Code-Strukturen des zugrundeliegenden Papers (\cite{han_reinforcement_2023}). Bei dieser Methode werden Konfidenzwerte oder -vektoren der generierten Bilder verwendet, um einem Agenten Belohnungen zuzuführen. Der Agent nutzt diese Belohnungen, um private Daten zu rekonstruieren, die während des Trainingsprozesses des Modells verwendet wurden. Aufgrund der begrenzten Zugriffsmöglichkeiten auf das Modell, bei dem der Zugriff auf die Konfidenzwertausgabe des Modells eingeschränkt ist, handelt es sich hierbei um einen sogenannten BlackBox-Angriff.
 Der Ansatz des bestärkenden Lernens beinhaltet die Verwendung von Konfidenzwerten, die die Zuversicht oder Sicherheit des Modells in Bezug auf die generierten Daten repräsentieren. Diese Konfidenzwerte dienen als Belohnungen für den Agenten, der daraufhin die Aufgabe hat, die privaten Daten so zu rekonstruieren, dass die Belohnungen maximiert werden.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Bilder/RBMI_PROCESS.png}
 	\caption{Prozessablauf eines RBMI-Angriffs}
@@ -211,7 +211,7 @@ Um den experimentellen Rahmen abzurunden, werden in diesem Abschnitt die impleme
 
 Für dieses Vorhaben wurde die Methode der differentiellen Privatsphäre, wie in Abschnitt \ref{diff_privacy} beschrieben, eingebunden. Diese Methode zielt darauf ab, Überanpassung (Overfitting) durch das Einbringen von Rauschen in die Trainingsdaten zu verhindern und die erfolgreiche Durchführung von Inferenzangriffen zu erschweren. Die Integration erfolgt mittels des sogenannten Opacus-Frameworks (\cite{noauthor_opacus_nodate}), welches die direkte Implementierung von Trainingsroutinen auf Basis von mit PyTorch erstellten Modellen ermöglicht.
 
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\hspace{-1.5cm}
 	\includegraphics[width=0.9\linewidth]{Bilder/dpsgd.png}
@@ -219,7 +219,7 @@ Für dieses Vorhaben wurde die Methode der differentiellen Privatsphäre, wie in
 	\label{img:dpsgd}
 \end{figure}
 
-Im Bild \ref{img:dpsgd} wird eine oberflächliche Visualisierung der Trainingsroutine eines neuronalen Netzwerks gezeigt, das auf Basis differentieller Privatsphäre trainiert wird. Dabei wird hervorgehoben, dass sich der Trainingsprozess von dem des \glqq normalen\grqq{} Trainings in verschiedenen Abschnitten durch spezifische Erweiterungen unterscheidet. Diese zusätzlichen Werte repräsentieren allesamt einen besonderen Mehrwert in den zusätzlichen Phasen des DP-SGD-Algorithmus (\cite[3]{abadi_deep_2016}).
+Im Abbildung \ref{img:dpsgd} wird eine oberflächliche Visualisierung der Trainingsroutine eines neuronalen Netzwerks gezeigt, das auf Basis differentieller Privatsphäre trainiert wird. Dabei wird hervorgehoben, dass sich der Trainingsprozess von dem des \glqq normalen\grqq{} Trainings in verschiedenen Abschnitten durch spezifische Erweiterungen unterscheidet. Diese zusätzlichen Werte repräsentieren allesamt einen besonderen Mehrwert in den zusätzlichen Phasen des DP-SGD-Algorithmus (\cite[3]{abadi_deep_2016}).
 
 Der \textit{Ablauf} des Algorithmus beginnt mit der Initialisierung verschiedener Parameter, die die Rahmenbedingungen des Trainings festlegen. Dazu zählen neben Hyperparametern wie der Lernrate $\eta_t$, dem Sensitivitätswert $S$, der Gruppierungs- und Rauschgröße ($L$ und $\sigma$), der Gradientenobergrenze $C$ auch Verlustfunktion 
 \begin{equation}

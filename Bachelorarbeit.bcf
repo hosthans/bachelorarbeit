@@ -1975,7 +1975,7 @@
     <bcf:datasource type="file" datatype="bibtex">Kapitel/7_Literatur/Literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Bar-Shalom</bcf:citekey>
+    <bcf:citekey order="1">weber_hosthansba_code_2024</bcf:citekey>
     <bcf:citekey order="2">joshi_machine_2020</bcf:citekey>
     <bcf:citekey order="3">joshi_machine_2020</bcf:citekey>
     <bcf:citekey order="4">lorenz_reinforcement_2020</bcf:citekey>
