@@ -1,6 +1,6 @@
 \section{Implementierungsdetails} \label{chpt:Implementierung_Details}
 Im Folgenden werden Details der Implementierung, wie Code-Strukturen und Ausführungsmethoden, dargestellt.
-\subsection{Repository-Struktur}
+\subsection{Repository-Struktur}\label{repostruct}
 Die grundlegende Struktur des Repositorys (\cite{weber_hosthansba_code_2024}) ist folgendermaßen in die verschiedenen Module untergliedert:
 \dirtree{%
 .1 repository.
@@ -24,7 +24,7 @@ Die grundlegende Struktur des Repositorys (\cite{weber_hosthansba_code_2024}) is
 .2 \dots.
 }
 
-Anhand der Struktur wird erkennbar, dass verschiedene Code-Module mit unterschiedlicher Funktionalität gekapselt in Klassen implementiert sind. Dabei sind zum Beispiel die Klassen für die Durchführung der verschiedenen Angriffsmethoden innerhalb der jeweiligen Verzeichnisse zu finden (\textit{KEDMI} \& \textit{RBMI}). Das \textit{config}-Verzeichnis beinhaltet die Konfigurationen für verschiedene Ausführungen, wie Training und Angriff von neuronalen Netzwerken. Die Angriffsresultate der Durchführungen, wie beispielsweise auf dem KEDMI-Angriff basierte Generierungen bezüglich eines bestimmten Zielmodells, landen im Verzeichnis \textit{attack\_results}. Mit Hilfe eines Notebooks können Leistungs-Metriken, wie Verlustfunktion und Genauigkeit, in einem Plot visualisiert, welche im \textit{graphs}-Verzeichnis abgespeichert werden.
+Anhand der Struktur wird erkennbar, dass verschiedene Code-Module mit unterschiedlicher Funktionalität gekapselt in Klassen implementiert sind. Dabei sind zum Beispiel die Klassen für die Durchführung der verschiedenen Angriffsmethoden innerhalb der jeweiligen Verzeichnisse zu finden (\textit{KEDMI} \& \textit{RBMI}). Das \textit{config}-Verzeichnis beinhaltet die Konfigurationen für verschiedene Ausführungen, wie Training und Angriff von neuronalen Netzwerken. Die Angriffsresultate der Durchführungen, wie beispielsweise auf dem KEDMI-Angriff basierte Generierungen bezüglich eines bestimmten Zielmodells, landen im Verzeichnis \textit{attack\_results}. Mit Hilfe eines Notebooks können Leistungs-Metriken, wie Verlustfunktion und Genauigkeit, in einem Plot visualisiert und im \textit{graphs}-Verzeichnis abgespeichert werden.
 
 
 \subsection{Code-Ausführung}
@@ -37,7 +37,7 @@ from training.utils.trainer import Trainer
 trainer = Trainer(dataset="mnist", mode="nn")
 loss_nn, acc_nn, loss_t_nn, acc_t_nn = trainer.train()
 \end{lstlisting}
-Die im Listing \ref{lst:1} präsentierten Codezeilen illustrieren die unkomplizierte Verwendung einer Trainer-Instanz zur Durchführung eines lokalen Trainings. Basierend auf den Übergabeparametern, die während der Instanziierung übergemen werden, kann der Ausführende nicht nur die Datensatzdefinition steuern, sondern auch die Art des Trainings durch Anpassung von Werten in Form von Zeichenketten festlegen. Dabei steht dem Nutzer einerseits die Möglichkeit offen, zwischen dem MNIST- und dem CelebA-Datensatz zu wählen. Andererseits kann er auch die erforderliche Trainingsmethode bestimmen, sei es konventionelles Training, Training unter Verwendung differentieller Privatsphäre oder das Training eines Generativen Netzwerks. Die fertig trainierten Modelle werden im \textit{checkpoints}-Verzeichnis gespeichert. 
+Die im Listing \ref{lst:1} präsentierten Codezeilen illustrieren die unkomplizierte Verwendung einer Trainer-Instanz zur Durchführung eines lokalen Trainings. Basierend auf den Übergabeparametern, die während der Instanziierung übergeben werden, kann der Ausführende nicht nur die Datensatzdefinition steuern, sondern auch die Art des Trainings durch Anpassung von Werten in Form von Zeichenketten festlegen. Dabei steht dem Nutzer einerseits die Möglichkeit offen, zwischen dem MNIST- und dem CelebA-Datensatz zu wählen. Andererseits kann er auch die erforderliche Trainingsmethode bestimmen, sei es konventionelles Training, Training unter Verwendung differentieller Privatsphäre oder das Training eines Generativen Netzwerks. Die fertig trainierten Modelle werden im \textit{checkpoints}-Verzeichnis (\ref{repostruct}) gespeichert. 
 
 \subsubsection{Metrikvisualisierung}
 
@@ -50,7 +50,7 @@ plotter.sciencePlot(save_path="PATH.png", plot_title="Titel", x_label="X-Achsen-
 Um die Leistung von klassifizierenden Modellen bewerten zu können, wird die Genauigkeit und der Verlust bezüglich Trainings- und Testdaten genutzt. Die visualisierende Klasse implementiert eine Methode, welche einen Plot, basierend auf verschiedenen Parametern, generiert, der in wissenschaftlicher Darstellungsform erstellt wird. Anhand des Listings \ref{lst:2} wird die Erzeugung des zugrundeliegenden Visualisierungsobjekts dargestellt (Zeile 3). In Zeile 4 wird symbolisch die Methode zur Erstellung des spezifischen Plots mit \glqq erklärenden\grqq{} Parametern aufgerufen. Diese legen den Speicherort, die Kurven, die Beschriftungen und andere Eigenschaften des Resultats fest. 
 
 \subsubsection{Angriffsdurchführung}
-Die Angriffe sind jeweils in einer bestimmten Methode implementiert, die über eine vorgegebene Anzahl an Iterationen durchgeführt wird. Das Repository (\cite{weber_hosthansba_code_2024}) beinhaltet Notebooks für die korrekte Ausführung dieser Methoden. Dabei ist zu beachten, dass diese Anhand des jeweiligen Angriffnamens benannt sind, und Ergebnisse generieren, die anschließend im \textit{attack\_results}-Verzeichnis abgespeichert werden.
+Die Angriffe sind jeweils in einer bestimmten Methode implementiert, die über eine vorgegebene Anzahl an Iterationen durchgeführt wird. Das Repository (\cite{weber_hosthansba_code_2024}) beinhaltet Notebooks für die korrekte Ausführung dieser Methoden. Dabei ist zu beachten, dass diese anhand des jeweiligen Angriffnamens benannt sind, und Ergebnisse generieren, die anschließend im \textit{attack\_results}-Verzeichnis abgespeichert werden.
 \begin{lstlisting}[language=Python, caption=Angriffsschleife einer RBMI-Attacke, label=lst:3]
 for i in targets:
 	start = time.time()
@@ -61,4 +61,4 @@ for i in targets:
 	total_time = end-start
 	print(f"duration for {MAX_EPISODES} episodes: {total_time:.2f}")
 \end{lstlisting}
-Im Listing \ref{lst:3} wird eine mögliche Implementierung der Angriffsschleife dargestellt, die nach Instanziierung der jeweiligen Modelle und Parametern für die Durchführung einer RBMI-Attacke verwendet werden kann. Anhand der resultierenden Konsolenausgaben lässt sich zum einen die Angriffsgenauigkeit, aber auch die Dauer der Iterationen des Angriffs erlesen. Detailliertere Code-Einblicke und Ausführungsmechanismen sind innerhalb der jeweiligen Notebooks des Repositorys zu finden.
+Im Listing \ref{lst:3} wird der Ausschnitt einer möglichen Implementierung der Angriffsschleife dargestellt, die nach Instanziierung der jeweiligen Modelle und Parametern für die Durchführung einer RBMI-Attacke verwendet werden kann. Anhand der resultierenden Konsolenausgaben lässt sich zum einen die Angriffsgenauigkeit, aber auch die Dauer der Iterationen des Angriffs erlesen. Detailliertere Code-Einblicke und Ausführungsmechanismen sind innerhalb der jeweiligen Notebooks des Repositorys zu finden.

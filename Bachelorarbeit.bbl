@@ -258,6 +258,32 @@
       \endverb
       \keyw{Computer Science - Machine Learning}
     \endentry
+    \entry{noauthor_gesetz_2021}{online}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{langid}{german}
+      \field{month}{4}
+      \field{title}{Das Gesetz {|} {EU}-Gesetz über künstliche Intelligenz}
+      \field{urlday}{11}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/Users/hannes/Zotero/storage/AC9MEGXF/das-gesetz.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://artificialintelligenceact.eu/de/das-gesetz/
+      \endverb
+      \verb{url}
+      \verb https://artificialintelligenceact.eu/de/das-gesetz/
+      \endverb
+    \endentry
     \entry{fredrikson_model_2015}{inproceedings}{}
       \name{author}{3}{}{%
         {{uniquename=2,uniquepart=given,hash=ca53191803a563335db0f1917ff556b2}{%
@@ -614,6 +640,65 @@
       \verb http://link.springer.com/10.1007/978-3-030-26622-6
       \endverb
     \endentry
+    \entry{kanopoulos_design_1988}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=c874b7c87c054224744765fbfbdc0f0f}{%
+           family={Kanopoulos},
+           familyi={K\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=2f3b14a07e493e7754a68090377e07f0}{%
+           family={Vasanthavada},
+           familyi={V\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cbd574ddf25bb106c2e1d30534f9f877}{%
+           family={Baker},
+           familyi={B\bibinitperiod},
+           given={R.L.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1c1cda7774c3408e888d2d717242ab26}
+      \strng{fullhash}{1c1cda7774c3408e888d2d717242ab26}
+      \strng{bibnamehash}{1c1cda7774c3408e888d2d717242ab26}
+      \strng{authorbibnamehash}{1c1cda7774c3408e888d2d717242ab26}
+      \strng{authornamehash}{1c1cda7774c3408e888d2d717242ab26}
+      \strng{authorfullhash}{1c1cda7774c3408e888d2d717242ab26}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{IEEE} Journal of Solid-State Circuits}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{title}{Design of an image edge detection filter using the Sobel operator}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{volume}{23}
+      \field{year}{1988}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{358\bibrangedash 367}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/4.996
+      \endverb
+      \verb{file}
+      \verb Kanopoulos et al. - 1988 - Design of an image edge detection filter using the.pdf:/Users/hannes/Zotero/storage/DJJCMNT2/Kanopoulos et al. - 1988 - Design of an image edge detection filter using the.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/996/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/996/
+      \endverb
+    \endentry
     \entry{karras_style-based_2019}{misc}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=9c6cb97b8c2c22b41d64c2c4f4520c11}{%
@@ -724,6 +809,73 @@
       \verb http://link.springer.com/10.1007/978-3-662-61651-2
       \endverb
     \endentry
+    \entry{machado_adversarial_2023}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=79d33ee987d9cfc1920397b24596205d}{%
+           family={Machado},
+           familyi={M\bibinitperiod},
+           given={Gabriel\bibnamedelima Resende},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a6216513dce6d7a5dd6373aaacaddaf8}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Eugênio},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=998b953be13484d180a762533691986e}{%
+           family={Goldschmidt},
+           familyi={G\bibinitperiod},
+           given={Ronaldo\bibnamedelima Ribeiro},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{60c0944c81b6b0aa89765d0adf0783fe}
+      \strng{fullhash}{60c0944c81b6b0aa89765d0adf0783fe}
+      \strng{bibnamehash}{60c0944c81b6b0aa89765d0adf0783fe}
+      \strng{authorbibnamehash}{60c0944c81b6b0aa89765d0adf0783fe}
+      \strng{authornamehash}{60c0944c81b6b0aa89765d0adf0783fe}
+      \strng{authorfullhash}{60c0944c81b6b0aa89765d0adf0783fe}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Deep Learning algorithms have achieved the state-of-the-art performance for Image Classification and have been used even in security-critical applications, such as biometric recognition systems and self-driving cars. However, recent works have shown those algorithms, which can even surpass the human capabilities, are vulnerable to adversarial examples. In Computer Vision, adversarial examples are images containing subtle perturbations generated by malicious optimization algorithms in order to fool classifiers. As an attempt to mitigate these vulnerabilities, numerous countermeasures have been constantly proposed in literature. Nevertheless, devising an efficient defense mechanism has proven to be a difficult task, since many approaches have already shown to be ineffective to adaptive attackers. Thus, this self-containing paper aims to provide all readerships with a review of the latest research progress on Adversarial Machine Learning in Image Classification, however with a defender’s perspective. Here, novel taxonomies for categorizing adversarial attacks and defenses are introduced and discussions about the existence of adversarial examples are provided. Further, in contrast to exisiting surveys, it is also given relevant guidance that should be taken into consideration by researchers when devising and evaluating defenses. Finally, based on the reviewed literature, it is discussed some promising paths for future research. {CCS} Concepts: • Information systems → Decision support systems; • Security and privacy → Domainspecific security and privacy architectures; • Computing methodologies → Neural networks.}
+      \field{booktitle}{{ACM} Computing Surveys}
+      \field{day}{31}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{shorttitle}{Adversarial Machine Learning in Image Classification}
+      \field{title}{Adversarial Machine Learning in Image Classification: A Survey Towards the Defender's Perspective}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{volume}{55}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 38}
+      \range{pages}{38}
+      \verb{doi}
+      \verb 10.1145/3485133
+      \endverb
+      \verb{eprint}
+      \verb 2009.03728 [cs]
+      \endverb
+      \verb{file}
+      \verb Machado et al. - 2023 - Adversarial Machine Learning in Image Classificati.pdf:/Users/hannes/Zotero/storage/7R83ARM9/Machado et al. - 2023 - Adversarial Machine Learning in Image Classificati.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2009.03728
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2009.03728
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
     \entry{noauthor_mnist_nodate}{online}{}
       \field{sortinit}{M}
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
@@ -767,6 +919,33 @@
       \endverb
       \verb{url}
       \verb https://github.com/NVlabs/ffhq-dataset
+      \endverb
+    \endentry
+    \entry{noauthor_nvlabsstylegan_2024}{online}{}
+      \list{publisher}{1}{%
+        {{NVIDIA} Research Projects}%
+      }
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{StyleGAN} - Official {TensorFlow} Implementation}
+      \field{day}{17}
+      \field{month}{1}
+      \field{note}{original-date: 2019-02-04T15:33:58Z}
+      \field{title}{{NVlabs}/stylegan}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/NVlabs/stylegan
+      \endverb
+      \verb{url}
+      \verb https://github.com/NVlabs/stylegan
       \endverb
     \endentry
     \entry{noauthor_opacus_nodate}{online}{}
@@ -853,6 +1032,100 @@
       \verb http://arxiv.org/abs/1511.06434
       \endverb
       \keyw{Computer Science - Machine Learning,Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{ramirez_poisoning_2022}{misc}{}
+      \name{author}{8}{}{%
+        {{uniquename=0,uniquepart=base,hash=c49b8b9c8fd34921cae4f735b3ea0a9a}{%
+           family={Ramirez},
+           familyi={R\bibinitperiod},
+           given={Miguel\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9fde01712eaa6eb61253a2b6e42daa79}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Song-Kyoo},
+           giveni={S\bibinithyphendelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=42367ffe50ba26dc5397f01c91606059}{%
+           family={Hamadi},
+           familyi={H\bibinitperiod},
+           given={Hussam\bibnamedelima Al},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=832654d2c401b8bf9a040fe6056d3a49}{%
+           family={Damiani},
+           familyi={D\bibinitperiod},
+           given={Ernesto},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a02afd53820fcaa7eea99bd86009cfb4}{%
+           family={Byon},
+           familyi={B\bibinitperiod},
+           given={Young-Ji},
+           giveni={Y\bibinithyphendelim J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=00ae8d6e9a546bfe2540bdb165b86b92}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Tae-Yeon},
+           giveni={T\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d99dbf8b74ba3af64b9a5080cd4f9de6}{%
+           family={Cho},
+           familyi={C\bibinitperiod},
+           given={Chung-Suk},
+           giveni={C\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e81c86a827e6ec7da40b928c5b1c5339}{%
+           family={Yeun},
+           familyi={Y\bibinitperiod},
+           given={Chan\bibnamedelima Yeob},
+           giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{bbad2d65e8f3239f4b5f46f8c7a7f3d5}
+      \strng{fullhash}{2091cdca606fa9b2b5c23c9ad67e97d2}
+      \strng{bibnamehash}{bbad2d65e8f3239f4b5f46f8c7a7f3d5}
+      \strng{authorbibnamehash}{bbad2d65e8f3239f4b5f46f8c7a7f3d5}
+      \strng{authornamehash}{bbad2d65e8f3239f4b5f46f8c7a7f3d5}
+      \strng{authorfullhash}{2091cdca606fa9b2b5c23c9ad67e97d2}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Machine learning models have been widely adopted in several ﬁelds. However, most recent studies have shown several vulnerabilities from attacks with a potential to jeopardize the integrity of the model, presenting a new window of research opportunity in terms of cyber-security. This survey is conducted with a main intention of highlighting the most relevant information related to security vulnerabilities in the context of machine learning ({ML}) classiﬁers; more speciﬁcally, directed towards training procedures against data poisoning attacks, representing a type of attack that consists of tampering the data samples fed to the model during the training phase, leading to a degradation in the model’s overall accuracy during the inference phase. This work compiles the most relevant insights and ﬁndings found in the latest existing literatures addressing this type of attacks. Moreover, this paper also covers several defense techniques that promise feasible detection and mitigation mechanisms, capable of conferring a certain level of robustness to a target model against an attacker. A thorough assessment is performed on the reviewed works, comparing the effects of data poisoning on a wide range of {ML} models in real-world conditions, performing quantitative and qualitative analyses. This paper analyzes the main characteristics for each approach including performance success metrics, required hyperparameters, and deployment complexity. Moreover, this paper emphasizes the underlying assumptions and limitations considered by both attackers and defenders along with their intrinsic properties such as: availability, reliability, privacy, accountability, interpretability, etc. Finally, this paper concludes by making references of some of main existing research trends that provide pathways towards future research directions in the ﬁeld of cyber-security.}
+      \field{day}{22}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{{arXiv}:2202.10276}
+      \field{shorttitle}{Poisoning Attacks and Defenses on Artificial Intelligence}
+      \field{title}{Poisoning Attacks and Defenses on Artificial Intelligence: A Survey}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2202.10276 [cs]
+      \endverb
+      \verb{file}
+      \verb Ramirez et al. - 2022 - Poisoning Attacks and Defenses on Artificial Intel.pdf:/Users/hannes/Zotero/storage/DX455K3J/Ramirez et al. - 2022 - Poisoning Attacks and Defenses on Artificial Intel.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2202.10276
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2202.10276
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Cryptography and Security}
     \endentry
     \entry{shahapure_cluster_2020}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1082,6 +1355,64 @@
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/9527945/
       \endverb
+    \endentry
+    \entry{yadav_cold_2019}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=b9a752c74cd3c7369078eb110c0b20a7}{%
+           family={Yadav},
+           familyi={Y\bibinitperiod},
+           given={Chhavi},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Léon},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{949290dcbd773def534f710dcc4bdc6f}
+      \strng{fullhash}{949290dcbd773def534f710dcc4bdc6f}
+      \strng{bibnamehash}{949290dcbd773def534f710dcc4bdc6f}
+      \strng{authorbibnamehash}{949290dcbd773def534f710dcc4bdc6f}
+      \strng{authornamehash}{949290dcbd773def534f710dcc4bdc6f}
+      \strng{authorfullhash}{949290dcbd773def534f710dcc4bdc6f}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Although the popular {MNIST} dataset [{LeCun} et al., 1994] is derived from the {NIST} database [Grother and Hanaoka, 1995], the precise processing steps for this derivation have been lost to time. We propose a reconstruction that is accurate enough to serve as a replacement for the {MNIST} dataset, with insigniﬁcant changes in accuracy. We trace each {MNIST} digit to its {NIST} source and its rich metadata such as writer identiﬁer, partition identiﬁer, etc. We also reconstruct the complete {MNIST} test set with 60,000 samples instead of the usual 10,000. Since the balance 50,000 were never distributed, they can be used to investigate the impact of twenty-ﬁve years of {MNIST} experiments on the reported testing performances. Our limited results unambiguously conﬁrm the trends observed by Recht et al. [2018, 2019]: although the misclassiﬁcation rates are slightly off, classiﬁer ordering and model selection remain broadly reliable. We attribute this phenomenon to the pairing beneﬁts of comparing classiﬁers on the same digits.}
+      \field{day}{4}
+      \field{eprinttype}{arxiv}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{{arXiv}:1905.10498}
+      \field{shorttitle}{Cold Case}
+      \field{title}{Cold Case: The Lost {MNIST} Digits}
+      \field{urlday}{9}
+      \field{urlmonth}{1}
+      \field{urlyear}{2024}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 1905.10498 [cs, stat]
+      \endverb
+      \verb{file}
+      \verb Yadav und Bottou - 2019 - Cold Case The Lost MNIST Digits.pdf:/Users/hannes/Zotero/storage/QRL55WDQ/Yadav und Bottou - 2019 - Cold Case The Lost MNIST Digits.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1905.10498
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1905.10498
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
   \enddatalist
 \endrefsection
