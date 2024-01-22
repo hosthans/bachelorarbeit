@@ -134,12 +134,12 @@ Zur Durchführung der im vorliegenden Kontext beschriebenen Modell-Inversions-An
 Ein zentraler Aspekt dieser Architektur ist die tiefe Faltungsstruktur, die sowohl im Generator als auch im Diskriminator Verwendung findet. Diese Struktur ermöglicht die Erfassung räumlicher Strukturen in den generierten Daten. Im Gegensatz zu herkömmlichen Convolutional Neural Networks (CNNs) werden in der Architektur von DCGANs keine Pooling-Schichten verwendet, um Unschärfe zu vermeiden. Stattdessen setzt man auf Normalisierungsschichten, um das Training stabil zu gestalten und die Konvergenz der Verlustfunktionen zu beschleunigen.
 
 Eine weitere Abweichung von konventionellen CNNs besteht in der Verwendung der LeakyReLU-Aktivierungsfunktion anstelle der üblichen ReLU-Funktion.
-\[
-\text{LeakyReLU}(x) = \begin{cases}
-	x, & \text{if } x > 0 \\
-	\alpha x, & \text{otherwise}
-\end{cases}
-\]
+\begin{equation}
+	\text{LeakyReLU}(x) = \begin{cases}
+		x, & \text{if } x > 0 \\
+		\alpha x, & \text{otherwise}
+	\end{cases}
+\end{equation}
 Hier repräsentiert $\alpha$ eine kleine, positive Konstante. Der Einsatz dieser modifizierten Aktivierungsfunktion zielt darauf ab, das Problem der \glqq tötenden Neuronen\grqq{} zu umgehen, das bei der Verwendung der ReLU-Aktivierungsfunktion auftreten kann. Dabei werden Neuronen während des Trainings inaktiv, weshalb kein positiver Beitrag zur Leistungssteigerung des Modells beigetragen wird. In bestimmten Fällen kann die Modellleistung dadurch sogar verschlechtert werden. 
 
 Die Trainingseffizienz des DCGAN kann variieren, abhängig von der verwendeten Hardware. Es wird empfohlen, das Netzwerk auf einer oder mehreren GPUs zu trainieren, da diese leistungsfähiger sind als eine ausschließliche Verwendung der CPU. Eine alternative Möglichkeit besteht im Transfer Learning, bei dem ein bereits trainiertes Modell als Ausgangspunkt für das aktuelle Training dient. Allgemein lässt sich feststellen, dass mit zunehmenden Epochen eine Verbesserung der Qualität der neu generierten Bilder erkennbar ist.
