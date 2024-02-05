@@ -15,7 +15,7 @@ Im Folgenden werden Metriken dargestellt und verglichen, mit Hilfe derer die Lei
 		\caption{Verlust}
 		\label{img:loss_vgg_dp}
 	\end{subfigure}
-	\caption{Verlust- und Genauigkeitsgegenüberstellung eines auf den MNIST-Datensatz normal und privat trainierten Modells}
+	\caption{Genauigkeits- und Verlustgegenüberstellung eines auf den MNIST-Datensatz normal und privat trainierten Modells}
 	\label{img:mnist_figure}
 \end{figure}
 Die \textit{Genauigkeit} (\(Acc\)) (Abbildung \ref{img:acc_vgg_dp}) bezüglich der Test- und Trainingsdaten nimmt -- wie erwartet -- im Laufe des Trainingsprozesses zu. 
@@ -51,7 +51,7 @@ Die \textit{Qualität} der Bilder ist abhängig von genutztem GAN (Generative ad
 	\label{img:gen_img}
 \end{figure}
 Die Bilder des DCGAN basierten Generators sind etwas schwach mit vergleichsweise wenigen Pixeln aufgelöst (siehe Abbildung \ref{img:gen_img_dcgan}). Dahingegen lassen sich Bilder des StyleGAN Netzwerks in einer deutlich besseren Auflösung von bis zu 200 $\times$ 200 Pixeln generiern. Wie in Abbildung \ref{img:gen_img_stylegan} zu erkennen, wird die Qualität der Bilder durch die Reduktion der Pixel deutlich verschlechtert, was aber zu einer effektiveren Angriffsdauer führt. Im Gegensatz zu den generierten Ziffern handelt es sich bei den Gesichtern um 3-Kanal Bilder (RGB), weshalb diese farblich zu betrachtet sind.
-\section{Angriffsperformance}
+\section{Bewertung der Angriffsleistung}
 Dieses Kapitel befasst sich mit der Auswertung beider Angriffe nach der Durchführung, wobei im Folgenden ein Vergleich mit dem Ziel der Stärken- und Schwächenbeleuchtung aufgestellt wird. Um die Angriffe besser bewerten zu können, werden zum einen visuelle, aber auch metrische Qualitätsmerkmale begutachtet, wozu beispielsweise die Genauigkeit der neu generierten Bilder bezüglich der Ziel-Kategorie des \glqq angegriffenen\grqq{} Modells zählt.
 \subsection{Genauigkeit der Angriffe}
 Um eine präzisere Analyse der Angriffsgenauigkeit zu ermöglichen, werden neben visuellen Metriken auch numerische Kennzahlen integriert, um einen messbaren und vergleichbaren Wert zu erlangen.
@@ -73,7 +73,7 @@ Die visuelle Metrik zur Bewertung der Angriffsqualität stellt einen Vergleich d
 		\caption{60 durch den \glqq KEDMI\grqq-Angriff generierte Bilder}
 		\label{img:kedmi_gen}
 	\end{subfigure}
-	\caption{Gegenüberstellung der generierten und originalen Bilder}
+	\caption{Gegenüberstellung originaler und generierter Ziffern}
 	\label{img:kedmi_visual}
 \end{figure}
 
@@ -103,7 +103,7 @@ Die visuelle Qualitätsanalyse bezüglich eines weiteren Datensatzes (CelebA) ge
 		\caption{60 durch den \glqq KEDMI\grqq-Angriff generierte Bilder}
 		\label{img:kedmi_celeba_gen}
 	\end{subfigure}
-	\caption{Gegenüberstellung der generierten und originalen Bilder}
+	\caption{Gegenüberstellung originaler und generierter Gesichter}
 	\label{img:kedmi_celeba_visuell}
 \end{figure}
 
@@ -118,7 +118,7 @@ Mit Hilfe der visuellen Metrik kann auch hier ein Vergleich zwischen generierten
 	\begin{subfigure}[b]{0.8\linewidth}
 		\includegraphics[width=\linewidth, height=5cm, keepaspectratio]{Bilder/4_mnist_rbmi.png}
 	\end{subfigure}
-	\caption{Gegenüberstellung des generierten Bildes (\textit{rechts}) (mit \glqq RBMI\grqq-Angriff) mit den Originalbildern aus MNIST (\textit{links}) der Zielklasse}
+	\caption{Gegenüberstellung von Originalbildern des MNIST-Datensatzes (\textit{links}) mit dem generierten Bild (\textit{rechts}) (durch \glqq RBMI\grqq-Angriff) der Zielklasse \glqq 4\grqq{}}
 	\label{img:rbmi_visual_mnist}
 \end{figure}
 
@@ -129,7 +129,7 @@ Während der Durchführung von Algorithmen zur Rückgewinnung von Trainingsdaten
 	\begin{subfigure}[b]{0.8\linewidth}
 		\includegraphics[width=\linewidth, height=5cm, keepaspectratio]{Bilder/0_celeba_rbmi.png}
 	\end{subfigure}
-	\caption{Gegenüberstellung des generierten Bildes (\textit{rechts}) (mit \glqq RBMI\grqq-Angriff und DCGAN) mit den Originalbildern aus CelebA (\textit{links}) der Zielklasse}
+	\caption{Gegenüberstellung von Originalbildern des CelebA-Datensatzes (\textit{links}) mit dem generierten Bild (\textit{rechts}) (durch \glqq RBMI\grqq-Angriff) der Zielperson}
 	\label{img:rbmi_visual}
 \end{figure}
 
@@ -140,7 +140,7 @@ Für die Angriffsvalidierung werden auch hier (Abbildung \ref{img:rbmi_visual}) 
 	\begin{subfigure}[b]{0.8\linewidth}
 		\includegraphics[width=\linewidth, height=5cm, keepaspectratio]{Bilder/0_celeba_rbmi_stylegan.png}
 	\end{subfigure}
-	\caption{Gegenüberstellung des generierten Bildes (\textit{rechts}) (mit \glqq RBMI\grqq-Angriff und StyleGAN) mit den Originalbildern aus CelebA (\textit{links}) der Zielklasse}
+	\caption{Gegenüberstellung von Originalbildern des CelebA-Datensatzes (\textit{links}) mit dem generierten Bild (\textit{rechts}) (durch \glqq RBMI\grqq-Angriff und StyleGAN) der Zielperson}
 	\label{img:rbmi_visual_stylegan}
 \end{figure}
 

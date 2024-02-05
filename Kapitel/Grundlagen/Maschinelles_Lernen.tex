@@ -20,9 +20,9 @@ Mögliche Arten von neuronalen Netzwerken, die über diese Methode trainiert wur
 Der \textit{Ablauf} des Trainings lässt sich wie folgt beschreiben: nach Beenden von Datensammlung, Datenvorverarbeitung und Datensatztrennung in einen Trainings-, Validierungs- und Testdatensatz beginnt der eigentliche Teil des Trainings, wobei die Trainings- und Validierungsdaten für die Aktualisierung der interenen Modelleinstellungen, wie Gewichtungen und Schwellenwerte, verwendet werden. Die Optimierung der Parameter wird auf Basis der Verlustfunktion mit Hilfe eines Rückwärtsdurchlaufes (eng.: Backward Propagation) durchgeführt, die mit der Differenz zwischen Vorhersagen des Modells aus dem Vorwärtsdurchlauf (eng.: Forward Propagation) und den realen Labeln berechnet wird.
 
 Die \textit{Qualität} des Trainings wird meist anhand der Genauigkeit von Vorhersagen bestimmt, welche ausdrückt, wie gut die Klassifikation von im Training ungesehenen Daten funktioniert.
-\[
+\begin{equation}
 \text{Genauigkeit} = \frac{\text{Anzahl korrekter Vorhersagen}}{\text{Gesamtanzahl der Vorhersagen}}
-\]
+\end{equation}
  Weitere Metriken können die Präzision (eng.: Precision), der Recall oder auch der F1-Score sein. Neben Messungen der Modell-Genauigkeit kann man die Qualität des trainierten Modells auch anhand der Verlustfunktion (eng.: loss-function) oder der \glqq Area Under the Curve\grqq{} (AUC), welche die Fläche unter der \glqq Receiver Operating Characteristic\grqq{} (ROC) -- dem Verhältnis zwischen der True- und False-Positive-Rate -- messen.
 \subsection{Unüberwachtes Lernen}\label{subsec:unsupervisedlearning}
 \begin{figure}[H]

@@ -178,14 +178,14 @@ Insgesamt wurden die Modelle entsprechend ihrer Architektur, Trainingsdaten und 
 \subsection{Angriffsmethoden}
 %KEDMI
 %RBMI
-Dieser Abschnitt beleuchtet die implementierten Angriffsmethoden, die darauf abzielen, die Integrität und Sicherheit der Modelle zu kompromittieren. Die Wahl der Angriffsvektoren, deren Ausführung und Auswirkungen werden systematisch erläutert. Zusätzlich werden mögliche Schwächen der Modelle aufgezeigt, die durch die Angriffsmethoden ausgenutzt wurden. Die detaillierte Beschreibung ermöglicht es, die Reproduzierbarkeit der Angriffe zu gewährleisten und die Robustheit der Modelle zu bewerten. Der Angreifer nutzt das Wissen über Trainingsdatensatz und Modellparameter, um das Modell zu invertieren und ursprüngliche Trainings-Datenpunkte zu rekonstruieren. Hierbei finden verschiedene Verfahren für die Rekonstuktion, wie beispielsweise Regularisierung oder Gradientenabstiegsverfahren, Verwendung.
+Dieser Abschnitt beleuchtet die implementierten Angriffsmethoden (\textit{KEDMI} \& \textit{RBMI}), die darauf abzielen, die Integrität und Sicherheit der Modelle zu kompromittieren. Die Wahl der Angriffsvektoren, deren Ausführung und Auswirkungen werden systematisch erläutert. Zusätzlich werden mögliche Schwächen der Modelle aufgezeigt, die durch die Angriffsmethoden ausgenutzt wurden. Die detaillierte Beschreibung ermöglicht es, die Reproduzierbarkeit der Angriffe zu gewährleisten und die Robustheit der Modelle zu bewerten. Der Angreifer nutzt das Wissen über Trainingsdatensatz und Modellparameter, um das Modell zu invertieren und ursprüngliche Trainings-Datenpunkte zu rekonstruieren. Hierbei finden verschiedene Verfahren für die Rekonstuktion, wie beispielsweise Regularisierung oder Gradientenabstiegsverfahren, Verwendung.
 
 Der \glqq KEDMI\grqq-Angriff, wie in der Arbeit von Chen et al. (\cite{chen_knowledge-enriched_2021}) beschrieben, repräsentiert eine der beiden Angriffsmethoden, die für die durchgeführten Experimente von Relevanz waren. Die Implementierung des Angriffs basiert auf Code-Strukturen des dazugehörigen Papers (\cite{chen_knowledge-enriched_2021}). In diesem Kontext wird das Bestreben verfolgt, sensible Informationen aus einem bereits trainierten maschinellen Lernmodell zu rekonstruieren, indem das interne Wissen und die Struktur des Modells gezielt ausgenutzt werden. Durch die Anwendung des bekannten Modellwissens und die Implementierung des Konzepts der \glqq Wissensanreicherung\grqq, bei dem zusätzliche Informationen des Modells erfasst werden, handelt es sich um einen \glqq WhiteBox-basierten\grqq{} Angriff. Hierbei hat der Angreifer uneingeschränkten Zugriff auf die internen Funktionsweisen des Modells, einschließlich der Parameter, Architektur sowie der internen Darstellungen, und den genutzten Datensatz. Die Wissensanreicherung zielt darauf ab, Merkmale oder andere interne Repräsentationen des Modells zu extrahieren.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=1\linewidth]{Bilder/KEDMI_PROCESS.png}
-	\caption{Prozessablauf eines KEDMI-Angriffs}
+	\caption{Prozessvisualisierung des KEDMI-Angriffs}
 	\label{img:kedmi_process}
 \end{figure}
 
@@ -195,13 +195,13 @@ Die resultierenden latenten Variablen spielen im Verlauf des Angriffs eine entsc
 
 Anhand dieser ermittelten Variablen werden verschiedene Verluste berechnet, die für die Optimierung des Angriffs verwendet werden. Die Rückwärtsdurchläufe, wie üblicherweise in herkömmlichen Trainingsprozessen verwendet, werden gefolgt von einer Optimierung basierend auf den berechneten Verlusten durchgeführt. Dieser Prozess wiederholt sich über eine vordefinierte Anzahl von Iterationen, wobei in jedem Schritt eine bestimmte Anzahl von Rekonstruktionsbildern erzeugt wird. Diese generierten Bilder werden gespeichert und ermöglichen es dem Angreifer, die Leistung des Angriffs über die Angriffszeit hinweg zu analysieren, indem die Qualität und Genauigkeit der Rückgewinnungen betrachtet werden. Zudem ermöglicht der fortlaufende Analyseprozess dem Angreifer Einsichten in die Wirksamkeit des Angriffs zu erlangen.
 
-Des Weiteren wurde eine Modellinversionsmethode angewandt, die auf dem Prinzip des bestärkenden Lernens durchgeführt wird. Die Implementierungen basieren auf bereits vorhandenene Code-Strukturen des zugrundeliegenden Papers (\cite{han_reinforcement_2023}). Bei dieser Methode werden Konfidenzwerte oder -vektoren der generierten Bilder verwendet, um einem  auf dem \glqq Soft-Actor-Critic-Algorithmus\grqq{} basierenden Agenten Belohnungen zuzuführen. Detailliertere Informationen über diesen lassen sich aus dem entsprechenden Paper entnehmen (\cite{haarnoja_soft_2019}). Der Agent nutzt diese Belohnungen, um private Daten zu rekonstruieren, die während des Trainingsprozesses des Modells verwendet wurden. Aufgrund der begrenzten Zugriffsmöglichkeiten auf das Modell, bei dem der Zugriff auf die Konfidenzwertausgabe des Modells eingeschränkt ist, handelt es sich hierbei um einen sogenannten BlackBox-Angriff.
+Des Weiteren wurde eine Modellinversionsmethode angewandt (\glqq RBMI\grqq{}), die auf dem Prinzip des bestärkenden Lernens durchgeführt wird. Die Implementierungen basieren auf bereits vorhandenene Code-Strukturen des zugrundeliegenden Papers (\cite{han_reinforcement_2023}). Bei dieser Methode werden Konfidenzwerte oder -vektoren der generierten Bilder verwendet, um einem  auf dem \glqq Soft-Actor-Critic-Algorithmus\grqq{} basierenden Agenten Belohnungen zuzuführen. Detailliertere Informationen über diesen lassen sich aus dem entsprechenden Paper entnehmen (\cite{haarnoja_soft_2019}). Der Agent nutzt diese Belohnungen, um private Daten zu rekonstruieren, die während des Trainingsprozesses des Modells verwendet wurden. Aufgrund der begrenzten Zugriffsmöglichkeiten auf das Modell, bei dem der Zugriff auf die Konfidenzwertausgabe des Modells eingeschränkt ist, handelt es sich hierbei um einen sogenannten BlackBox-Angriff.
 Der Ansatz des bestärkenden Lernens beinhaltet die Verwendung von Konfidenzwerten, die die Zuversicht oder Sicherheit des Modells in Bezug auf die generierten Daten repräsentieren. Diese Konfidenzwerte dienen als Belohnungen für den Agenten, der daraufhin die Aufgabe hat, die privaten Daten so zu rekonstruieren, dass die Belohnungen maximiert werden.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{Bilder/RBMI_PROCESS.png}
-	\caption{Prozessablauf eines RBMI-Angriffs}
+	\caption{Prozessvisualisierung des RBMI-Angriffs}
 	\label{img:rbmi_process}
 \end{figure}
 
