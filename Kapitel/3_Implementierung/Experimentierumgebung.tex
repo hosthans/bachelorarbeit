@@ -10,7 +10,7 @@ In dieser Arbeit wurde aus Gründen der Einfachheit der MNIST-Datensatz (\cite{n
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.2\linewidth]{Bilder/5_mnist.png}
+	\includegraphics[width=0.3\linewidth]{Bilder/5_mnist.png}
 	\caption{Beispielbild des MNIST-Datensatzes}
 	\label{img:mnist}
 \end{figure}
@@ -31,7 +31,7 @@ Der CelebA-Datensatz wurde als Vergleichsdatensatz zum zuvor genannten MNIST-Dat
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.2\linewidth]{Bilder/0_celeba_one.png}
+	\includegraphics[width=0.3\linewidth]{Bilder/0_celeba_one.png}
 	\caption{Beispielbild des CelebA-Datensatzes}
 	\label{img:celeba}
 \end{figure}
@@ -42,7 +42,7 @@ Neben den Hauptdatensätzen CelebA und MNIST wurde der FFHQ-Datensatz (\cite{noa
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\linewidth]{Bilder/ffhq.png}
+	\includegraphics[width=0.7\linewidth]{Bilder/ffhq.png}
 	\caption{Beispielbilder des Flickr-Faces-HQ-Datensatzes}
 	\label{img:ffhq}
 \end{figure}
@@ -94,39 +94,34 @@ Hervorzuheben ist, dass das VGG-16 Netzwerk auf dem ImageNet-Datensatz trainiert
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.35\linewidth}
-		\includegraphics[width=\linewidth]{Bilder/mnist_nn_acc.png}
-		\caption{Genauigkeit während des Trainingsprozesses}
-		\label{img:mnist_nn_acc}
-	\end{subfigure}
-	\hspace{1cm} % Einfügen von horizontalen Abständen zwischen den Bildern
-	\begin{subfigure}[b]{0.35\linewidth}
-		\includegraphics[width=\linewidth]{Bilder/mnist_nn_loss.png}
-		\caption{Verlust während des Trainingsprozesses}
-		\label{img:mnist_nn_loss}
-	\end{subfigure}
-	\caption{Modellleistung eines MNIST-Trainings}
-	\label{img:mnist_training}
+	\includegraphics[width=0.5\linewidth]{Bilder/mnist_nn_acc.png}
+	\caption{Genauigkeit während des Trainingsprozesses bezüglich Trainings- und Testdaten des MNIST-Datensatzes}
+	\label{img:mnist_nn_acc}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Bilder/mnist_nn_loss.png}
+	\caption{Verlust während des Trainingsprozesses bezüglich Trainings- und Testdaten des MNIST-Datensatzes}
+	\label{img:mnist_nn_loss}
 \end{figure}
 
 % Trainingsteil des VGG hinzufügen 
 Die Trainingsroutine des VGG-16 Netzwerks basiert auf einem überwachten Lernverfahren (siehe \ref{subsec:supervisedlearning}), wobei eine Menge an Datenpunkten des Trainingssatzes, welchen eine bestimmte Kategorisierung/ein bestimmtes Label zugeordnet ist, genutzt wird, um die Parameter des Modells möglichst effizient und zielführend zu aktualisieren. Dabei wurde bei der Durchführung dieser Arbeit kein Wert auf eine optimalisierte Modellgenauigkeit und Leistung gelegt, weshalb ein mögliches Hyperparameter-Tuning eine Verbesserung der Modellleistung herbeiführen kann. Die Durchführung des Trainings auf Basis verschiedener Datensätze (CelebA und MNIST) wurde mit verschiedenen Hyperparametereinstellungen ausgeführt, wie in Tabelle \ref{tab:nn_train} beschrieben.
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.35\linewidth}
-		\includegraphics[width=\linewidth]{Bilder/celeba_nn_acc.png}
-		\caption{Genauigkeit während des Trainingsprozesses}
-		\label{img:celeba_nn_acc}
-	\end{subfigure}
-	\hspace{1cm} % Einfügen von horizontalen Abständen zwischen den Bildern
-	\begin{subfigure}[b]{0.35\linewidth}
-		\includegraphics[width=\linewidth]{Bilder/celeba_nn_loss.png}
-		\caption{Verlust während des Trainingsprozesses}
-		\label{img:celeba_nn_loss}
-	\end{subfigure}
-	\caption{Modellleistung eines CelebA-Trainings}
-	\label{img:celeba_training}
+	\includegraphics[width=0.5\linewidth]{Bilder/celeba_nn_acc.png}
+	\caption{Genauigkeit während des Trainingsprozesses bezüglich Trainings- und Testdaten des CelebA-Datensatzes}
+	\label{img:celeba_nn_acc}
 \end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Bilder/celeba_nn_loss.png}
+	\caption{Verlust während des Trainingsprozesses bezüglich Trainings- und Testdaten des CelebA-Datensatzes}
+	\label{img:celeba_nn_loss}
+\end{figure}
+
  Deutlich zu erkennen ist, dass die Testgenauigkeit (Abbildung \ref{img:celeba_nn_acc}) des Modells bezüglich Gesichtdaten sehr niedrig ist, die Trainingsgenauigkeit allerdings deutlich höher. Auch der Verlust des Modells (Abbildung \ref{img:celeba_nn_loss}) während des Trainings ist sehr hoch und passt sich nur sehr langsam an. Dies ist auf den Aufbau des genutzten Datensatzes zurückzuführen, der aufgrund der großen Klassenanzahl (>1000) mit maximal 10 Bildern pro Klasse nicht für ein Training zur Klassifikation von Gesichtsbildern prominenter Persönlichkeiten geeignet ist. Durch die Divergenz zwischen Trainings- und Testgenauigkeit ist ersichtlich, dass es sich um ein sogenanntes Overfitting handelt, welches eine hohe Genauigkeit bezüglich der im Training verwendeten Daten aufweist, allerdings Testdaten nicht gut erkannt werden. Somit erkennt man ungefähr jedes 2. Bild richtig, was eine sehr schwache Modellleistung hervorhebt. Die Leistung des auf den MNIST-Datensatz trainierten VGG-16 Modells ist deutlich besser, da sowohl Test- als auch Trainingsgenauigkeit (Abbildung \ref{img:mnist_nn_acc}) an den Genauigkeitswert von 100\% konvergieren. Auch der Verlust des Modells konvergiert gegen 0 (Abbildung \ref{img:mnist_nn_loss}).
 
 Zur Durchführung der im vorliegenden Kontext beschriebenen Modell-Inversions-Angriffe ist ein neuronales Netzwerk erforderlich, das die Fähigkeit besitzt, spezifische Bilder zu generieren. In diesem Zusammenhang wurde das Deep Convolutional Generative Adversarial Network (DCGAN) gemäß der Arbeit von Radford et al. (\cite{radford_unsupervised_2016}) eingesetzt. Dieses Netzwerk zeichnet sich durch eine Vielzahl von speziellen architektonischen Merkmalen aus. Es besteht primär aus zwei Hauptkomponenten: dem Generator, der die Generierung neuer Datenpunkte durch zufälliges Rauschen übernimmt, und dem Diskriminator, der versucht, zwischen realen und gefälschten Bildern zu differenzieren.

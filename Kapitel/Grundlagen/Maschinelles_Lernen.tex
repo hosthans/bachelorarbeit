@@ -14,7 +14,7 @@ Mögliche Arten von neuronalen Netzwerken, die über diese Methode trainiert wur
 \begin{figure}[H]
 	\hspace{-30mm}
 	\centering
-	\includegraphics[width=0.8\linewidth]{Bilder/SupervisedLearning.png}
+	\includegraphics[width=\linewidth]{Bilder/SupervisedLearning.png}
 	\caption{Prozessvisualisierung: überwachtes Lernen}
 \end{figure}
 Der \textit{Ablauf} des Trainings lässt sich wie folgt beschreiben: nach Beenden von Datensammlung, Datenvorverarbeitung und Datensatztrennung in einen Trainings-, Validierungs- und Testdatensatz beginnt der eigentliche Teil des Trainings, wobei die Trainings- und Validierungsdaten für die Aktualisierung der interenen Modelleinstellungen, wie Gewichtungen und Schwellenwerte, verwendet werden. Die Optimierung der Parameter wird auf Basis der Verlustfunktion mit Hilfe eines Rückwärtsdurchlaufes (eng.: Backward Propagation) durchgeführt, die mit der Differenz zwischen Vorhersagen des Modells aus dem Vorwärtsdurchlauf (eng.: Forward Propagation) und den realen Labeln berechnet wird.
@@ -34,7 +34,7 @@ Unüberwachtes Lernen (eng.: unsupervised learning) stellt einen anderen bedeute
 \begin{figure}[H]\label{img:unsupervisedworkflow}
 	\hspace{-15mm}
 	\centering
-	\includegraphics[width=0.8\linewidth]{Bilder/UnsupervisedLearning.png}
+	\includegraphics[width=\linewidth]{Bilder/UnsupervisedLearning.png}
 	\caption{Prozessvisualisierung: unüberwachtes Lernen}
 \end{figure}
 Der \textit{Ablauf} des Trainigs gestaltet sich wie folgt: Nach Abschluss von Datensammlung und Vorverarbeitung beginnt der eigentliche Prozess des unüberwachten Lernens. Im Gegensatz zum überwachten Lernen (\ref{subsec:supervisedlearning}) gibt es hierbei keine vordefinierten Zielvariablen. Den Datenpunkten $X = x_1, x_2, \ldots, x_n$ ist also initial keine Kategorie beziehungsweise kein Label zugeordnet, da die Menge $Y$ bist dato nicht existent ist. Im Gegensatz zu überwachtem Lernen nutzt man hier Algorithmen wie beispielsweise \glqq $k$-Nearest Neighbors (KNN)\grqq{} (\cite[38]{joshi_machine_2020}), um eine bestimmte Operation auf den zu behandelnden Datensatz auszuführen. Mit Hilfe des Algorithmus wird ein bestimmtes Modell dahingehend trainiert, dass es einen Datensatz zum Beispiel in bestimmte Kategorien unterteilen kann. Dafür analysiert der Algorithmus die jeweiligen Datenpunkte und versucht diese mit Hilfe von Zusammenhängen und verschiedenen extrahierten Merkmalen zu interpretieren. Anhand des dabei erlangten Wissens werden Modellparameter aktualisiert, wonach das unüberwachte Lernen beendet ist. Ein Ergebnis kann hierbei beispielsweise ein \glqq geclusterter\grqq{} Datensatz sein.
@@ -47,7 +47,7 @@ Zu den wichtigsten Bestandteilen des bestärkenden Lernverfahrens zählen neben 
 \begin{figure}[H]\label{img:reinforcementworkflow}
 	\hspace{-10mm}
 	\centering
-	\includegraphics[width=0.8\linewidth]{Bilder/ReinforcementLearning.png}
+	\includegraphics[width=\linewidth]{Bilder/ReinforcementLearning.png}
 	\caption{Prozessvisualisierung: bestärkendes Lernen}
 \end{figure}
 Der \textit{Ablauf} des Trainings kann wie folgt beschrieben werden: Zu Beginn des Algorithmus setzt man die Parameter des Lernalgorithmus und des Agenten, wie Q-Werte, Policy und andere relevante Variablen auf einen bestimmten Startwert. Der Agent beobachtet hier den aktuellen Zustand der Umgebung mit einer bestimmten Methode (zum Beispiel visuell), um relevante Informationen für die Entscheidungsfindung aufzunehmen. Basierend auf seine interne Policy oder Schätzungen der Q-Werte des beobachteten Zustands der Umgebung wählt der Agent eine Aktion, um einen neuen Zustand herbeizuführen. Die Umgebung verändert ihren Zustand und gibt eine Belohnung, wie auch den neuen Zustand, an den Agenten zurück. Der Agent aktualisiert seine internen Modelle, um die Qualität seiner Entscheidungen zu verbessern, indem er den neuen Zustand analysiert und Belohnungen interpretiert. Beim Wählen der nächsten Aktion steht der Agent vor der Entscheidung der Exploration einer neuen Aktion und der Exploitation einer bereits durchgeführten. Der Prozess, beginnend mit der Auswahl einer bestimmten Aktion, wiederholt sich für eine gegebene Anzahl an Epochen beziehungsweise Schritten bis zur Konvergenz des Modells oder dem Erreichen einer akzeptablen Leistung.
